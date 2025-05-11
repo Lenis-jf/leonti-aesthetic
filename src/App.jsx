@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/leonti-aesthetic">
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

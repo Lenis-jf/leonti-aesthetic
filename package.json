@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://lenis-jf.github.io/leonti-aesthetic",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

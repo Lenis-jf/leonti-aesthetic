@@ -72,48 +72,105 @@ const Home = () => {
             <div className="picture-gallery-container">
                 <div className="black-background"></div>
 
-                <div class="pictures-scroll">
-                    <div class="column">
-                        <img src="/public/assets/imgs/face-treatment.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/big-eye.jpg" class="picture row-2" />
+                <div className="pictures-scroll">
+                    <div className="column">
+                        <img 
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
-                    <div class="column">    
-                        <img src="/public/assets/imgs/big-eye.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/black-glove.jpg" class="picture row-2" />
+                    <div className="column">    
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
-                    <div class="column">
-                        <img src="/public/assets/imgs/black-glove.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/face-treatment.jpg" class="picture row-2" />
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
-                                        <div class="column">
-                        <img src="/public/assets/imgs/face-treatment.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/big-eye.jpg" class="picture row-2" />
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
-                    <div class="column">
-                        <img src="/public/assets/imgs/big-eye.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/black-glove.jpg" class="picture row-2" />
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
-                    <div class="column">
-                        <img src="/public/assets/imgs/black-glove.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/face-treatment.jpg" class="picture row-2" />
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
-                                        <div class="column">
-                        <img src="/public/assets/imgs/face-treatment.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/big-eye.jpg" class="picture row-2" />
+                                        <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
-                    <div class="column">
-                        <img src="/public/assets/imgs/big-eye.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/black-glove.jpg" class="picture row-2" />
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
-                    <div class="column">
-                        <img src="/public/assets/imgs/black-glove.jpg" class="picture row-1" />
-                        <img src="/public/assets/imgs/face-treatment.jpg" class="picture row-2" />
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            className="picture row-2"
+                        />
                     </div>
                 </div>
             </div>
             <Link className="see-more-btn" to="/services">See more</Link>
 
-            <img className="cnc-shop-logo" src="/public/assets/imgs/cnc-shop.png" alt="cnc-shop logo" />
+            <img className="cnc-shop-logo" 
+                src={`${import.meta.env.BASE_URL}assets/imgs/cnc-shop.png`}
+                alt="cnc-shop logo"
+            />
 
             <div className="cnc-info-background">
                 <div className="cnc-info">
