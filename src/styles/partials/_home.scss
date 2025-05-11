@@ -1,0 +1,456 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+div.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: $secondary-color;
+    min-width: 100vw;
+    min-height: 100dvh;
+}
+
+img.mainBGimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 450px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+img.mainFoto {
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 100px);
+    width: 200px;
+    z-index: 1;
+}
+
+div.elipse1 {
+    position: absolute;
+    top: 175px;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    z-index: 0;
+    box-shadow: 0 0px 40px 70px $primary-color;
+}
+
+div.elipse2 {
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    z-index: 2;
+    box-shadow: 0 30px 50px 100px $primary-color;
+}
+
+img.mainLogo {
+    position: absolute;
+    top: 300px;
+    left: calc(50% - 100px);
+    width: 200px;
+    z-index: 2;
+}
+
+div.mainGreeting {
+    width: 250px;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: $black-base;
+    text-align: center;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 20px;
+    font-weight: 800;
+    margin-top: 425px;
+    margin-bottom: 20px;
+
+    h1 {
+        @include titles-font;
+        text-align: center;
+    }
+
+    div.divider2 {
+        width: 85px;
+        height: 1.5px;
+        background-color: $black-base;
+        margin: 5px 0 10px 0;
+        flex-shrink: 0;
+    }
+
+    p.subtitle {
+        @include text-font;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        font-weight: 800;
+        margin-top: 5px;
+    }
+
+    div.text-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 225px;
+        height: 60px;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        font-weight: 400;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+}
+
+h1 {
+    @include titles-font;
+    text-align: center;
+    color: $black-base;
+}
+
+div.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 0;
+
+    div.service {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 240px;
+        height: 60px;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 0;
+
+        h1 {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            z-index: 2;
+            color: $secondary-color;
+            font-size: 1.8rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 70%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            height: 0px;
+            border-radius: 50%;
+            background-color: $black-base;
+            box-shadow: 0 0 25px 20px rgba(36, 36, 36, 0.65);
+            z-index: 1;
+        }
+
+        p {
+            @include text-font;
+            position: absolute;
+            top: 65%;
+            transform: translateY(-50%);
+            z-index: 2;
+            color: $secondary-color;
+            font-size: 0.7rem;
+            line-height: 1.2rem;
+            font-weight: 400;
+        }
+    }
+
+    div.service.pure-glow {
+        background-image: url('/assets/imgs/pure-glow.jpg');
+    }
+
+    div.service.microneedling {
+        background-image: url('/assets/imgs/microneedling.jpg');
+    }
+
+    div.service.eyelash-extensions {
+        background-image: url('/assets/imgs/eyelash-extensions.jpg');
+    }
+
+    div.service.eyelash-lifting {
+        background-image: url('/assets/imgs/eyelash-lifting.jpg');
+    }
+
+    div.service.eyebrows-lifting {
+        background-image: url('/assets/imgs/eyebrow-lifting.jpg');
+    }
+
+    div.service.eyebrows-lifting {
+        background-image: url('/assets/imgs/eyebrow-lifting.jpg');
+    }
+}
+
+button.btn {
+    @include titles-font;
+    width: 240px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: $white-base;
+    color: $black-base;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    margin: 40px 0;
+
+    @include hoverBtn;
+}
+
+h1~button.btn {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-weight: 800;
+}
+
+a.see-more-btn {
+    @include titles-font;
+    width: 88px;
+    height: 30px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    text-decoration: none;
+    color: $white-base;
+    background-color: $btn-color;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $neo-morphism-static;
+
+    @include hoverBtn;
+}
+
+div.prices-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    background: #0D0D0D;
+    background: linear-gradient(180deg, rgba(13, 13, 13, 1) 50%, rgba(255, 251, 248, 1) 85%);
+
+    div.iluminator {
+        position: absolute;
+        left: -15px;
+        top: 15px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: 5px 0px 100px 30px $primary-color;
+        background-color: $primary-color
+    }
+
+    h3 {
+        @include titles-font;
+
+        margin-top: 40px;
+        color: $white-base;
+    }
+
+    p {
+        @include text-font;
+
+        width: 200px;
+        text-align: center;
+        margin-top: 5px;
+        color: $white-base;
+    }
+
+    button.price-list {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        div.download-icon-container {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $btn-color;
+            margin-left: 15px;
+            background-image: url("/public/assets/icons/download-icon.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+div.picture-gallery-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 30px 0 20px 0;
+    overflow: hidden;
+
+    div.black-background {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 250px;
+        transform: translateY(-50%);
+        background-color: $btn-color;
+        z-index: 0;
+    }
+
+    div.pictures-scroll {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+        padding: 10px 0;
+        overflow-x: auto;
+        max-width: calc(100vw - 20px);
+        height: 100%;
+        overflow-x: auto;
+        z-index: 1;
+        padding: 10px;
+        box-sizing: border-box;
+
+        div.column {
+            display: flex;
+            flex: 0 0 auto;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        img.picture {
+            display: block;
+            width: 115px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: gray;
+        }
+
+        div.column:nth-child(3n+1) img.row-1 {
+            height: 112px;
+        }
+
+        div.column:nth-child(3n+2) img.row-1 {
+            height: 150px;
+        }
+
+        div.column:nth-child(3n+3) img.row-1 {
+            height: 170px;
+        }
+
+        .row-2 {
+            height: 200px;
+        }
+    }
+
+    .pictures-scroll::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+img.cnc-shop-logo {
+    margin-top: 50px;
+}
+
+div.cnc-info-background {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin: 50px 0 25px 0;
+    background-color: #1D5078;
+
+    div.cnc-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #28567D;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 270px;
+        padding: 10px;
+        height: 135px;
+        border-radius: 8px;
+        position: absolute;
+        top: -20px;
+        left: calc(50% - 145px);
+        text-align: center;
+
+        &::before {
+            content: "";
+            width: 145px;
+            height: 10px;
+            background-color: $white-base;
+            position: absolute;
+            top: -35px;
+            border-radius: 50%;
+            left: calc(50% - 72.5px);
+            box-shadow: 0px 0px 35px 25px $white-base;
+        }
+
+        p {
+            @include text-font;
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+        }
+
+        p:nth-last-of-type(1) {
+            opacity: 0.7;
+        }
+    }
+}
+
+h1.access-code {
+    @include titles-font;
+    color: #205077;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+a.cnc-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    width: 175px;
+    height: 45px;
+    @include titles-font;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    background-color: #1D5078;
+    color: $white-base;
+    border-radius: 8px;
+    margin: 20px 0 80px 0;
+    box-shadow: $neo-morphism-static;
+    @include hoverBtn;
+}
