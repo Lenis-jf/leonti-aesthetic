@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from '../components/Menu';
+import Footer from '../components/Footer';
 import mainBGimage from "../assets/principal-assets/main-bg-img.jpeg";
 import mainFoto from "../assets/principal-assets/main-foto.png";
 import mainLogo from "../assets/principal-assets/main-logo.svg";
@@ -187,6 +188,8 @@ const Home = () => {
             <h1 className="access-code">Access Code: 1180011</h1>
 
             <Link to="" className="cnc-shop">Go to Store Now</Link>
+
+            <Footer />
         </div>
     );
 }
