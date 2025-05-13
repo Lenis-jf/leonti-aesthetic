@@ -165,7 +165,7 @@ const Home = () => {
             <Link className="see-more-btn" to="/services">See more</Link>
 
             <img className="cnc-shop-logo" 
-                src={`${import.meta.env.BASE_URL}assets/imgs/cnc-shop.png`}
+                src={`${import.meta.env.BASE_URL}assets/icons/cnc-shop.svg`}
                 alt="cnc-shop logo"
             />
             <div className="cnc-info-background">

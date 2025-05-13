@@ -82,8 +82,6 @@ div.main-fotos-container {
 
 
 div.mainGreeting {
-    width: 250px;
-    height: 215px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +98,9 @@ div.mainGreeting {
     padding: 20px;
     font-weight: 800;
     margin-top: 95%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 320px;
 
     h1 {
         @include titles-font;
@@ -109,7 +109,7 @@ div.mainGreeting {
 
     div.divider2 {
         width: 85px;
-        height: 1.5px;
+        height: 1px;
         background-color: $black-base;
         margin: 5px 0 10px 0;
         flex-shrink: 0;
@@ -117,8 +117,8 @@ div.mainGreeting {
 
     p.subtitle {
         @include text-font;
-        font-size: 0.9rem;
-        line-height: 1.2rem;
+        font-size: 1.1rem;
+        line-height: 1.45rem;
         font-weight: 800;
         margin-top: 5px;
     }
@@ -127,10 +127,10 @@ div.mainGreeting {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 225px;
-        height: 60px;
-        font-size: 0.9rem;
-        line-height: 1.2rem;
+        width: 250px;
+        height: 70px;
+        font-size: 1rem;
+        line-height: 1.4rem;
         padding: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
         background: rgba(255, 255, 255, 0.25);
@@ -154,6 +154,7 @@ div.services {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
     gap: 25px;
     padding: 20px 0;
 
@@ -163,8 +164,9 @@ div.services {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 240px;
-        height: 60px;
+        width: 70%;
+        max-width: 400px;
+        height: 70px;
         border-radius: 8px;
         background-size: cover;
         background-position: center;
@@ -201,8 +203,8 @@ div.services {
             transform: translateY(-50%);
             z-index: 2;
             color: $secondary-color;
-            font-size: 0.7rem;
-            line-height: 1.2rem;
+            font-size: 0.9rem;
+            line-height: 1.4rem;
             font-weight: 400;
         }
     }
@@ -409,6 +411,7 @@ div.picture-gallery-container {
 }
 
 img.cnc-shop-logo {
+    width: 280px;
     margin-top: 50px;
 }
 
@@ -416,7 +419,7 @@ div.cnc-info-background {
     position: relative;
     width: 100%;
     height: 150px;
-    margin: 50px 0 25px 0;
+    margin: 60px 0 25px 0;
     background-color: #1D5078;
 
     div.cnc-info {
@@ -432,7 +435,8 @@ div.cnc-info-background {
         border-radius: 8px;
         position: absolute;
         top: -20px;
-        left: calc(50% - 145px);
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
         color: $white-base;
 
@@ -450,8 +454,8 @@ div.cnc-info-background {
 
         p {
             @include text-font;
-            font-size: 0.9rem;
-            line-height: 1.2rem;
+            font-size: 1rem;
+            line-height: 1.4rem;
             color: $white-base;
         }
 
