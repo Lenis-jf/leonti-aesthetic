@@ -20,6 +20,8 @@ div.icons-container {
 span.address {
     @include text-font;
     text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
 }
 
 footer {
@@ -77,6 +79,7 @@ footer {
 
         span.address.black {
             @include text-font;
+            color: $black-base;
             font-size: 1.2rem;
             line-height: 1.8rem;
         }
@@ -120,14 +123,15 @@ footer {
         }
     }
 
-    span.address {
+    span.address.white {
         display: block;
-        text-align: center;
         margin: 10px 0;
+        color: $white-base
     }
 
     div.icons-container.white {
         margin: 50px auto;
+
         span.email.white {
             background-image: url("/public/assets/icons/email-icon-white.svg")
         }
@@ -159,8 +163,13 @@ footer {
             line-height: 1.1rem;
             color: $black-base;
             font-weight: 800;
-
             cursor: pointer;
+        }
+
+        div.vertical-divider {
+            width: 1.5px;
+            height: 50%;
+            background-color: $black-base;
         }
     }
 }

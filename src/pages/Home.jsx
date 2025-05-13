@@ -1,5 +1,5 @@
-import React from 'react';
 import Menu from '../components/Menu';
+import WhatsappButton from '../components/WhatsappButton';
 import Footer from '../components/Footer';
 import mainBGimage from "../assets/principal-assets/main-bg-img.jpeg";
 import mainFoto from "../assets/principal-assets/main-foto.png";
@@ -10,12 +10,14 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <div className='home'>
-            <img className="mainBGimage" src={mainBGimage} alt="foto enfocada en la zona de ojos y cejas de una mujer" />
-            <Menu />
-            <img className="mainFoto" src={mainFoto} alt="dueña del local cruzada de brazos en una pose poderosa pero simpatica" />
-            <div className="elipse1"></div>
-            <div className="elipse2"></div>
-            <img className="mainLogo" src={mainLogo} alt="Leonti Aesthethics Logo" />
+            <div className="main-fotos-container">
+                <img className="mainBGimage" src={mainBGimage} alt="foto enfocada en la zona de ojos y cejas de una mujer" />
+                <Menu />
+                <img className="mainFoto" src={mainFoto} alt="dueña del local cruzada de brazos en una pose poderosa pero simpatica" />
+                <div className="elipse1"></div>
+                <div className="elipse2"></div>
+                <img className="mainLogo" src={mainLogo} alt="Leonti Aesthethics Logo" />
+            </div>
             <div className='mainGreeting'>
                 <h1>Crafting Confidence</h1>
                 <div className='divider2' />
@@ -179,6 +181,7 @@ const Home = () => {
             </div>
             <h1 className="access-code">Access Code: 1180011</h1>
             <Link to="" className="cnc-shop">Go to Store Now</Link>
+            <WhatsappButton />
             <Footer />
         </div>
     );

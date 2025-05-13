@@ -42,7 +42,9 @@ const Footer = () => {
                 </div>
                 <div className="sub-footer">
                     <div>Privacy Policy</div>
+                    <div className="vertical-divider"></div>
                     <div>© 2025 LEONTI. All Rights Reserved.</div>
+                    <div className="vertical-divider"></div>
                     <div>Terms of Service</div>
                 </div>
             </footer>

@@ -11,58 +11,75 @@ div.home {
     background-color: $secondary-color;
 }
 
-img.mainBGimage {
+div.mainContainer {
+    position: relative;
+}
+
+div.main-fotos-container {
+  position: relative;
+  width: 100%;
+  max-height: 275px;
+  aspect-ratio: 16 / 9;          
+  
+  img.mainBGimage {
     position: absolute;
-    max-width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: 0;
-}
+  }
 
-img.mainFoto {
+  img.mainFoto {
     position: absolute;
-    top: 8dvh;
-    // top: 60px;
-    left: calc(50% - 160px);
-    width: 320px;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    max-width: 400px;
+    height: auto;
     z-index: 1;
-}
+  }
 
-div.elipse1 {
+  div.elipse1 {
     position: absolute;
-    top: 25dvh;
-    // top: 250px;
-    left: calc(50% - 100vw);
-    width: 200vw;
-    height: 400px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 100%;
     border-radius: 50%;
     background-color: $primary-color;
+    box-shadow: 0 0 40px 70px $primary-color;
     z-index: 0;
-    box-shadow: 0 0px 40px 70px $primary-color;
-}
+  }
 
-div.elipse2 {
+  div.elipse2 {
     position: absolute;
-    top: 72dvh;
-    // top: 550px;
-    left: calc(50% - 100vw);
-    width: 200vw;
-    height: 50px;
+    top: 230%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 20px;
     border-radius: 50%;
     background-color: $primary-color;
-    z-index: 2;
     box-shadow: 0 30px 50px 100px $primary-color;
+    z-index: 2;
+  }
+
+  img.mainLogo {
+    position: absolute;
+    top: 215%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    max-width: 50%;
+    height: auto;
+    z-index: 2;
+  }
 }
 
-img.mainLogo {
-    position: absolute;
-    top: 65dvh;
-    // top: 500px;
-    left: calc(50% - 100px);
-    width: 200px;
-    z-index: 2;
-}
 
 div.mainGreeting {
     width: 250px;
@@ -82,7 +99,7 @@ div.mainGreeting {
     -webkit-backdrop-filter: blur(5px);
     padding: 20px;
     font-weight: 800;
-    margin-top: 625px;
+    margin-top: 95%;
     margin-bottom: 20px;
 
     h1 {
@@ -470,134 +487,8 @@ a.cnc-shop {
     @include hoverBtn;
 }
 
-@media screen and (min-width: 380px) {
-    div.elipse1 {
-        top: 30dvh;
-    }
-
-    div.elipse2 {
-        top: 75dvh;
-    }
-
-    img.mainFoto {
-        top: 15dvh;
-    }
-
-    img.mainLogo {
-        top: 70dvh;
-    }
-
+@media screen and (min-width: 470px) {
     div.mainGreeting {
-        margin-top: 680px;
-    }
-}
-
-@media screen and (min-width: 500px) {
-    div.elipse1 {
-        top: 35dvh;
-    }
-
-    div.elipse2 {
-        top: 80dvh;
-    }
-
-    img.mainFoto {
-        top: 20dvh;
-    }
-
-    img.mainLogo {
-        top: 75dvh
-    }
-
-    div.mainGreeting {
-        margin-top: 700px;
-    }
-}
-
-@media screen and (min-width: 595px) {
-    div.elipse1 {
-        top: 40dvh;
-    }
-
-    div.elipse2 {
-        top: 85dvh;
-    }
-
-    img.mainFoto {
-        top: 25dvh;
-    }
-
-    img.mainLogo {
-        top: 80dvh;
-    }
-
-    div.mainGreeting {
-        margin-top: 740px;
-    }
-}
-
-@media screen and (min-width: 710px) {
-    div.elipse1 {
-        top: 45dvh;
-    }
-
-    div.elipse2 {
-        top: 90dvh;
-    }
-
-    img.mainFoto {
-        top: 30dvh;
-    }
-
-    img.mainLogo {
-        top: 85dvh;
-    }
-
-    div.mainGreeting {
-        margin-top: 760px;
-    }
-}
-
-@media screen and (min-width: 825px) {
-    div.elipse1 {
-        top: 50dvh;
-    }
-
-    div.elipse2 {
-        top: 95dvh;
-    }
-
-    img.mainFoto {
-        top: 35dvh;
-    }
-
-    img.mainLogo {
-        top: 90dvh;
-    }
-
-    div.mainGreeting {
-        margin-top: 780px;
-    }
-}
-
-@media screen and (min-width: 960px) {
-    div.elipse1 {
-        top: 55dvh;
-    }
-
-    div.elipse2 {
-        top: 100dvh;
-    }
-
-    img.mainFoto {
-        top: 40dvh;
-    }
-
-    img.mainLogo {
-        top: 95dvh;
-    }
-
-    div.mainGreeting {
-        margin-top: 820px;
+        margin-top: 440px;
     }
 }

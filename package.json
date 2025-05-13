@@ -6,7 +6,8 @@
   "homepage": "https://lenis-jf.github.io/leonti-aesthetic",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "optimize-images": "node scripts/optimize-images.js",
+    "build": "npm run optimize-images && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -25,6 +26,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "sharp": "^0.34.1",
     "vite": "^6.3.5"
   }
 }
