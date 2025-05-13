@@ -7,7 +7,7 @@ const Footer = () => {
             <footer>
                 <div className="contact-card">
                     <span>Contact / Booking</span>
-                    <div className="icons-container">
+                    <div className="icons-container black">
                         <span className="social-media-icon email black"></span>
                         <span className="social-media-icon instagram black"></span>
                         <span className="social-media-icon facebook black"></span>
@@ -31,9 +31,9 @@ const Footer = () => {
                     </ul>
                 </nav>
 
-                <span className="address">Hochstädter Str.1a, 63477 Maintal</span>
+                <span className="address white">Hochstädter Str.1a, 63477 Maintal</span>
 
-                <div className="icons-container">
+                <div className="icons-container white">
                     <span className="social-media-icon email white"></span>
                     <span className="social-media-icon instagram white"></span>
                     <span className="social-media-icon facebook white"></span>

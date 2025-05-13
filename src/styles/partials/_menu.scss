@@ -161,7 +161,7 @@ input.menuToggle:checked~nav.menu {
     visibility: visible;
     border-radius: 0 15px 15px 15px;
     width: calc(100% - 20px);
-    height: 90%;
+    height: 80dvh;
     padding: 20px;
 
     ul {

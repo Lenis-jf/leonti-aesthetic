@@ -56,7 +56,8 @@ const Home = () => {
             <Link className="see-more-btn" to="/services">See more</Link>
 
             <div className="prices-container">
-                <div className="iluminator"></div>
+                <div className="iluminator1 iluminator"></div>
+                <div className="iluminator2 iluminator"></div>
                 <h3>
                     Looking for our latest rates?
                 </h3>
