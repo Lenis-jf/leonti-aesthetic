@@ -11,13 +11,11 @@ const Home = () => {
     return (
         <div className='home'>
             <img className="mainBGimage" src={mainBGimage} alt="foto enfocada en la zona de ojos y cejas de una mujer" />
-
             <Menu />
             <img className="mainFoto" src={mainFoto} alt="dueña del local cruzada de brazos en una pose poderosa pero simpatica" />
             <div className="elipse1"></div>
             <div className="elipse2"></div>
             <img className="mainLogo" src={mainLogo} alt="Leonti Aesthethics Logo" />
-
             <div className='mainGreeting'>
                 <h1>Crafting Confidence</h1>
                 <div className='divider2' />
@@ -29,7 +27,6 @@ const Home = () => {
                     <p>A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to you here!</p>
                 </div>
             </div>
-
             <div className='services'>
                 <h1 className='services-title'>Services</h1>
                 <div className="service pure-glow">
@@ -54,7 +51,6 @@ const Home = () => {
                 </div>
             </div>
             <Link className="see-more-btn" to="/services">See more</Link>
-
             <div className="prices-container">
                 <div className="iluminator1 iluminator"></div>
                 <div className="iluminator2 iluminator"></div>
@@ -68,12 +64,9 @@ const Home = () => {
                     <div className="download-icon-container"></div>
                 </button>
             </div>
-
             <h1>Picture Gallery</h1>
-
             <div className="picture-gallery-container">
                 <div className="black-background"></div>
-
                 <div className="pictures-scroll">
                     <div className="column">
                         <img 
@@ -173,7 +166,6 @@ const Home = () => {
                 src={`${import.meta.env.BASE_URL}assets/imgs/cnc-shop.png`}
                 alt="cnc-shop logo"
             />
-
             <div className="cnc-info-background">
                 <div className="cnc-info">
                     <p>
@@ -185,11 +177,8 @@ const Home = () => {
                     </p>
                 </div>
             </div>
-
             <h1 className="access-code">Access Code: 1180011</h1>
-
             <Link to="" className="cnc-shop">Go to Store Now</Link>
-
             <Footer />
         </div>
     );

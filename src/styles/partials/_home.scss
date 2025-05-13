@@ -22,7 +22,8 @@ img.mainBGimage {
 
 img.mainFoto {
     position: absolute;
-    top: 60px;
+    top: 8dvh;
+    // top: 60px;
     left: calc(50% - 160px);
     width: 320px;
     z-index: 1;
@@ -30,7 +31,8 @@ img.mainFoto {
 
 div.elipse1 {
     position: absolute;
-    top: 250px;
+    top: 25dvh;
+    // top: 250px;
     left: calc(50% - 100vw);
     width: 200vw;
     height: 400px;
@@ -42,7 +44,8 @@ div.elipse1 {
 
 div.elipse2 {
     position: absolute;
-    top: 550px;
+    top: 72dvh;
+    // top: 550px;
     left: calc(50% - 100vw);
     width: 200vw;
     height: 50px;
@@ -54,7 +57,8 @@ div.elipse2 {
 
 img.mainLogo {
     position: absolute;
-    top: 500px;
+    top: 65dvh;
+    // top: 500px;
     left: calc(50% - 100px);
     width: 200px;
     z-index: 2;
@@ -464,4 +468,136 @@ a.cnc-shop {
     margin: 20px 0 80px 0;
     box-shadow: $neo-morphism-static;
     @include hoverBtn;
+}
+
+@media screen and (min-width: 380px) {
+    div.elipse1 {
+        top: 30dvh;
+    }
+
+    div.elipse2 {
+        top: 75dvh;
+    }
+
+    img.mainFoto {
+        top: 15dvh;
+    }
+
+    img.mainLogo {
+        top: 70dvh;
+    }
+
+    div.mainGreeting {
+        margin-top: 680px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    div.elipse1 {
+        top: 35dvh;
+    }
+
+    div.elipse2 {
+        top: 80dvh;
+    }
+
+    img.mainFoto {
+        top: 20dvh;
+    }
+
+    img.mainLogo {
+        top: 75dvh
+    }
+
+    div.mainGreeting {
+        margin-top: 700px;
+    }
+}
+
+@media screen and (min-width: 595px) {
+    div.elipse1 {
+        top: 40dvh;
+    }
+
+    div.elipse2 {
+        top: 85dvh;
+    }
+
+    img.mainFoto {
+        top: 25dvh;
+    }
+
+    img.mainLogo {
+        top: 80dvh;
+    }
+
+    div.mainGreeting {
+        margin-top: 740px;
+    }
+}
+
+@media screen and (min-width: 710px) {
+    div.elipse1 {
+        top: 45dvh;
+    }
+
+    div.elipse2 {
+        top: 90dvh;
+    }
+
+    img.mainFoto {
+        top: 30dvh;
+    }
+
+    img.mainLogo {
+        top: 85dvh;
+    }
+
+    div.mainGreeting {
+        margin-top: 760px;
+    }
+}
+
+@media screen and (min-width: 825px) {
+    div.elipse1 {
+        top: 50dvh;
+    }
+
+    div.elipse2 {
+        top: 95dvh;
+    }
+
+    img.mainFoto {
+        top: 35dvh;
+    }
+
+    img.mainLogo {
+        top: 90dvh;
+    }
+
+    div.mainGreeting {
+        margin-top: 780px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    div.elipse1 {
+        top: 55dvh;
+    }
+
+    div.elipse2 {
+        top: 100dvh;
+    }
+
+    img.mainFoto {
+        top: 40dvh;
+    }
+
+    img.mainLogo {
+        top: 95dvh;
+    }
+
+    div.mainGreeting {
+        margin-top: 820px;
+    }
 }
