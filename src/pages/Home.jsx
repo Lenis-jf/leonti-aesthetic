@@ -1,4 +1,5 @@
 import Menu from '../components/Menu';
+import PricesTable from '../components/PricesTable';
 import WhatsappButton from '../components/WhatsappButton';
 import Footer from '../components/Footer';
 import mainBGimage from "../assets/principal-assets/main-bg-img.jpeg";
@@ -66,41 +67,12 @@ const Home = () => {
                     <div className="download-icon-container"></div>
                 </button>
             </div>
+            <PricesTable />
             <h1>Picture Gallery</h1>
             <div className="picture-gallery-container">
                 <div className="black-background"></div>
                 <div className="pictures-scroll">
                     <div className="column">
-                        <img 
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">    
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
                         <img
                             src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
                             className="picture row-1"
@@ -130,7 +102,37 @@ const Home = () => {
                             className="picture row-2"
                         />
                     </div>
-                                        <div className="column">
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            className="picture row-2"
+                        />
+                    </div>
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            className="picture row-2"
+                        />
+                    </div>
+                    <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            className="picture row-2"
+                        />
+                    </div>
+                    <div className="column">
                         <img
                             src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
                             className="picture row-1"
@@ -164,7 +166,7 @@ const Home = () => {
             </div>
             <Link className="see-more-btn" to="/services">See more</Link>
 
-            <img className="cnc-shop-logo" 
+            <img className="cnc-shop-logo"
                 src={`${import.meta.env.BASE_URL}assets/icons/cnc-shop.svg`}
                 alt="cnc-shop logo"
             />
