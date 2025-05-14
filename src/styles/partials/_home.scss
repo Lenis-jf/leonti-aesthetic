@@ -99,7 +99,7 @@ div.mainGreeting {
     font-weight: 800;
     margin-top: 95%;
     margin-bottom: 10px;
-    width: 80%;
+    width: 90%;
     max-width: 320px;
 
     h1 {
@@ -210,27 +210,27 @@ div.services {
     }
 
     div.service.pure-glow {
-        background-image: url('/assets/imgs/pure-glow.jpg');
+        background-image: url('/assets/imgs/pure-glow.webp');
     }
 
     div.service.microneedling {
-        background-image: url('/assets/imgs/microneedling.jpg');
+        background-image: url('/assets/imgs/microneedling.webp');
     }
 
     div.service.eyelash-extensions {
-        background-image: url('/assets/imgs/eyelash-extensions.jpg');
+        background-image: url('/assets/imgs/eyelash-extensions.webp');
     }
 
     div.service.eyelash-lifting {
-        background-image: url('/assets/imgs/eyelash-lifting.jpg');
+        background-image: url('/assets/imgs/eyelash-lifting.webp');
     }
 
     div.service.eyebrows-lifting {
-        background-image: url('/assets/imgs/eyebrow-lifting.jpg');
+        background-image: url('/assets/imgs/eyebrow-lifting.webp');
     }
 
     div.service.eyebrows-lifting {
-        background-image: url('/assets/imgs/eyebrow-lifting.jpg');
+        background-image: url('/assets/imgs/eyebrow-lifting.webp');
     }
 }
 
@@ -343,86 +343,122 @@ div.prices-container {
     }
 }
 
-div.price-table-wrapper {
+.price-table-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
-    padding-bottom: 60px;
+    padding-bottom: 2rem;
+    transition: all 1s ease;
 
     .price-table {
+        position: relative;
         width: 80%;
         max-width: 600px;
-        margin: 2rem auto;
+        margin: 2rem 0;
         background: white;
         border-radius: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-height: 600px;
         overflow: hidden;
-        transition: all 300ms ease-out;
+        transition: max-height 1s ease;
 
-        .section-header {
-            @include titles-font;
-            background-color: $primary-color;
-            color: white;
-            padding: 1.25rem;
-            font-size: 1.4rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        /* estilos de sección, categoría, filas… igual que antes */
+        .section-block {
+            .section-header {
+                @include titles-font;
+                background-color: $primary-color;
+                color: $white-base;
+                padding: 1.25rem;
+                font-size: 1.4rem;
+            }
+
+            &:first-child .section-header {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            .category-header {
+                @include titles-font;
+                background-color: fade-out($primary-color, 0.5);
+                padding: 1rem 1.25rem;
+                font-size: 1.1rem;
+            }
+
+            .service-row {
+                @include text-font;
+                display: flex;
+                justify-content: space-between;
+                padding: 0.75rem 1.25rem;
+                border-bottom: 1px solid #dee2e6;
+
+                &:hover {
+                    background-color: #f8f9fa;
+                }
+
+                .service-name {
+                    color: #212529;
+                }
+
+                .price {
+                    color: #6c757d;
+                }
+            }
+
+            .note {
+                padding: 0.8rem;
+                margin: 1rem;
+                background-color: #fff4e6;
+                font-style: italic;
+                color: $black-base;
+                border-radius: 5px;
+                opacity: 0.7;
+            }
         }
 
-        .category-header {
-            @include titles-font;
-            background-color: fade-out($color: $primary-color, $amount: 0.8);
-            padding: 1rem 1.25rem;
-            font-weight: 600;
-            color: #495057;
-            font-size: 1.1rem;
-        }
-
-        .service-row {
-            @include text-font;
-            display: flex;
-            justify-content: space-between;
-            padding: 0.75rem 1.25rem;
-            border-bottom: 1px solid #dee2e6;
-            transition: background-color 0.2s ease;
-
-            &:last-child {
-                border-bottom: none;
-            }
-
-            &:hover {
-                background-color: #f8f9fa;
-            }
-
-            .service-name {
-                color: #212529;
-                font-weight: 500;
-            }
-
-            .price {
-                color: #6c757d;
-                font-weight: 600;
-                min-width: 80px;
-                text-align: right;
-            }
-        }
-
-        .note {
-            padding: 1rem;
-            margin: 1rem;
-            background-color: #fff4e6;
-            color: #495057;
-            font-size: 0.9rem;
-            border-radius: 8px;
-            line-height: 1.4;
-            font-style: italic;
+        /* El overlay de fade en fondo de la parte final */
+        .fade-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0) 0%,
+                    $secondary-color 100%);
+            opacity: 1;
+            pointer-events: none;
+            transition: opacity 1s ease;
         }
     }
+
+    /* cuando está expandida quitamos el max-height */
+    .price-table.expanded {
+        max-height: 2000px;
+        overflow: visible;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Si está expandida, ocultamos el overlay */
+    .price-table.expanded .fade-overlay {
+        opacity: 0;
+    }
+
+    .toggle-btn {
+        @include titles-font;
+        margin: 1rem 0;
+        padding: 0.5rem 1.5rem;
+        border: none;
+        border-radius: 20px;
+        background-color: $btn-color;
+        color: $white-base;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1.2rem;
+
+        @include hoverBtn;
+    }
 }
+
 
 div.picture-gallery-container {
     position: relative;

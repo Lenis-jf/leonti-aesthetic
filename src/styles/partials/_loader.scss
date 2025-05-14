@@ -1,0 +1,52 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.dots {
+    display: flex;
+    gap: 0.5rem;
+
+    span {
+        width: 12px;
+        height: 12px;
+        background: $primary-color; // o cualquier color
+        border-radius: 50%;
+        opacity: 0.3;
+        animation: blink 1s infinite;
+    }
+
+    span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    80%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}

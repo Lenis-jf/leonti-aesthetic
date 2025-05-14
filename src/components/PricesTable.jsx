@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const PricesTable = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(false);
 
     const servicesData = [
         {
@@ -80,76 +80,37 @@ const PricesTable = () => {
     ];
 
     return (
-        <div className="price-table-wrapper" style={{ position: 'relative' }}>
-            <div
-                className="price-table"
-                style={{
-                    maxHeight: isExpanded ? 'none' : '600px',
-                    overflow: 'hidden',
-                    transition: 'max-height 0.5s ease'
-                }}
-            >
-                {servicesData.map((section, index) => (
-                    <div key={index}>
-                        <div className="section-header">{section.section}</div>
+        <div className={`price-table-wrapper ${expanded ? 'expanded' : ''}`}>
+            <div className={`price-table ${expanded ? 'expanded' : ''}`}>
+                {servicesData.map((section, i) => (
+                    <section key={i} className="section-block">
+                        <h2 className="section-header">{section.section}</h2>
 
-                        {section.categories ? (
-                            section.categories.map((category, catIndex) => (
-                                <div key={catIndex}>
-                                    <div className="category-header">{category.name}</div>
-                                    {category.services.map((service, serviceIndex) => (
-                                        <div className="service-row" key={serviceIndex}>
-                                            <span className="service-name">{service.name}</span>
-                                            <span className="price">{service.price}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            ))
-                        ) : (
-                            section.services.map((service, serviceIndex) => (
-                                <div className="service-row" key={serviceIndex}>
-                                    <span className="service-name">{service.name}</span>
-                                    <span className="price">{service.price}</span>
-                                </div>
-                            ))
-                        )}
+                        {(section.categories ?? [{ services: section.services }]).map((cat, ci) => (
+                            <div key={ci} className="category-block">
+                                {cat.name && <h3 className="category-header">{cat.name}</h3>}
+                                {cat.services.map((svc, si) => (
+                                    <div className="service-row" key={si}>
+                                        <span className="service-name">{svc.name}</span>
+                                        <span className="price">{svc.price}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
 
-                        {section.note && <div className="note">{section.note}</div>}
-                    </div>
+                        {section.note && <p className="note">{section.note}</p>}
+                    </section>
                 ))}
+
+                {/* Fade overlay solo cuando NO está expandida */}
+                {!expanded && <div className="fade-overlay" />}
             </div>
 
-            {!isExpanded && (
-                <div style={{
-                    width: '80%',
-                    maxWidth: '600px',
-                    position: 'absolute',
-                    bottom: '150px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    right: 0,
-                    height: '100px',
-                    backdropFilter: 'blur(3px)',
-                    WebkitBackdropFilter: 'blur(5px)',
-                    backgroundColor: `linear-gradient(to bottom, transparent 0%, #0D0D0D 100%)`,
-                    pointerEvents: 'none'
-                }} />
-            )}
-
             <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                style={{
-                    display: 'block',
-                    margin: '20px auto',
-                    padding: '10px 25px',
-                    borderRadius: '20px',
-                    border: 'none',
-                    backgroundColor: "#0D0D0D",
-                    color: 'white',
-                    cursor: 'pointer'
-                }}
+                className="toggle-btn"
+                onClick={() => setExpanded(!expanded)}
             >
-                {isExpanded ? 'Show Less' : 'Show More'}
+                {expanded ? 'Show Less' : 'Show More'}
             </button>
         </div>
     );

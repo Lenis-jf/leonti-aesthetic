@@ -2,8 +2,8 @@ import Menu from '../components/Menu';
 import PricesTable from '../components/PricesTable';
 import WhatsappButton from '../components/WhatsappButton';
 import Footer from '../components/Footer';
-import mainBGimage from "../assets/principal-assets/main-bg-img.jpeg";
-import mainFoto from "../assets/principal-assets/main-foto.png";
+import mainBGimage from "../assets/principal-assets/main-bg-img.webp";
+import mainFoto from "../assets/principal-assets/main-foto.webp";
 import mainLogo from "../assets/principal-assets/main-logo.svg";
 
 import { Link } from "react-router-dom";
@@ -74,94 +74,94 @@ const Home = () => {
                 <div className="pictures-scroll">
                     <div className="column">
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo1.webp`}
                             className="picture row-1"
                         />
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo2.webp`}
                             className="picture row-2"
                         />
                     </div>
                     <div className="column">
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo3.webp`}
                             className="picture row-1"
                         />
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo4.webp`}
                             className="picture row-2"
                         />
                     </div>
                     <div className="column">
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo5.webp`}
                             className="picture row-1"
                         />
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo6.webp`}
                             className="picture row-2"
                         />
                     </div>
                     <div className="column">
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo7.webp`}
                             className="picture row-1"
                         />
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo8.webp`}
                             className="picture row-2"
                         />
                     </div>
                     <div className="column">
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo9.webp`}
                             className="picture row-1"
                         />
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo11.webp`}
                             className="picture row-2"
                         />
                     </div>
                     <div className="column">
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo13.webp`}
                             className="picture row-1"
                         />
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo14.webp`}
                             className="picture row-2"
                         />
                     </div>
                     <div className="column">
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo15.webp`}
                             className="picture row-1"
                         />
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/photo16.webp`}
+                            className="picture row-2"
+                        />
+                    </div>
+                    {/* <div className="column">
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.webp`}
+                            className="picture row-1"
+                        />
+                        <img
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.webp`}
                             className="picture row-2"
                         />
                     </div>
                     <div className="column">
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.webp`}
                             className="picture row-1"
                         />
                         <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
+                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.webp`}
                             className="picture row-2"
                         />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.jpg`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.jpg`}
-                            className="picture row-2"
-                        />
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <Link className="see-more-btn" to="/services">See more</Link>
