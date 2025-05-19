@@ -46,14 +46,6 @@ const Home = () => {
                     loop
                     autoplay
                     className="bg-animation"
-                    // style={{
-                    //     width: 300,    // <-- aquí el ancho
-                    //     height: 300,   // <-- aquí la altura
-                    //     position: 'absolute',
-                    //     top: 0,
-                    //     left: '50%',
-                    //     transform: 'translateX(-50%)',
-                    // }}
                 />
                 <img className="mainFoto-services" src={mainFoto} alt="dueña del local en primer plano cruzada de brazos" />
                 <div className='light'></div>

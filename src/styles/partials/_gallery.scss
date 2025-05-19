@@ -3,7 +3,11 @@
 
 section.picture-gallery {
     margin-top: 60px;
+    margin-bottom: 20px;
     text-align: center;
+    width: 100%;
+    max-width: 100vw;
+    padding-left: 10px;
 
     h1 {
         margin-bottom: 20px;
@@ -11,16 +15,14 @@ section.picture-gallery {
 
     .picture-gallery-container {
         position: relative;
-        width: 100%;
-        max-width: 100vw;
+        right: 0;
         overflow: hidden;
-        padding: 10px 0 40px 10px;
 
         .pictures-scroll {
             display: flex;
             flex-wrap: nowrap;
             gap: 10px;
-            padding: 10px;
+            padding: 10px 0;
             overflow-x: auto;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
@@ -31,8 +33,7 @@ section.picture-gallery {
 
             .image-container {
                 flex: 0 0 auto;
-                width: 80%;
-                max-width: 380px;
+                width: clamp(280px, calc(80% - 20px), 320px);
                 height: 350px;
                 background: #fff;
                 padding: 10px;
@@ -43,6 +44,9 @@ section.picture-gallery {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
 
                 img.picture {
                     width: 100%;
