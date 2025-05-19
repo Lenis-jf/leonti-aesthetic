@@ -44,9 +44,7 @@ section.picture-gallery {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
+                border: 1px solid rgba(36, 36, 36, 0.2);
 
                 img.picture {
                     width: 100%;
@@ -54,6 +52,26 @@ section.picture-gallery {
                     object-fit: cover;
                     border-radius: 4px;
                 }
+            }
+        }
+
+        div.images-nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 280px;
+            margin: 20px auto;
+
+            div.img-nav-line {
+                width: 15px;
+                height: 4px;
+                border-radius: 2px;
+                background-color: $color-fuente-titulos;
+                opacity: 1;
+            }
+
+            div.img-nav-line.idle {
+                opacity: 0.5;
             }
         }
     }

@@ -64,8 +64,8 @@ const Home = () => {
                 <Link className="see-more-btn" to="/services">See more</Link>
             </section>
             <div className="prices-container">
-                <div className="iluminator1 iluminator"></div>
-                <div className="iluminator2 iluminator"></div>
+                {/* <div className="iluminator1 iluminator"></div>
+                <div className="iluminator2 iluminator"></div> */}
                 <h3>
                     Looking for our latest rates?
                 </h3>
@@ -78,24 +78,35 @@ const Home = () => {
             </div>
             <PricesTable />
             <Gallery />
-            <Link className="see-more-btn" to="/services">See more</Link>
-            <img className="cnc-shop-logo"
-                src={`${import.meta.env.BASE_URL}assets/icons/cnc-shop.svg`}
-                alt="cnc-shop logo"
-            />
-            <div className="cnc-info-background">
-                <div className="cnc-info">
-                    <p>
-                        <b>An exclusive selection of professional cosmetic products from the CNC brand — developed for all skin types and every skin need.</b>
-                    </p>
-                    <br />
-                    <p>
-                        Whether it’s anti-ageing, blemished skin, couperose, pigmentation, dryness or sensitivity — find targeted skincare solutions tailored to you.
-                    </p>
-                </div>
+            <div className="btn-bottom-container">
+                <Link className="see-more-btn" to="/services">See more</Link>
+                <Link className="contact-btn" to="/services">Contact me</Link>
             </div>
-            <h1 className="access-code">Access Code: 1180011</h1>
-            <Link to="" className="cnc-shop">Go to Store Now</Link>
+            <section className="cnc-shop-section">
+                <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-orange.webp`} alt="mano decorativa con producto" className="hand orange" />
+                <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-white.webp`} alt="mano decorativa con producto" className="hand white" />
+                <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-transparent.webp`} alt="mano decorativa con producto" className="hand transparent" />
+                <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-rounded.webp`} alt="mano decorativa con producto" className="hand rounded" />
+                <div className="cnc-card">
+                    <h2>CNC DIRECT SHOP</h2>
+                    <img className="cnc-shop-logo"
+                        src={`${import.meta.env.BASE_URL}assets/icons/cnc-shop.svg`}
+                        alt="cnc-shop logo"
+                    />
+                    <div className="divider"></div>
+                    <p>
+                        An exclusive selection of professional cosmetic products from the CNC brand — developed for all skin types and every skin need.
+                    </p>
+                    <div className="blue-info">
+                        <div className="notch"></div>
+                        <p>
+                            Whether it’s anti-ageing, blemished skin, couperose, pigmentation, dryness or sensitivity — find targeted skincare solutions tailored to you.
+                        </p>
+                    </div>
+                </div>
+                <Link to="" className="cnc-shop">Go to Store Now <img src={`${import.meta.env.BASE_URL}assets/icons/arrow-right-white.svg`} alt="icono a la flecha a la derecha" /></Link>
+                <h1 className="access-code">Access Code: 1180011</h1>
+            </section>
             <WhatsappButton />
             <Footer />
         </div>

@@ -15,6 +15,17 @@ div.mainContainer {
     position: relative;
 }
 
+a.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $botones-dorados;
+    text-decoration: none;
+    @include text-font;
+    font-weight: 800;
+    color: $black-base;
+}
+
 div.main-fotos-container {
     display: flex;
     flex-direction: column;
@@ -36,22 +47,14 @@ div.main-fotos-container {
     }
 
     a.contact-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: absolute;
         top: 25px;
         right: 5%;
         width: 62px;
         height: 22px;
-        background-color: $botones-dorados;
-        border-radius: 2px;
-        text-decoration: none;
-        @include text-font;
         font-size: 0.8rem;
         line-height: 10rem;
-        font-weight: 800;
-        color: $black-base;
+        border-radius: 2px;
     }
 }
 
@@ -148,6 +151,27 @@ a.see-more-btn {
     @include hoverBtn;
 }
 
+div.btn-bottom-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+    a.see-more-btn {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    a.contact-btn {
+        width: 88px;
+        height: 30px;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        border-radius: 8px;
+        box-shadow: $neo-morphism-static;
+        transform: translateX(-40%);
+    }
+}
+
 div.prices-container {
     position: relative;
     display: flex;
@@ -212,83 +236,144 @@ div.prices-container {
     }
 }
 
-img.cnc-shop-logo {
-    width: 280px;
-    margin-top: 50px;
-}
-
-div.cnc-info-background {
+section.cnc-shop-section {
     position: relative;
     width: 100%;
-    height: 150px;
-    margin: 60px 0 25px 0;
-    background-color: #1D5078;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $third-color;
+    padding: 150px 0;
+    margin-top: 60px;
 
-    div.cnc-info {
+    &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $botones-dorados;
+        position: absolute;
+        top: 2px;
+        filter: blur(5px);
+    }
+
+    div.cnc-card {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #28567D;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-        width: 270px;
-        padding: 10px;
-        height: 135px;
-        border-radius: 8px;
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        color: $white-base;
+        gap: 10px;
+        width: clamp(260px, 80%, 340px);
+        height: 280px;
+        background-color: $white-base;
+        padding: 15px 15px 65px 15px;
+        border-radius: 10px;
+        box-shadow: $neo-morphism-static;
+        margin-bottom: 80px;
 
-        &::before {
-            content: "";
-            width: 80%;
-            height: 10px;
-            background-color: $white-base;
-            position: absolute;
-            top: -35px;
-            border-radius: 50%;
-            left: calc(50% - 40%);
-            box-shadow: 0px 0px 35px 25px $white-base;
+        h2 {
+            @include titles-font;
+            font-size: 1.2rem;
+            text-align: center;
+            color: $botones-dorados;
+            font-weight: 800;
+        }
+
+        img.cnc-shop-logo {
+            width: clamp(200px, 80%, 300px);
+        }
+
+        div.divider {
+            width: 180px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #7070701C;
         }
 
         p {
             @include text-font;
-            font-size: 1rem;
-            line-height: 1.4rem;
-            color: $white-base;
+            font-size: 1.1rem;
+            line-height: 100%;
+            font-weight: 500;
+            color: $color-fuente;
+            text-align: center;
         }
 
-        p:nth-last-of-type(1) {
-            opacity: 0.7;
+        div.blue-info {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 240px;
+            height: 150px;
+            background-color: #1D5078;
+            border-radius: 10px;
+            padding: 15px;
+            bottom: -80px;
+            box-shadow: $neo-morphism-static;
+
+            div.notch {
+                position: absolute;
+                width: 70%;
+                height: 20px;
+                border-radius: 10px;
+                top: -10%;
+                transform: translateY(50%);
+                background-color: #1D5078
+            }
+
+            p {
+                @include text-font;
+                font-weight: 500;
+                font-size: 1.1rem;
+                line-height: 100%;
+                color: $white-base;
+                text-align: center;
+            }
         }
     }
+
+    img.hand {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    img.hand.orange {top: -50px; right: 0; z-index: 2;}
+    img.hand.white {top: -50px; left: 0; z-index: 2;}
+    img.hand.transparent {bottom: 180px; left: 0; z-index: 2;}
+    img.hand.rounded {bottom: 180px; right: 0; z-index: 2;}
 }
 
 h1.access-code {
     @include titles-font;
-    color: #205077;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    color: $color-fuente;
+    font-size: 1.2rem;
+    line-height: 100%;
 }
 
 a.cnc-shop {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     text-decoration: none;
-    width: 175px;
+    width: 180px;
     height: 45px;
     @include titles-font;
     font-size: 1.5rem;
     line-height: 1.9rem;
-    background-color: #1D5078;
+    background-color: $color-fuente-titulos;
     color: $white-base;
     border-radius: 8px;
-    margin: 20px 0 80px 0;
+    margin: 20px 0;
     box-shadow: $neo-morphism-static;
+    padding: 5px;
     @include hoverBtn;
+
+    img {
+        width: 14px;
+    }
 }
