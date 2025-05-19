@@ -7,17 +7,11 @@ input.menuToggle {
 }
 
 label.menuBubbleContainer {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     width: 53px;
     height: 53px;
-    background: rgba(36, 36, 36, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 0 50% 50% 50%;
-    border: 1px solid rgba(255, 255, 255, 0.18);
     -webkit-tap-highlight-color: transparent;
     outline: none;
     overflow: visible;
@@ -65,7 +59,7 @@ label.menuBubbleContainer {
         content: "";
         position: absolute;
         width: 3px;
-        height: 24px;
+        height: 15px;
         background-color: $black-base;
         top: 50%;
         left: 50%;
@@ -84,17 +78,17 @@ label.menuBubbleContainer {
 }
 
 nav.menu {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     width: 53px;
     height: 53px;
     opacity: 0;
     visibility: hidden;
-    background: rgba(36, 36, 36, 0.25);
+    background: rgba(36, 36, 36, 0.45);
     box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 0 50% 50% 50%;
     border: 1px solid rgba(255, 255, 255, 0.18);
     transition: all 0.5s ease-in-out;

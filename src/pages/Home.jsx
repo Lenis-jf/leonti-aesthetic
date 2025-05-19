@@ -2,58 +2,75 @@ import Menu from '../components/Menu';
 import PricesTable from '../components/PricesTable';
 import WhatsappButton from '../components/WhatsappButton';
 import Footer from '../components/Footer';
+import Service from '../components/Service';
+import Gallery from '../components/Gallery';
 import mainBGimage from "../assets/principal-assets/main-bg-img.webp";
 import mainFoto from "../assets/principal-assets/main-foto.webp";
+import mainFoto2 from "../assets/principal-assets/main-foto-2.webp";
 import mainLogo from "../assets/principal-assets/main-logo.svg";
+import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
         <div className='home'>
+            <Menu />
             <div className="main-fotos-container">
-                <img className="mainBGimage" src={mainBGimage} alt="foto enfocada en la zona de ojos y cejas de una mujer" />
-                <Menu />
-                <img className="mainFoto" src={mainFoto} alt="dueña del local cruzada de brazos en una pose poderosa pero simpatica" />
-                <div className="elipse1"></div>
-                <div className="elipse2"></div>
-                <img className="mainLogo" src={mainLogo} alt="Leonti Aesthethics Logo" />
+                <img className="mainLogo-top" src={mainLogoWhite} alt="Leonti Aesthetic"></img>
+                <Link className="contact-btn" to="/contact">Contact me</Link>
+                <img className="mainFoto" src={mainFoto2} alt="dueña del local en primer plano" />
             </div>
             <div className='mainGreeting'>
-                <h1>Crafting Confidence</h1>
-                <div className='divider2' />
-                <p className='subtitle'>Welcome to Leonti Aesthetic - your place for natural beauty and stylish care.</p>
-                <div className="text-box box-1">
-                    <p>My name is <b><i>Ecaterina Leonti</i></b>, I am a certified beautician and eyelash stylist - as well as the founder of Leonti Aesthetic. My studio stands for quality, aesthetics and genuine, natural results.</p>
-                </div>
-                <div className="text-box box-2">
-                    <p>A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to you here!</p>
-                </div>
+                <h3>Leonti Aesthetic</h3>
+                <h1>
+                    <strong>Crafting Confidence</strong>
+                </h1>
+                <br />
+                <h4>
+                    Welcome to Leonti Aesthetic - your place for natural beauty and stylish care.
+                </h4>
+                <br />
+                <p>
+                    My name is Ecaterina Leonti, I am a certified beautician and eyelash stylist - as well as the founder of <strong>Leonti Aesthetic</strong>. My studio stands for quality, aesthetics and genuine, natural results.
+                </p>
+                <br />
+                <p>
+                    A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!
+                </p>
             </div>
-            <div className='services'>
-                <h1 className='services-title'>Services</h1>
-                <div className="service pure-glow">
-                    <h1>Pure Glow</h1>
-                    <p>Classic facial cleaning</p>
-                </div>
-                <div className="service microneedling">
-                    <h1>Microneedling</h1>
-                    <p>Naturally beautiful skin through targeted deep care</p>
-                </div>
-                <div className="service eyelash-extensions">
-                    <h1>Eyelash Extensions</h1>
-                    <p>Your look, your expression</p>
-                </div>
-                <div className="service eyelash-lifting">
-                    <h1>Eyelash Lifting</h1>
-                    <p>Natural curl without extensions</p>
-                </div>
-                <div className="service eyebrows-lifting">
-                    <h1>Eyebrows Lifting</h1>
-                    <p>Volume and shap that lasts</p>
-                </div>
-            </div>
-            <Link className="see-more-btn" to="/services">See more</Link>
+            <section className='services'>
+                <DotLottieReact
+                    src="https://lottie.host/92a6ea43-55ea-42f2-b874-6a83a33d7acc/hBUyi9HHhr.lottie"
+                    loop
+                    autoplay
+                    className="bg-animation"
+                    // style={{
+                    //     width: 300,    // <-- aquí el ancho
+                    //     height: 300,   // <-- aquí la altura
+                    //     position: 'absolute',
+                    //     top: 0,
+                    //     left: '50%',
+                    //     transform: 'translateX(-50%)',
+                    // }}
+                />
+                <img className="mainFoto-services" src={mainFoto} alt="dueña del local en primer plano cruzada de brazos" />
+                <div className='light'></div>
+                <div className="border"></div>
+                <h2 className='services-title'>OUR SERVICES</h2>
+                <Service path="" name="Pure Glow"
+                    description="Classic facial cleaning" />
+                <Service path="" name="Microneedling"
+                    description="Naturally beautiful skin through targeted deep care" />
+                <Service path="" name="Eyelash extensions"
+                    description="Your look, your expression" />
+                <Service path="" name="Eyelash lifting"
+                    description="Natural curl, without extensions" />
+                <Service path="" name="Eyebrow lifting"
+                    description="Volume & shape that last" />
+                <Link className="see-more-btn" to="/services">See more</Link>
+            </section>
             <div className="prices-container">
                 <div className="iluminator1 iluminator"></div>
                 <div className="iluminator2 iluminator"></div>
@@ -68,104 +85,8 @@ const Home = () => {
                 </button>
             </div>
             <PricesTable />
-            <h1>Picture Gallery</h1>
-            <div className="picture-gallery-container">
-                <div className="black-background"></div>
-                <div className="pictures-scroll">
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo1.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo2.webp`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo3.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo4.webp`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo5.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo6.webp`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo7.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo8.webp`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo9.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo11.webp`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo13.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo14.webp`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo15.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/photo16.webp`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    {/* <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/big-eye.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.webp`}
-                            className="picture row-2"
-                        />
-                    </div>
-                    <div className="column">
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/black-glove.webp`}
-                            className="picture row-1"
-                        />
-                        <img
-                            src={`${import.meta.env.BASE_URL}assets/imgs/face-treatment.webp`}
-                            className="picture row-2"
-                        />
-                    </div> */}
-                </div>
-            </div>
+            <Gallery />
             <Link className="see-more-btn" to="/services">See more</Link>
-
             <img className="cnc-shop-logo"
                 src={`${import.meta.env.BASE_URL}assets/icons/cnc-shop.svg`}
                 alt="cnc-shop logo"

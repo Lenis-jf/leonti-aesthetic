@@ -102,10 +102,9 @@ const PricesTable = () => {
                     </section>
                 ))}
 
-                {/* Fade overlay solo cuando NO está expandida */}
-                {!expanded && <div className="fade-overlay" />}
             </div>
-
+            {/* Fade overlay solo cuando NO está expandida */}
+            {!expanded && <div className="fade-overlay" />}
             <button
                 className="toggle-btn"
                 onClick={() => setExpanded(!expanded)}

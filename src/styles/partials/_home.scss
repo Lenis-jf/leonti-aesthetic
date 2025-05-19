@@ -16,67 +16,41 @@ div.mainContainer {
 }
 
 div.main-fotos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     width: 100%;
-    max-height: 275px;
-    aspect-ratio: 16 / 9;
-
-    img.mainBGimage {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 0;
-    }
+    background-color: $negro-fondo;
+    clip-path: polygon(0 0, 98% 0, 95% 100%, 0 95%);
 
     img.mainFoto {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 75%;
-        max-width: 400px;
-        height: auto;
-        z-index: 1;
+        max-width: 100%;
+        max-width: 500px;
     }
 
-    div.elipse1 {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 200%;
-        height: 100%;
-        border-radius: 50%;
-        background-color: $primary-color;
-        box-shadow: 0 0 40px 70px $primary-color;
-        z-index: 0;
-    }
-
-    div.elipse2 {
-        position: absolute;
-        top: 230%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 200%;
-        height: 20px;
-        border-radius: 50%;
-        background-color: $primary-color;
-        box-shadow: 0 30px 50px 100px $primary-color;
-        z-index: 2;
-    }
-
-    img.mainLogo {
-        position: absolute;
-        top: 215%;
-        left: 50%;
-        transform: translateX(-50%);
+    img.mainLogo-top {
         width: 200px;
-        max-width: 50%;
-        height: auto;
-        z-index: 2;
+        margin-top: 10px;
+    }
+
+    a.contact-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 25px;
+        right: 5%;
+        width: 62px;
+        height: 22px;
+        background-color: $botones-dorados;
+        border-radius: 2px;
+        text-decoration: none;
+        @include text-font;
+        font-size: 0.8rem;
+        line-height: 10rem;
+        font-weight: 800;
+        color: $black-base;
     }
 }
 
@@ -84,154 +58,49 @@ div.main-fotos-container {
 div.mainGreeting {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    color: $black-base;
-    text-align: center;
-    z-index: 2;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.2);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    padding: 20px;
-    font-weight: 800;
-    margin-top: 95%;
-    margin-bottom: 10px;
-    width: 90%;
-    max-width: 320px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    width: 80%;
+
+    h3 {
+        @include text-font;
+        color: $botones-dorados;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
 
     h1 {
         @include titles-font;
-        text-align: center;
+        text-align: left;
+        font-size: 3.7rem;
+        line-height: 3.8rem;
+        color: $color-fuente-titulos;
     }
 
-    div.divider2 {
-        width: 85px;
-        height: 1px;
-        background-color: $black-base;
-        margin: 5px 0 10px 0;
-        flex-shrink: 0;
+    h4 {
+        @include text-font;
+        font-weight: 800;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        color: $color-fuente-titulos;
     }
 
-    p.subtitle {
+    p {
         @include text-font;
         font-size: 1.1rem;
-        line-height: 1.45rem;
-        font-weight: 800;
-        margin-top: 5px;
+        line-height: 1.8rem;
+        color: $color-fuente;
     }
-
-    div.text-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 250px;
-        height: 70px;
-        font-size: 1rem;
-        line-height: 1.4rem;
-        padding: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.2);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        font-weight: 400;
-        border-radius: 5px;
-        margin-top: 5px;
-    }
+    
 }
 
 h1 {
     @include titles-font;
     text-align: center;
     color: $black-base;
-}
-
-div.services {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    gap: 25px;
-    padding: 20px 0;
-
-    div.service {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 70%;
-        max-width: 400px;
-        height: 70px;
-        border-radius: 8px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        z-index: 0;
-
-        h1 {
-            position: absolute;
-            top: 40%;
-            transform: translateY(-50%);
-            z-index: 2;
-            color: $secondary-color;
-            font-size: 1.8rem;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 70%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            height: 0px;
-            border-radius: 50%;
-            background-color: $black-base;
-            box-shadow: 0 0 25px 20px rgba(36, 36, 36, 0.65);
-            z-index: 1;
-        }
-
-        p {
-            @include text-font;
-            position: absolute;
-            top: 65%;
-            transform: translateY(-50%);
-            z-index: 2;
-            color: $secondary-color;
-            font-size: 0.9rem;
-            line-height: 1.4rem;
-            font-weight: 400;
-        }
-    }
-
-    div.service.pure-glow {
-        background-image: url('/assets/imgs/pure-glow.webp');
-    }
-
-    div.service.microneedling {
-        background-image: url('/assets/imgs/microneedling.webp');
-    }
-
-    div.service.eyelash-extensions {
-        background-image: url('/assets/imgs/eyelash-extensions.webp');
-    }
-
-    div.service.eyelash-lifting {
-        background-image: url('/assets/imgs/eyelash-lifting.webp');
-    }
-
-    div.service.eyebrows-lifting {
-        background-image: url('/assets/imgs/eyebrow-lifting.webp');
-    }
-
-    div.service.eyebrows-lifting {
-        background-image: url('/assets/imgs/eyebrow-lifting.webp');
-    }
 }
 
 button.btn {
@@ -285,9 +154,8 @@ div.prices-container {
     height: 300px;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
     background: #0D0D0D;
-    background: linear-gradient(180deg, rgba(13, 13, 13, 1) 50%, rgba(255, 251, 248, 1) 85%);
+    background: linear-gradient(180deg, $primary-color 50%, $third-color 85%);
 
     div.iluminator {
         position: absolute;
@@ -295,7 +163,7 @@ div.prices-container {
         height: 15px;
         border-radius: 50%;
         box-shadow: 5px 0px 100px 30px $primary-color;
-        background-color: $primary-color
+        background-color: $third-color;
     }
 
     div.iluminator1 {
@@ -340,190 +208,6 @@ div.prices-container {
             background-repeat: no-repeat;
             background-size: cover;
         }
-    }
-}
-
-.price-table-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 2rem;
-    transition: all 1s ease;
-
-    .price-table {
-        position: relative;
-        width: 80%;
-        max-width: 600px;
-        margin: 2rem 0;
-        background: white;
-        border-radius: 15px;
-        max-height: 600px;
-        overflow: hidden;
-        transition: max-height 1s ease;
-
-        /* estilos de sección, categoría, filas… igual que antes */
-        .section-block {
-            .section-header {
-                @include titles-font;
-                background-color: $primary-color;
-                color: $white-base;
-                padding: 1.25rem;
-                font-size: 1.4rem;
-            }
-
-            &:first-child .section-header {
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-            }
-
-            .category-header {
-                @include titles-font;
-                background-color: fade-out($primary-color, 0.5);
-                padding: 1rem 1.25rem;
-                font-size: 1.1rem;
-            }
-
-            .service-row {
-                @include text-font;
-                display: flex;
-                justify-content: space-between;
-                padding: 0.75rem 1.25rem;
-                border-bottom: 1px solid #dee2e6;
-
-                &:hover {
-                    background-color: #f8f9fa;
-                }
-
-                .service-name {
-                    color: #212529;
-                }
-
-                .price {
-                    color: #6c757d;
-                }
-            }
-
-            .note {
-                padding: 0.8rem;
-                margin: 1rem;
-                background-color: #fff4e6;
-                font-style: italic;
-                color: $black-base;
-                border-radius: 5px;
-                opacity: 0.7;
-            }
-        }
-
-        /* El overlay de fade en fondo de la parte final */
-        .fade-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(to bottom,
-                    rgba(255, 255, 255, 0) 0%,
-                    $secondary-color 100%);
-            opacity: 1;
-            pointer-events: none;
-            transition: opacity 1s ease;
-        }
-    }
-
-    /* cuando está expandida quitamos el max-height */
-    .price-table.expanded {
-        max-height: 2000px;
-        overflow: visible;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Si está expandida, ocultamos el overlay */
-    .price-table.expanded .fade-overlay {
-        opacity: 0;
-    }
-
-    .toggle-btn {
-        @include titles-font;
-        margin: 1rem 0;
-        padding: 0.5rem 1.5rem;
-        border: none;
-        border-radius: 20px;
-        background-color: $btn-color;
-        color: $white-base;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 1.2rem;
-
-        @include hoverBtn;
-    }
-}
-
-
-div.picture-gallery-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 30px 0 20px 0;
-    overflow: hidden;
-
-    div.black-background {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        height: 250px;
-        transform: translateY(-50%);
-        background-color: $btn-color;
-        z-index: 0;
-    }
-
-    div.pictures-scroll {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 5px;
-        overflow-x: auto;
-        max-width: 100vw;
-        height: 100%;
-        overflow-x: auto;
-        z-index: 1;
-        box-sizing: border-box;
-        padding: 0 0 0 10px;
-
-        div.column {
-            display: flex;
-            flex: 0 0 auto;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        img.picture {
-            display: block;
-            width: 115px;
-            object-fit: cover;
-            border-radius: 8px;
-            background-color: gray;
-        }
-
-        div.column:nth-child(3n+1) img.row-1 {
-            height: 112px;
-        }
-
-        div.column:nth-child(3n+2) img.row-1 {
-            height: 150px;
-        }
-
-        div.column:nth-child(3n+3) img.row-1 {
-            height: 170px;
-        }
-
-        .row-2 {
-            height: 200px;
-        }
-    }
-
-    .pictures-scroll::-webkit-scrollbar {
-        display: none;
     }
 }
 
@@ -606,10 +290,4 @@ a.cnc-shop {
     margin: 20px 0 80px 0;
     box-shadow: $neo-morphism-static;
     @include hoverBtn;
-}
-
-@media screen and (min-width: 470px) {
-    div.mainGreeting {
-        margin-top: 440px;
-    }
 }
