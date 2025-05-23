@@ -17,13 +17,18 @@ const Home = () => {
     return (
         <div className='home'>
             <Menu />
-            <div className="main-fotos-container">
-                <img className="mainLogo-top" src={mainLogoWhite} alt="Leonti Aesthetic"></img>
-                <Link className="contact-btn" to="/contact">Contact me</Link>
-                <img className="mainFoto" src={mainFoto2} alt="dueña del local en primer plano" />
-            </div>
-            <div className='mainGreeting'>
-                <h3>Leonti Aesthetic</h3>
+            <section className="firstSection">
+                <section className="main-fotos-container">
+                    <img className="mainLogo-top" src={mainLogoWhite} alt="Leonti Aesthetic"></img>
+                    <Link className="contact-btn" to="/contact">Contact me</Link>
+                    <img className="mainFoto" src={mainFoto2} alt="dueña del local en primer plano" />
+                </section>
+                <h1>Welcome to <strong>Leonti Aesthetic</strong> a place where we care about you</h1>
+            </section>
+            <section className='mainGreeting'>
+                <div className="greetingImg-container">
+                    <img className="mainFoto-greeting" src={mainFoto} alt="dueña del local en primer plano cruzada de brazos" />
+                </div>
                 <h1>
                     <strong>Crafting Confidence</strong>
                 </h1>
@@ -39,17 +44,8 @@ const Home = () => {
                 <p>
                     A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!
                 </p>
-            </div>
-            <section className='services'>
-                <DotLottieReact
-                    src="https://lottie.host/92a6ea43-55ea-42f2-b874-6a83a33d7acc/hBUyi9HHhr.lottie"
-                    loop
-                    autoplay
-                    className="bg-animation"
-                />
-                <img className="mainFoto-services" src={mainFoto} alt="dueña del local en primer plano cruzada de brazos" />
-                <div className='light'></div>
-                <div className="border"></div>
+            </section>
+            <section className='services beige-section'>
                 <h2 className='services-title'>OUR SERVICES</h2>
                 <Service path="" name="Pure Glow"
                     description="Classic facial cleaning" />
@@ -63,7 +59,7 @@ const Home = () => {
                     description="Volume & shape that last" />
                 <Link className="see-more-btn" to="/services">See more</Link>
             </section>
-            <div className="prices-container">
+            <section className="prices-container">
                 {/* <div className="iluminator1 iluminator"></div>
                 <div className="iluminator2 iluminator"></div> */}
                 <h3>
@@ -75,14 +71,14 @@ const Home = () => {
                 <button className='price-list btn'>Price List - Download
                     <div className="download-icon-container"></div>
                 </button>
-            </div>
+            </section>
             <PricesTable />
             <Gallery />
             <div className="btn-bottom-container">
                 <Link className="see-more-btn" to="/services">See more</Link>
                 <Link className="contact-btn" to="/services">Contact me</Link>
             </div>
-            <section className="cnc-shop-section">
+            <section className="cnc-shop-section beige-section beige-section">
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-orange.webp`} alt="mano decorativa con producto" className="hand orange" />
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-white.webp`} alt="mano decorativa con producto" className="hand white" />
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-transparent.webp`} alt="mano decorativa con producto" className="hand transparent" />
@@ -104,7 +100,7 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <Link to="" className="cnc-shop">Go to Store Now <img src={`${import.meta.env.BASE_URL}assets/icons/arrow-right-white.svg`} alt="icono a la flecha a la derecha" /></Link>
+                <Link to="https://shop.cnc-cosmetic.de/" className="cnc-shop">Go to Store Now <img src={`${import.meta.env.BASE_URL}assets/icons/arrow-right-white.svg`} alt="icono a la flecha a la derecha" /></Link>
                 <h1 className="access-code">Access Code: 1180011</h1>
             </section>
             <WhatsappButton />

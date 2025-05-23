@@ -78,13 +78,11 @@
         }
     }
 
-    /* cuando está expandida quitamos el max-height */
     .price-table.expanded {
         max-height: 2000px;
         overflow: visible;
     }
 
-    /* El overlay de fade en fondo de la parte final */
     .fade-overlay {
         position: absolute;
         bottom: 80px;
@@ -99,7 +97,6 @@
         transition: opacity 1s ease;
     }
     
-    /* Si está expandida, ocultamos el overlay */
     .price-table-wrapper.expanded .fade-overlay {
         opacity: 0;
     }

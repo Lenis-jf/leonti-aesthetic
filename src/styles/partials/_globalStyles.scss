@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 * {
     box-sizing: border-box;
@@ -10,4 +11,49 @@ html {
     font-size: 62.5%;
     background-color: $primary-color;
     overflow-x: hidden;
+}
+
+section.beige-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: $third-color;
+    @include topShadow;
+}
+
+a.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $botones-dorados;
+    text-decoration: none;
+    @include text-font;
+    font-weight: 800;
+    color: $black-base;
+}
+
+div.icons-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    span.social-media-icon {
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+}
+
+span.address {
+    @include text-font;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
 }

@@ -15,51 +15,55 @@ div.mainContainer {
     position: relative;
 }
 
-a.contact-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $botones-dorados;
-    text-decoration: none;
-    @include text-font;
-    font-weight: 800;
-    color: $black-base;
-}
-
-div.main-fotos-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+section.firstSection {
     width: 100%;
-    background-color: $negro-fondo;
-    clip-path: polygon(0 0, 98% 0, 95% 100%, 0 95%);
+    height: 100vh;
 
-    img.mainFoto {
-        max-width: 100%;
-        max-width: 100vw;
+    h1 {
+        @include titles-font;
+        color: $color-fuente-titulos;
+        font-size: 3.5rem;
+        line-height: 4rem;
+        text-align: left;
+        max-width: 300px;
+        margin: 50px auto 0 auto;
     }
 
-    img.mainLogo-top {
-        width: 40%;
-        max-width: 220px;
-        margin-top: 10px;
-    }
-
-    a.contact-btn {
-        position: absolute;
-        top: 25px;
-        right: 5%;
-        width: 62px;
-        height: 22px;
-        font-size: 0.8rem;
-        line-height: 10rem;
-        border-radius: 2px;
+    section.main-fotos-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        background-color: $negro-fondo;
+        clip-path: polygon(0 0, 99% 0, 97% 100%, 0 95%);
+    
+        img.mainFoto {
+            width: 100%;
+            max-width: 350px;
+        }
+    
+        img.mainLogo-top {
+            width: 40%;
+            max-width: 220px;
+            margin-top: 10px;
+        }
+    
+        a.contact-btn {
+            position: absolute;
+            top: 25px;
+            right: 5%;
+            width: 62px;
+            height: 22px;
+            font-size: 0.8rem;
+            line-height: 10rem;
+            border-radius: 2px;
+        }
     }
 }
 
 
-div.mainGreeting {
+section.mainGreeting {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -68,6 +72,33 @@ div.mainGreeting {
     font-size: 1.3rem;
     line-height: 1.8rem;
     width: 80%;
+
+    div.greetingImg-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img.mainFoto-greeting {
+            width: 80%;
+            max-width: 350px;
+            height: auto;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            height: 30px;
+            background-color: $secondary-color;
+            filter: blur(5px);
+            z-index: 2;
+        }
+    }
 
     h3 {
         @include text-font;
@@ -172,7 +203,7 @@ div.btn-bottom-container {
     }
 }
 
-div.prices-container {
+section.prices-container {
     position: relative;
     display: flex;
     width: 100%;
@@ -237,25 +268,8 @@ div.prices-container {
 }
 
 section.cnc-shop-section {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $third-color;
     padding: 150px 0;
     margin-top: 60px;
-
-    &::before {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: $botones-dorados;
-        position: absolute;
-        top: 2px;
-        filter: blur(5px);
-    }
 
     div.cnc-card {
         position: relative;
@@ -281,7 +295,7 @@ section.cnc-shop-section {
         }
 
         img.cnc-shop-logo {
-            width: clamp(200px, 80%, 300px);
+            width: clamp(80px, 0.5vw, 100px);
         }
 
         div.divider {
@@ -298,6 +312,7 @@ section.cnc-shop-section {
             font-weight: 500;
             color: $color-fuente;
             text-align: center;
+            max-width: 200px;
         }
 
         div.blue-info {
@@ -309,7 +324,7 @@ section.cnc-shop-section {
             width: 90%;
             max-width: 240px;
             height: 150px;
-            background-color: #1D5078;
+            background-color: #FFCBCB;
             border-radius: 10px;
             padding: 15px;
             bottom: -80px;
@@ -322,7 +337,7 @@ section.cnc-shop-section {
                 border-radius: 10px;
                 top: -10%;
                 transform: translateY(50%);
-                background-color: #1D5078
+                background-color: #FFCBCB
             }
 
             p {
@@ -332,6 +347,7 @@ section.cnc-shop-section {
                 line-height: 100%;
                 color: $white-base;
                 text-align: center;
+                max-width: 160px;
             }
         }
     }
