@@ -29,7 +29,7 @@ function App() {
   return (
     <BrowserRouter basename="/leonti-aesthetic">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home imagesLoaded={ready}/>} />
       </Routes>
     </BrowserRouter>
   );

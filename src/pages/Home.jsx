@@ -11,9 +11,20 @@ import mainLogo from "../assets/principal-assets/main-logo.svg";
 import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
+import { useState, useRef, useEffect } from 'react';
+
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ imagesLoaded }) => {
+    const titleRef = useRef(null);
+    const [play, setPlay] = useState(false);
+
+    useEffect(() => {
+        if(imagesLoaded && titleRef.current) {
+            requestAnimationFrame(() => setPlay(true));
+        }
+    }, [imagesLoaded]);
+
     return (
         <div className='home'>
             <Menu />
@@ -23,27 +34,32 @@ const Home = () => {
                     <Link className="contact-btn" to="/contact">Contact me</Link>
                     <img className="mainFoto" src={mainFoto2} alt="dueña del local en primer plano" />
                 </section>
-                <h1>Welcome to <strong>Leonti Aesthetic</strong> a place where we care about you</h1>
+                <div className='mainTitle-container'>
+                    <h1 ref={titleRef} className={play ? 'running' : ''}>
+                        Welcome to <strong>Leonti Aesthetic</strong> a place where we care about you</h1>
+                </div>
             </section>
             <section className='mainGreeting'>
                 <div className="greetingImg-container">
                     <img className="mainFoto-greeting" src={mainFoto} alt="dueña del local en primer plano cruzada de brazos" />
                 </div>
-                <h1>
-                    <strong>Crafting Confidence</strong>
-                </h1>
-                <br />
-                <h4>
-                    Welcome to Leonti Aesthetic - your place for natural beauty and stylish care.
-                </h4>
-                <br />
-                <p>
-                    My name is Ecaterina Leonti, I am a certified beautician and eyelash stylist - as well as the founder of <strong>Leonti Aesthetic</strong>. My studio stands for quality, aesthetics and genuine, natural results.
-                </p>
-                <br />
-                <p>
-                    A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!
-                </p>
+                <div className='greeting'> 
+                    <h1>
+                        <strong>Crafting Confidence</strong>
+                    </h1>
+                    <br />
+                    <h4>
+                        Welcome to Leonti Aesthetic - your place for natural beauty and stylish care.
+                    </h4>
+                    <br />
+                    <p>
+                        My name is Ecaterina Leonti, I am a certified beautician and eyelash stylist - as well as the founder of <strong>Leonti Aesthetic</strong>. My studio stands for quality, aesthetics and genuine, natural results.
+                    </p>
+                    <br />
+                    <p>
+                        A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!
+                    </p>
+                </div>
             </section>
             <section className='services beige-section'>
                 <h2 className='services-title'>OUR SERVICES</h2>
