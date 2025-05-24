@@ -32,11 +32,27 @@
 @mixin topShadow {
     &::before {
         content: "";
-        width: 100%;
+        width: 120%;
         height: 40px;
         background-color: $secondary-color;
         position: absolute;
         top: -20px;
-        filter: blur(10px);
+        left: 50%;
+        transform: translateX(-50%);
+        filter: blur(8px);
+    }
+}
+
+@mixin bottomShadow {
+    &::after {
+        content: "";
+        width: 115%;
+        height: 40px;
+        background-color: $secondary-color;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: blur(8px);
     }
 }

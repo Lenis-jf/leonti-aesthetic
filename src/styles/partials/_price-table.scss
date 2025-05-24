@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-bottom: 2rem;
+    padding-bottom: 60px;
     transition: all 1s ease;
     background-color: $third-color;
 
@@ -85,10 +85,11 @@
 
     .fade-overlay {
         position: absolute;
-        bottom: 80px;
+        bottom: 120px;
         left: 0;
         width: 100%;
         height: 200px;
+        background-color: $third-color;
         background: linear-gradient(to bottom,
                 rgba(255, 255, 255, 0) 0%,
                 $third-color 100%);
@@ -112,7 +113,7 @@
         cursor: pointer;
         transition: all 0.3s ease;
         font-size: 1.2rem;
-
+        outline: none;
         @include hoverBtn;
     }
 }

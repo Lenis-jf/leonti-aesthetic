@@ -29,7 +29,7 @@ const Home = ({ imagesLoaded }) => {
         <div className='home'>
             <Menu />
             <section className="firstSection">
-                <section className="main-fotos-container">
+                <section className="main-fotos-container dark-section">
                     <img className="mainLogo-top" src={mainLogoWhite} alt="Leonti Aesthetic"></img>
                     <Link className="contact-btn" to="/contact">Contact me</Link>
                     <img className="mainFoto" src={mainFoto2} alt="dueña del local en primer plano" />
@@ -120,7 +120,7 @@ const Home = ({ imagesLoaded }) => {
                 <h1 className="access-code">Access Code: 1180011</h1>
             </section>
             <WhatsappButton />
-            <Footer />
+            <Footer/>
         </div>
     );
 }

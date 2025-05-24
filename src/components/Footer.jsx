@@ -17,7 +17,7 @@ const Footer = () => {
                 <h1>We’re here to help</h1>
                 <p>Give us call or send us a message and one of our friendly team members will be in touch shortly.</p>
             </section>
-            <footer>
+            <footer className="dark-section">
                 <img className="main-logo-white" src={mainLogoWhite} alt="Leonti Aesthetics logo" />
                 <nav className="footer-menu">
                     <ul>
