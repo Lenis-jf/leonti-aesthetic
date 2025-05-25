@@ -47,7 +47,7 @@ const Menu = () => {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <div className="divider"></div>
-                    <li><Link to="/">Services</Link></li>
+                    <li><Link to="services">Services</Link></li>
                     <div className="divider"></div>
                     <li><Link to="/about">Prices</Link></li>
                     <div className="divider"></div>

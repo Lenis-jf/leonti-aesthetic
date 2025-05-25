@@ -38,7 +38,7 @@ const Services = () => {
                     <p>
                         <strong>Result: A clear, radiant, and healthy-looking</strong><br />complexion.
                     </p>
-                    <Link className="contact-btn"></Link>
+                    <Link className="contact-btn">Contact me</Link>
                 </div>
                 <div className="service-card microneedling">
                     <img src={`${import.meta.env.BASE_URL}assets/imgs/rosa-gloves.webp`} alt="microneedling service image" className="microneedling-img" />
@@ -72,7 +72,7 @@ const Services = () => {
                         <h3>MicroNeedling Pro</h3>
                         <p>Intensive & deeply active — for powerful anti-aging and skin renewal.</p>
                     </div>
-                    <Link className="contact-btn"></Link>
+                    <Link className="contact-btn">Contact me</Link>
                 </div>
                 <div className="service-card eyelashextensions">
                     <img src={`${import.meta.env.BASE_URL}assets/imgs/eyelash-extensions.webp`} alt="eyelash extensions service image" className="eyelashextensions-img" />
@@ -81,26 +81,26 @@ const Services = () => {
                     <p>
                         Enhance your natural beauty with lash styles ranging from subtle to bold — no mascara needed. We use top-quality materials and precision techniques to deliver the look that suits you best:
                     </p>
-                    <div className="subservice">
+                    <div className="subservice-2">
                         <span>Classic (1:1)</span>
                         <p>
                             Elegant and natural for everyday wear
                         </p>
                     </div>
-                    <div className="subservice">
+                    <div className="subservice-2">
                         <span>Soft Volume (3-4D)</span>
                         <p>
                             Fuller lashes with a soft, fluffy finish
                         </p>
                     </div>
-                    <div className="subservice">
+                    <div className="subservice-2">
                         <span>Volume (5-7D)</span>
                         <p>
                             Fuller lashes with a soft, fluffy finish
                         </p>
                     </div>
                     <h4>Choose your style We’ll take care of the rest</h4>
-                    <Link className="contact-btn"></Link>
+                    <Link className="contact-btn">Contact me</Link>
                 </div>
                 <div className="service-card eyelash-lifting">
                     <img src={`${import.meta.env.BASE_URL}assets/imgs/eyelash-lifting.webp`} alt="eyelash lifting service image" className="eyelash-lifting-img" />
@@ -110,7 +110,7 @@ const Services = () => {
                         Get fuller, more defined brows without the daily effort. Your eyebrows are shaped, strengthened, and fixed for a clean, even look that stays in place.
                         <strong>Result: A natural curl that lasts up to 6 weeks.</strong>
                     </p>
-                    <Link className="contact-btn"></Link>
+                    <Link className="contact-btn">Contact me</Link>
                 </div>
                 <div className="service-card eyebrow-lifting">
                     <img src={`${import.meta.env.BASE_URL}assets/imgs/eyebrow-lifting.webp`} alt="eyebrow lifting service image" className="eyebrow-lifting-img" />
@@ -119,7 +119,7 @@ const Services = () => {
                     <p>
                         Enhance your natural beauty with lash styles ranging from subtle to bold — no mascara needed. We use top-quality materials and precision techniques to deliver the look that suits you best:
                     </p>
-                    <Link className="contact-btn"></Link>
+                    <Link className="contact-btn">Contact me</Link>
                 </div>
                 <Link to="/" className='mainLogo-bottom'>
                     <img src={mainLogo} alt="Leonti Aesthetic Logo" />
