@@ -20,7 +20,7 @@ const Home = ({ imagesLoaded }) => {
     const [play, setPlay] = useState(false);
 
     useEffect(() => {
-        if(imagesLoaded && titleRef.current) {
+        if (imagesLoaded && titleRef.current) {
             requestAnimationFrame(() => setPlay(true));
         }
     }, [imagesLoaded]);
@@ -39,29 +39,29 @@ const Home = ({ imagesLoaded }) => {
                         Welcome to <strong>Leonti Aesthetic</strong> a place where we care about you</h1>
                 </div>
             </section>
-            <section className='mainGreeting'>
-                <div className="greetingImg-container">
-                    <img className="mainFoto-greeting" src={mainFoto} alt="dueña del local en primer plano cruzada de brazos" />
-                </div>
-                <div className='greeting'> 
-                    <h1>
-                        <strong>Crafting Confidence</strong>
-                    </h1>
-                    <br />
-                    <h4>
-                        Welcome to Leonti Aesthetic - your place for natural beauty and stylish care.
-                    </h4>
-                    <br />
-                    <p>
-                        My name is Ecaterina Leonti, I am a certified beautician and eyelash stylist - as well as the founder of <strong>Leonti Aesthetic</strong>. My studio stands for quality, aesthetics and genuine, natural results.
-                    </p>
-                    <br />
-                    <p>
-                        A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!
-                    </p>
-                </div>
-            </section>
             <section className='services beige-section'>
+                <section className='mainGreeting'>
+                    <div className="greetingImg-container">
+                        <img className="mainFoto-greeting" src={mainFoto} alt="dueña del local en primer plano cruzada de brazos" />
+                    </div>
+                    <div className='greeting'>
+                        <h1>
+                            <strong>Crafting Confidence</strong>
+                        </h1>
+                        <br />
+                        <h4>
+                            Welcome to Leonti Aesthetic - your place for natural beauty and stylish care.
+                        </h4>
+                        <br />
+                        <p>
+                            My name is Ecaterina Leonti, I am a certified beautician and eyelash stylist - as well as the founder of <strong>Leonti Aesthetic</strong>. My studio stands for quality, aesthetics and genuine, natural results.
+                        </p>
+                        <br />
+                        <p>
+                            A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!
+                        </p>
+                    </div>
+                </section>
                 <h2 className='services-title'>OUR SERVICES</h2>
                 <Service path="" name="Pure Glow"
                     description="Classic facial cleaning" />
@@ -120,7 +120,7 @@ const Home = ({ imagesLoaded }) => {
                 <h1 className="access-code">Access Code: 1180011</h1>
             </section>
             <WhatsappButton />
-            <Footer/>
+            <Footer />
         </div>
     );
 }
