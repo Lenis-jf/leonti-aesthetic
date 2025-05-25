@@ -39,7 +39,7 @@ div.whatsapp-floating {
         position: absolute;
         bottom: 60px;
         right: 0;
-        width: 200px;
+        width: 180px;
         padding: 10px;
         background: white;
         border-radius: 8px;
@@ -54,7 +54,8 @@ div.whatsapp-floating {
             @include text-font;
             margin: 0 0 8px;
             color: #333;
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 0.8vw, 1.2rem);
+            line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         }
 
         .popup-button {
@@ -65,8 +66,8 @@ div.whatsapp-floating {
             color: $white-base;
             border-radius: 4px;
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: clamp(0.6rem, 0.8vw, 1rem);
+            line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         }
     }
 

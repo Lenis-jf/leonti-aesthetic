@@ -17,13 +17,45 @@ import { Link } from "react-router-dom";
 
 const Home = ({ imagesLoaded }) => {
     const titleRef = useRef(null);
-    const [play, setPlay] = useState(false);
+    const greetingImgRef = useRef(null);
+    const greetingTextRef = useRef(null);
+
+    const [playTitle, setPlayTitle] = useState(false);
+    const [playGreetingImg, setPlayGreetingImg] = useState(false);
+    const [playGreetingText, setPlayGreetingText] = useState(false);
 
     useEffect(() => {
         if (imagesLoaded && titleRef.current) {
-            requestAnimationFrame(() => setPlay(true));
+            requestAnimationFrame(() => setPlayTitle(true));
         }
     }, [imagesLoaded]);
+
+    useEffect(() => {
+        const targets = [greetingImgRef.current, greetingTextRef.current].filter(Boolean);
+        if (targets.length === 0) return;
+
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                const isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.1;
+                if (entry.target === greetingImgRef.current) {
+                    setPlayGreetingImg(isVisible);
+                }
+                if (entry.target === greetingTextRef.current) {
+                    setPlayGreetingText(isVisible);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        });
+
+        targets.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className='home'>
@@ -35,16 +67,20 @@ const Home = ({ imagesLoaded }) => {
                     <img className="mainFoto" src={mainFoto2} alt="dueña del local en primer plano" />
                 </section>
                 <div className='mainTitle-container'>
-                    <h1 ref={titleRef} className={play ? 'running' : ''}>
+                    <h1 ref={titleRef} className={playTitle ? 'running' : ''}>
                         Welcome to <strong>Leonti Aesthetic</strong> a place where we care about you</h1>
                 </div>
             </section>
             <section className='services beige-section'>
                 <section className='mainGreeting'>
                     <div className="greetingImg-container">
-                        <img className="mainFoto-greeting" src={mainFoto} alt="dueña del local en primer plano cruzada de brazos" />
+                        <img className={`mainFoto-greeting ${playGreetingImg ? 'running' : ''}`}
+                            src={mainFoto}
+                            alt="dueña del local en primer plano cruzada de brazos"
+                            ref={greetingImgRef} />
                     </div>
-                    <div className='greeting'>
+                    <div className={`greeting ${playGreetingText ? 'running' : ''}`}
+                        ref={greetingTextRef}>
                         <h1>
                             <strong>Crafting Confidence</strong>
                         </h1>

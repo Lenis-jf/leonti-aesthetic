@@ -31,7 +31,8 @@
                 background-color: $primary-color;
                 color: $white-base;
                 padding: 1.25rem;
-                font-size: 1.4rem;
+                font-size: clamp(1.2rem, 1vw, 1.5rem);
+                line-height: clamp(1.5rem, 1vw, 1.8rem);
                 border-radius: 8px;
             }
 
@@ -39,7 +40,8 @@
                 @include titles-font;
                 background-color: $third-color;
                 padding: 1rem 1.25rem;
-                font-size: 1.1rem;
+                font-size: clamp(1rem, 0.8vw, 1.2rem);
+                line-height: clamp(1.5rem, 0.8vw, 1.8rem);
                 border-radius: 8px;
                 margin: 5px 0;
                 color: $color-fuente;
@@ -112,7 +114,8 @@
         color: $white-base;
         cursor: pointer;
         transition: all 0.3s ease;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 0.8vw, 1.2rem);
+        line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         outline: none;
         @include hoverBtn;
     }

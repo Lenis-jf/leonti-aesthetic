@@ -9,8 +9,8 @@ section.services.beige-section {
     h2 {
         @include text-font;
         font-weight: 800;
-        font-size: 2rem;
-        line-height: 1.2rem;
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        line-height: clamp(0.9rem, 1vw, 1.2rem);
         color: $primary-color;
     }
 
@@ -23,13 +23,14 @@ section.services.beige-section {
         border-radius: 8px;
         background-color: $secondary-color;
         z-index: 0;
-        padding: 25px;
+        padding: 20px;
         box-shadow: $neo-morphism-static;
 
         h2 {
             color: $color-fuente-titulos;
-            font-size: 2.5rem;
-            margin-bottom: 15px
+            font-size: clamp(2.2rem, 2vw, 2.5rem);
+            line-height: clamp(1.5rem, 0.8vw, 1.8rem);
+            margin-bottom: 15px;
         }
 
         p {
@@ -38,8 +39,8 @@ section.services.beige-section {
             transform: translateY(-30%);
             z-index: 2;
             color: $color-fuente;
-            font-size: 1.1rem;
-            line-height: 0.9rem;
+            font-size: clamp(1rem, 0.8vw, 1.2rem);
+            line-height: clamp(1.5rem, 0.8vw, 1.8rem);
             font-weight: 400;
             text-align: center;
         }

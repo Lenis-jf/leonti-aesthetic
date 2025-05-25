@@ -95,7 +95,7 @@ section.firstSection {
             right: 5%;
             width: 62px;
             height: 22px;
-            font-size: 0.8rem;
+            font-size: clamp(0.8rem, 1vw, 1.2rem);
             line-height: 10rem;
             border-radius: 2px;
         }
@@ -117,51 +117,93 @@ section.mainGreeting {
         max-width: 280px;
         display: flex;
         justify-content: center;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         img.mainFoto-greeting {
             width: 80%;
             height: auto;
             z-index: 1;
-            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+            opacity: 0;
+            transform: translateY(20px);
+
+            &.running {
+                animation-play-state: running;
+            }
         }
 
         &::before {
             content: "";
             display: block;
             position: absolute;
-            bottom: 10px;
+            bottom: -20px;
             width: 100%;
-            height: 30px;
+            height: 80px;
             background-color: $third-color;
             filter: blur(5px);
             z-index: 2;
         }
     }
 
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }   
+
     div.greeting {
         width: 100%;
         max-width: 260px;
+        animation: fadeInRight 1s ease-out;
+        animation-fill-mode: forwards;
+        animation-delay: 500m;
+        animation-play-state: paused;
+        opacity: 0;
+        transform: translateX(40px);
+
+        &.running {
+            animation-play-state: running;
+        }
         
         h1 {
             @include titles-font;
             text-align: left;
-            font-size: 3.7rem;
-            line-height: 3.8rem;
+            font-size: clamp(2.8rem, 2vw, 3.5rem);
+            line-height: clamp(3.1rem, 2vw, 3.8rem);
             color: $color-fuente-titulos;
         }
 
         h4 {
             @include text-font;
             font-weight: 800;
-            font-size: 1.5rem;
-            line-height: 1.8rem;
+            font-size: clamp(1.2rem, 1vw, 1.7rem);
+            line-height: clamp(1.5rem, 1vw, 1.8rem);
             color: $color-fuente-titulos;
         }
 
         p {
             @include text-font;
-            font-size: 1.3rem;
-            line-height: 2rem;
+            font-size: clamp(1.2rem, 0.8vw, 1.5rem);
+            line-height: clamp(1.2rem, 0.8vw, 1.5rem);
             color: $color-fuente;
         }
     }   
@@ -177,11 +219,11 @@ button.btn {
     @include titles-font;
     width: 240px;
     height: 40px;
-    border-radius: 8px;
+    border-radius: 6px;
     background-color: $white-base;
     color: $black-base;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: clamp(1.2rem, 0.8vw, 1.5rem);
+    line-height: clamp(1.5rem, 0.8vw, 1.8rem);
     font-weight: 800;
     border: none;
     cursor: pointer;
@@ -193,8 +235,8 @@ button.btn {
 }
 
 h1~button.btn {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    font-size: clamp(1.5rem, 0.8vw, 1.8rem);
+    line-height: clamp(1.9rem, 0.8vw, 2.2rem);
     font-weight: 800;
 }
 
@@ -202,13 +244,13 @@ a.see-more-btn {
     @include titles-font;
     width: 88px;
     height: 30px;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: clamp(1rem, 0.8vw, 1.2rem);
+    line-height: clamp(1.5rem, 0.8vw, 1.8rem);
     text-align: center;
     text-decoration: none;
     color: $white-base;
     background-color: $btn-color;
-    border-radius: 8px;
+    border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,8 +272,8 @@ div.btn-bottom-container {
     a.contact-btn {
         width: 88px;
         height: 30px;
-        font-size: 1.2rem;
-        line-height: 1.8rem;
+        font-size: clamp(1rem, 0.8vw, 1.2rem);
+        line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         border-radius: 8px;
         box-shadow: $neo-morphism-static;
         transform: translateX(-40%);
@@ -311,7 +353,8 @@ section.cnc-shop-section {
 
         h2 {
             @include titles-font;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 0.8vw, 1.2rem);
+            line-height: clamp(1.5rem, 0.8vw, 1.8rem);
             text-align: center;
             color: $botones-dorados;
             font-weight: 800;
@@ -330,7 +373,8 @@ section.cnc-shop-section {
 
         p {
             @include text-font;
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 0.8vw, 1.2rem);
+            line-height: clamp(1.5rem, 0.8vw, 1.8rem);
             line-height: 100%;
             font-weight: 500;
             color: $color-fuente;
@@ -366,8 +410,8 @@ section.cnc-shop-section {
             p {
                 @include text-font;
                 font-weight: 500;
-                font-size: 1.1rem;
-                line-height: 100%;
+                font-size: clamp(1rem, 0.8vw, 1.2rem);
+                line-height: clamp(1.5rem, 0.8vw, 1.8rem);
                 color: $white-base;
                 text-align: center;
                 max-width: 160px;
@@ -389,8 +433,8 @@ section.cnc-shop-section {
 h1.access-code {
     @include titles-font;
     color: $color-fuente;
-    font-size: 1.2rem;
-    line-height: 100%;
+    font-size: clamp(1rem, 0.8vw, 1.2rem);
+    line-height: clamp(1.5rem, 0.8vw, 1.8rem);
 }
 
 a.cnc-shop {
@@ -402,8 +446,8 @@ a.cnc-shop {
     width: 180px;
     height: 45px;
     @include titles-font;
-    font-size: 1.5rem;
-    line-height: 1.9rem;
+    font-size: clamp(1.2rem, 1vw, 1.5rem);
+    line-height: clamp(1.5rem, 1vw, 1.8rem);
     background-color: $color-fuente-titulos;
     color: $white-base;
     border-radius: 8px;
