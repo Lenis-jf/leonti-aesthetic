@@ -40,7 +40,7 @@ div.whatsapp-floating {
         bottom: 60px;
         right: 0;
         width: 180px;
-        padding: 10px;
+        padding: 15px;
         background: white;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -54,7 +54,7 @@ div.whatsapp-floating {
             @include text-font;
             margin: 0 0 8px;
             color: #333;
-            font-size: clamp(1rem, 0.8vw, 1.2rem);
+            font-size: $tamano-texto-mediano;
             line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         }
 
@@ -66,7 +66,7 @@ div.whatsapp-floating {
             color: $white-base;
             border-radius: 4px;
             text-decoration: none;
-            font-size: clamp(0.6rem, 0.8vw, 1rem);
+            font-size: $tamano-texto-pequeno;
             line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         }
     }

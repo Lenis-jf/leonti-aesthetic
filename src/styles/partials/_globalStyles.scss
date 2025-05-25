@@ -21,7 +21,7 @@ section.beige-section {
     flex-direction: column;
     width: 100%;
     background-color: $third-color;
-    font-size: clamp(1.2rem, 1vw, 1.5rem);
+    font-size: $tamano-texto;
     line-height: clamp(1.5rem, 1vw, 1.8rem);
     @include topShadow;
 }
@@ -57,6 +57,6 @@ div.icons-container {
 span.address {
     @include text-font;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: $tamano-texto-mediano;
     line-height: 1.8rem;
 }

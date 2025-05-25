@@ -36,7 +36,7 @@ const Home = ({ imagesLoaded }) => {
 
         const callback = (entries, observer) => {
             entries.forEach(entry => {
-                const isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.1;
+                const isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.5;
                 if (entry.target === greetingImgRef.current) {
                     setPlayGreetingImg(isVisible);
                 }
@@ -49,7 +49,7 @@ const Home = ({ imagesLoaded }) => {
         const observer = new IntersectionObserver(callback, {
             root: null,
             rootMargin: '0px',
-            threshold: 0.1
+            threshold: 0.5
         });
 
         targets.forEach(el => observer.observe(el));

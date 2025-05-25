@@ -19,16 +19,18 @@ section.firstSection {
     position: relative;
     width: 100%;
     height: 100vh;
+    max-height: 100vh;
 
     div.mainTitle-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        max-width: 500px;
-        margin-top: clamp(50px, 35%, 100px);
-        overflow: hidden;
+        transform: translateY(-50%);
+        margin-top: clamp(5vh, 15vh, 20vh);
 
         h1 {
             @include titles-font;
@@ -36,6 +38,8 @@ section.firstSection {
             font-size: 3.5rem;
             line-height: 4rem;
             text-align: left;
+            max-width: 500px;
+            margin-top: 20px;
 
             @keyframes moveOut {
                 0% {
@@ -95,7 +99,7 @@ section.firstSection {
             right: 5%;
             width: 62px;
             height: 22px;
-            font-size: clamp(0.8rem, 1vw, 1.2rem);
+            font-size: $tamano-texto-pequeno;
             line-height: 10rem;
             border-radius: 2px;
         }
@@ -107,8 +111,7 @@ section.mainGreeting {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 10px;
-    width: 80%;
+    padding: 0 15px;
     margin-bottom: 80px;
 
     div.greetingImg-container {
@@ -117,7 +120,7 @@ section.mainGreeting {
         max-width: 280px;
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         padding-bottom: 30px;
 
         @keyframes fadeInUp {
@@ -150,9 +153,9 @@ section.mainGreeting {
             content: "";
             display: block;
             position: absolute;
-            bottom: -20px;
+            bottom: -15px;
             width: 100%;
-            height: 80px;
+            height: 60px;
             background-color: $third-color;
             filter: blur(5px);
             z-index: 2;
@@ -172,7 +175,7 @@ section.mainGreeting {
 
     div.greeting {
         width: 100%;
-        max-width: 260px;
+        max-width: 320px;
         animation: fadeInRight 1s ease-out;
         animation-fill-mode: forwards;
         animation-delay: 500m;
@@ -187,7 +190,7 @@ section.mainGreeting {
         h1 {
             @include titles-font;
             text-align: left;
-            font-size: clamp(2.8rem, 2vw, 3.5rem);
+            font-size: $tamano-titulos-grandes;
             line-height: clamp(3.1rem, 2vw, 3.8rem);
             color: $color-fuente-titulos;
         }
@@ -195,15 +198,15 @@ section.mainGreeting {
         h4 {
             @include text-font;
             font-weight: 800;
-            font-size: clamp(1.2rem, 1vw, 1.7rem);
-            line-height: clamp(1.5rem, 1vw, 1.8rem);
+            font-size: $tamano-titulos-pequenos;
+            line-height: clamp(1.6rem, 1vw, 1.8rem);
             color: $color-fuente-titulos;
         }
 
         p {
             @include text-font;
-            font-size: clamp(1.2rem, 0.8vw, 1.5rem);
-            line-height: clamp(1.2rem, 0.8vw, 1.5rem);
+            font-size: $tamano-texto;
+            line-height: clamp(1.5rem, 1.2vw, 2.3rem);
             color: $color-fuente;
         }
     }   
@@ -222,7 +225,7 @@ button.btn {
     border-radius: 6px;
     background-color: $white-base;
     color: $black-base;
-    font-size: clamp(1.2rem, 0.8vw, 1.5rem);
+    font-size: $tamano-texto-pequeno;
     line-height: clamp(1.5rem, 0.8vw, 1.8rem);
     font-weight: 800;
     border: none;
@@ -235,7 +238,7 @@ button.btn {
 }
 
 h1~button.btn {
-    font-size: clamp(1.5rem, 0.8vw, 1.8rem);
+    font-size: $tamano-texto-pequeno;
     line-height: clamp(1.9rem, 0.8vw, 2.2rem);
     font-weight: 800;
 }
@@ -244,7 +247,7 @@ a.see-more-btn {
     @include titles-font;
     width: 88px;
     height: 30px;
-    font-size: clamp(1rem, 0.8vw, 1.2rem);
+    font-size: $tamano-texto-pequeno;
     line-height: clamp(1.5rem, 0.8vw, 1.8rem);
     text-align: center;
     text-decoration: none;
@@ -272,7 +275,7 @@ div.btn-bottom-container {
     a.contact-btn {
         width: 88px;
         height: 30px;
-        font-size: clamp(1rem, 0.8vw, 1.2rem);
+        font-size: $tamano-texto-pequeno;
         line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         border-radius: 8px;
         box-shadow: $neo-morphism-static;
@@ -297,14 +300,18 @@ section.prices-container {
     
     h3 {
         @include titles-font;
-
+        font-size: $tamano-titulos-medianos;
+        text-align: center;
         margin-top: 40px;
+        margin-bottom: 5px;
         color: $white-base;
     }
 
     p {
         @include text-font;
-
+        
+        font-size: $tamano-texto-mediano;
+        line-height: clamp(1.2rem, 1.2vw, 1.6rem);
         width: 200px;
         text-align: center;
         margin-top: 5px;
@@ -315,6 +322,8 @@ section.prices-container {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        margin: 25px 0;
+        font-size: $tamano-texto-mediano;
 
         div.download-icon-container {
             width: 30px;
@@ -325,7 +334,7 @@ section.prices-container {
             background-image: url("/public/assets/icons/download-icon.svg");
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 22px;
         }
     }
 }
@@ -334,7 +343,6 @@ section.cnc-shop-section {
     padding: 150px 0 80px 0;
     margin-top: 60px;
     @include bottomShadow;
-
 
     div.cnc-card {
         position: relative;
@@ -353,7 +361,7 @@ section.cnc-shop-section {
 
         h2 {
             @include titles-font;
-            font-size: clamp(1rem, 0.8vw, 1.2rem);
+            font-size: $tamano-texto-mediano;
             line-height: clamp(1.5rem, 0.8vw, 1.8rem);
             text-align: center;
             color: $botones-dorados;
@@ -373,7 +381,7 @@ section.cnc-shop-section {
 
         p {
             @include text-font;
-            font-size: clamp(1rem, 0.8vw, 1.2rem);
+            font-size: $tamano-texto-pequeno;
             line-height: clamp(1.5rem, 0.8vw, 1.8rem);
             line-height: 100%;
             font-weight: 500;
@@ -410,8 +418,8 @@ section.cnc-shop-section {
             p {
                 @include text-font;
                 font-weight: 500;
-                font-size: clamp(1rem, 0.8vw, 1.2rem);
-                line-height: clamp(1.5rem, 0.8vw, 1.8rem);
+                font-size: $tamano-texto-pequeno;
+                line-height: clamp(1.2rem, 0.5vw, 1.4rem);
                 color: $white-base;
                 text-align: center;
                 max-width: 160px;
@@ -426,7 +434,7 @@ section.cnc-shop-section {
 
     img.hand.orange {top: -50px; right: 0; z-index: 2;}
     img.hand.white {top: -50px; left: 0; z-index: 2;}
-    img.hand.transparent {bottom: 180px; left: 0; z-index: 2;}
+    img.hand.transparent {bottom: 110px; left: 0; z-index: 2;}
     img.hand.rounded {bottom: 180px; right: 0; z-index: 2;}
 }
 
@@ -446,7 +454,7 @@ a.cnc-shop {
     width: 180px;
     height: 45px;
     @include titles-font;
-    font-size: clamp(1.2rem, 1vw, 1.5rem);
+    font-size: $tamano-texto-mediano;
     line-height: clamp(1.5rem, 1vw, 1.8rem);
     background-color: $color-fuente-titulos;
     color: $white-base;

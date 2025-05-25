@@ -45,6 +45,8 @@ const Menu = () => {
 
             <nav className="menu">
                 <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <div className="divider"></div>
                     <li><Link to="/">Services</Link></li>
                     <div className="divider"></div>
                     <li><Link to="/about">Prices</Link></li>

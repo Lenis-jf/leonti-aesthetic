@@ -9,9 +9,10 @@ section.services.beige-section {
     h2 {
         @include text-font;
         font-weight: 800;
-        font-size: clamp(1.7rem, 2vw, 2rem);
+        font-size: $tamano-titulos-medianos;
         line-height: clamp(0.9rem, 1vw, 1.2rem);
         color: $primary-color;
+        margin-bottom: 25px;
     }
 
     a.service {
@@ -28,9 +29,9 @@ section.services.beige-section {
 
         h2 {
             color: $color-fuente-titulos;
-            font-size: clamp(2.2rem, 2vw, 2.5rem);
+            font-size: $tamano-titulos-pequenos;
             line-height: clamp(1.5rem, 0.8vw, 1.8rem);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         p {
@@ -39,7 +40,7 @@ section.services.beige-section {
             transform: translateY(-30%);
             z-index: 2;
             color: $color-fuente;
-            font-size: clamp(1rem, 0.8vw, 1.2rem);
+            font-size: $tamano-texto-pequeno;
             line-height: clamp(1.5rem, 0.8vw, 1.8rem);
             font-weight: 400;
             text-align: center;
