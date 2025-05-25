@@ -19,8 +19,20 @@ const Footer = () => {
             </section>
             <footer className="dark-section">
                 <img className="main-logo-white" src={mainLogoWhite} alt="Leonti Aesthetics logo" />
+                <div className="addresses">
+                    <span className="address white">Hochstädter Str.1a, 63477 Maintal</span>
+                    <span className="email-address white">aesthetic@leonti.eu</span>
+                </div>
+                <div className="icons-container white">
+                    <span className="social-media-icon email white"></span>
+                    <span className="social-media-icon instagram white"></span>
+                    <span className="social-media-icon facebook white"></span>
+                    <span className="social-media-icon phone white"></span>
+                    {/* <span className="social-media-icon"></span> */}
+                </div>
                 <nav className="footer-menu">
                     <ul>
+                        <div className="divider"></div>
                         <li><Link to="/">Services</Link></li>
                         <div className="divider"></div>
                         <li><Link to="/about">Prices</Link></li>
@@ -30,18 +42,9 @@ const Footer = () => {
                         <li><Link to="/cnc-shop">CNC Shop</Link></li>
                         <div className="divider"></div>
                         <li><Link to="/contact">Contact Us</Link></li>
+                        <div className="divider"></div>
                     </ul>
                 </nav>
-
-                <span className="address white">Hochstädter Str.1a, 63477 Maintal</span>
-
-                <div className="icons-container white">
-                    <span className="social-media-icon email white"></span>
-                    <span className="social-media-icon instagram white"></span>
-                    <span className="social-media-icon facebook white"></span>
-                    <span className="social-media-icon phone white"></span>
-                    {/* <span className="social-media-icon"></span> */}
-                </div>
                 <div className="sub-footer">
                     <div>Privacy Policy</div>
                     <div className="vertical-divider"></div>

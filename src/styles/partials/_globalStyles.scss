@@ -36,14 +36,15 @@ a.contact-btn {
 }
 
 div.icons-container {
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    max-width: 220px;
 
     span.social-media-icon {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

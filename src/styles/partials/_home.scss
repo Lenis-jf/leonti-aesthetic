@@ -57,10 +57,10 @@ section.firstSection {
                 background-color: $secondary-color;
                 filter: blur(30px);
                 z-index: 2;
-                animation: moveOut 1.5s ease-out;
+                animation: moveOut 2s ease-out;
                 animation-play-state: paused;
                 animation-fill-mode: forwards;
-                animation-delay: .125;
+                animation-delay: 200ms;
             }
 
             &.running::before {

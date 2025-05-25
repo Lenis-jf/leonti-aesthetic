@@ -56,6 +56,10 @@ footer {
     min-height: 100vh;
     background-color: $btn-color;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
 
     img.main-logo-white {
         display: block;
@@ -64,20 +68,19 @@ footer {
 
     nav.footer-menu {
         min-width: 100vw;
-        margin-top: 60px;
 
         ul {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: space-evenly;
-            text-align: center;
+            text-align: left;
             width: 100%;
             height: 100%;
             list-style: none;
 
             li {
-                padding: 15px;
+                padding: 10px 35px;
 
                 a {
                     @include text-font;
@@ -90,9 +93,10 @@ footer {
             }
 
             div.divider {
-                width: 160px;
-                height: 1px;
-                background-color: $white-base;
+                width: 90%;
+                // max-width: 320px;
+                height: 0.5px;
+                background-color: rgba($white-base, 0.3);
                 margin: 0 auto;
             }
         }
@@ -100,12 +104,17 @@ footer {
 
     span.address.white {
         display: block;
-        margin: 10px 0;
+        margin: 10px 0 0px 0;
         color: $white-base
     }
 
+    span.email-address {
+        display: block;
+        text-align: center;
+    }
+
     div.icons-container.white {
-        margin: 50px auto;
+        margin: 25px auto;
 
         span.email.white {
             background-image: url("/public/assets/icons/email-icon-white.svg")
@@ -125,6 +134,8 @@ footer {
     }
 
     div.sub-footer {
+        // position: absolute;
+        // bottom: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
