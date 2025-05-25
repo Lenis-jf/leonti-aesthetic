@@ -1,0 +1,176 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+div.services-page {
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: $secondary-color;
+}
+
+section.topMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    background-color: $negro-fondo;
+    clip-path: polygon(0 0, 99% 0, 97% 100%, 0 95%);
+
+    a.mainLogo-top {
+            width: 40%;
+            max-width: 220px;
+            margin-top: 10px;
+        }
+
+    a.contact-btn {
+        position: absolute;
+        top: 25px;
+        right: 5%;
+        width: 62px;
+        height: 22px;
+        font-size: $tamano-texto-pequeno;
+        line-height: 10rem;
+        border-radius: 2px;
+    }
+}
+
+div.principal-img-container {
+    max-width: 90vw;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 65%);
+
+    img.principal-img {
+        width: 100%;
+    }
+}
+
+section.mainDescription {
+    width: 100%;
+    padding: 120px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
+
+    h4 {
+        @include text-font;
+        color: $botones-dorados;
+        font-weight: 600;
+        font-size: $tamano-texto;
+    }
+
+    h1 {
+        @include titles-font;
+        color: $color-fuente;
+        font-size: $tamano-titulos-grandes;
+        text-align: left;
+    }
+
+    p {
+        @include text-font;
+        color: $color-fuente;
+        font-size: $tamano-texto-mediano;
+        line-height: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
+    }
+
+    div.decorationText {
+        width: 220px;
+        height: 30px;
+        color: $botones-dorados;
+        background-color: $third-color;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-size: $tamano-texto-mediano;
+        font-weight: 600;
+        box-shadow: 1px 3px 8px 0px rgba($botones-dorados, 0.5);
+        margin-top: 10px;
+    }
+}
+
+section.service-cards-section {
+    display: flex;
+    justify-content: center;
+    background-color: $third-color;
+    @include topShadow;
+    padding: 80px 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+
+    div.service-card {
+        width: 300px;
+        height: 400px;
+        background-color: $white-base;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: $neo-morphism-static;
+
+        &.pure-glow {
+            img {
+                clip-path: polygon(0 0, 100% 0, 100% 84%, 0 71%);
+            }
+        }
+        &.microneedling {
+            img {
+                clip-path: polygon(0 0, 100% 0, 85% 93%, 0 93%);
+            }
+        }
+        &.eyelashextensions {
+            img {
+                clip-path: polygon(0 0, 100% 0, 94% 93%, 0 86%);
+            }
+        }
+        &.eyelash-lifting {
+            img {
+                clip-path: polygon(0 0, 100% 0, 89% 95%, 0 95%);
+            }
+        }
+        &.eyebrow-lifting {
+            img {
+                clip-path: polygon(0 0, 100% 0, 97% 96%, 0 88%);
+            }
+        }
+
+        img {
+            width: clamp(280px, 20vw + 100px, 350px);
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h2 {
+            @include titles-font;
+            color: $color-fuente-titulos;
+            font-size: $tamano-titulos-pequenos;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            @include text-font;
+            color: $color-fuente;
+            font-size: $tamano-texto-pequeno;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+    }
+
+    a.mainLogo-bottom {
+        width: 200px;
+        margin-top: 50px;
+    }
+}

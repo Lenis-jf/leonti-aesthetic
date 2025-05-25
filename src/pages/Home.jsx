@@ -4,12 +4,9 @@ import WhatsappButton from '../components/WhatsappButton';
 import Footer from '../components/Footer';
 import Service from '../components/Service';
 import Gallery from '../components/Gallery';
-import mainBGimage from "../assets/principal-assets/main-bg-img.webp";
 import mainFoto from "../assets/principal-assets/main-foto.webp";
 import mainFoto2 from "../assets/principal-assets/main-foto-2.webp";
-import mainLogo from "../assets/principal-assets/main-logo.svg";
 import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import { useState, useRef, useEffect } from 'react';
 
@@ -63,7 +60,7 @@ const Home = ({ imagesLoaded }) => {
             <section className="firstSection">
                 <section className="main-fotos-container dark-section">
                     <img className="mainLogo-top" src={mainLogoWhite} alt="Leonti Aesthetic"></img>
-                    <Link className="contact-btn" to="/contact">Contact me</Link>
+                    <Link className="contact-btn" to="contact">Contact me</Link>
                     <img className="mainFoto" src={mainFoto2} alt="dueña del local en primer plano" />
                 </section>
                 <div className='mainTitle-container'>
@@ -109,7 +106,7 @@ const Home = ({ imagesLoaded }) => {
                     description="Natural curl, without extensions" />
                 <Service path="" name="Eyebrow lifting"
                     description="Volume & shape that last" />
-                <Link className="see-more-btn" to="/services">See more</Link>
+                <Link className="see-more-btn" to="services">See more</Link>
             </section>
             <section className="prices-container">
                 {/* <div className="iluminator1 iluminator"></div>
@@ -127,8 +124,8 @@ const Home = ({ imagesLoaded }) => {
             <PricesTable />
             <Gallery />
             <div className="btn-bottom-container">
-                <Link className="see-more-btn" to="/services">See more</Link>
-                <Link className="contact-btn" to="/services">Contact me</Link>
+                <Link className="see-more-btn" to="services">See more</Link>
+                <Link className="contact-btn" to="services">Contact me</Link>
             </div>
             <section className="cnc-shop-section beige-section beige-section">
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-orange.webp`} alt="mano decorativa con producto" className="hand orange" />

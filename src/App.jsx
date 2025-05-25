@@ -1,16 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from 'react';  
 import Home from "./pages/Home";
+import Services from "./pages/Services";
 import Loader from './components/Loader';
 
-import mainBGimage from './assets/principal-assets/main-bg-img.webp';
 import mainFoto from './assets/principal-assets/main-foto.webp';
 
 function App() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const images = [mainBGimage, mainFoto];
+    const images = [mainFoto];
     Promise.all(
       images.map(src =>
         new Promise(resolve => {
@@ -27,11 +28,12 @@ function App() {
   }
 
   return (
-    <BrowserRouter basename="/leonti-aesthetic">
+    <Router>
       <Routes>
         <Route path="/" element={<Home imagesLoaded={ready}/>} />
+        <Route path="services" element={<Services />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
