@@ -61,7 +61,7 @@ const Home = () => {
         targets.forEach(el => observer.observe(el));
 
         return () => observer.disconnect();
-    }, []);
+    }, [imagesLoaded]);
 
     if(!imagesLoaded) return <Loader />;
 
