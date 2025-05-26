@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
-import { useEffect } from 'react';
+import { Link, NavLink } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
+import { useEffect, useRef } from 'react';
 
 const Menu = () => {
+    const menuToggleRef = useRef(null);
+
     useEffect(() => {
         const iconSquares = Array.from(document.querySelectorAll('.iconSquare'));
         const darkSections = Array.from(document.querySelectorAll('.dark-section'));
@@ -32,9 +35,15 @@ const Menu = () => {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
+    const closeMenu = () => {
+        if(menuToggleRef.current) {
+            menuToggleRef.current.checked = false;
+        }
+    }
+
     return (
         <div>
-            <input type="checkbox" id="menuToggle" className="menuToggle" />
+            <input type="checkbox" id="menuToggle" className="menuToggle" ref={menuToggleRef} />
 
             <label htmlFor="menuToggle" className="menuBubbleContainer">
                 <div className="iconSquare top-left"></div>
@@ -45,17 +54,17 @@ const Menu = () => {
 
             <nav className="menu">
                 <ul>
-                    <li><Link to="/">Home</Link></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/">Home</NavLink></li>
                     <div className="divider"></div>
-                    <li><Link to="services">Services</Link></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/services">Services</NavLink></li>
                     <div className="divider"></div>
-                    <li><Link to="/about">Prices</Link></li>
+                    <li><HashLink smooth to="/#prices" onClick={closeMenu}>Prices</HashLink></li>
                     <div className="divider"></div>
-                    <li><Link to="/services">Gallery</Link></li>
+                    <li><HashLink smooth to="/#gallery" onClick={closeMenu}>Gallery</HashLink></li>
                     <div className="divider"></div>
-                    <li><Link to="/cnc-shop">CNC Shop</Link></li>
+                    <li><HashLink smooth to="/#cnc-shop" onClick={closeMenu}>CNC Shop</HashLink></li>
                     <div className="divider"></div>
-                    <li><Link to="/contact">Contact Us</Link></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/contact">Contact Us</NavLink></li>
                 </ul>
             </nav>
         </div>

@@ -8,11 +8,13 @@ import mainFoto from "../assets/principal-assets/main-foto.webp";
 import mainFoto2 from "../assets/principal-assets/main-foto-2.webp";
 import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
 import Loader from '../components/Loader';
+import Map from "../components/Map";
 
 import { useState, useRef, useEffect } from 'react';
 import { useImagePreloader } from '../hooks/useImagePreloader';
 
 import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
     const images = [];
@@ -107,21 +109,19 @@ const Home = () => {
                     </div>
                 </section>
                 <h2 className='services-title'>OUR SERVICES</h2>
-                <Service path="" name="Pure Glow"
+                <Service path="/services#pure-glow" name="Pure Glow"
                     description="Classic facial cleaning" />
-                <Service path="" name="Microneedling"
+                <Service path="/services#microneedling" name="Microneedling"
                     description="Naturally beautiful skin through targeted deep care" />
-                <Service path="" name="Eyelash extensions"
+                <Service path="/services#eyelash-extensions" name="Eyelash extensions"
                     description="Your look, your expression" />
-                <Service path="" name="Eyelash lifting"
+                <Service path="/services#eyelash-lifting" name="Eyelash lifting"
                     description="Natural curl, without extensions" />
-                <Service path="" name="Eyebrow lifting"
+                <Service path="/services#eyebrow-lifting" name="Eyebrow lifting"
                     description="Volume & shape that last" />
-                <Link className="see-more-btn" to="services">See more</Link>
+                <NavLink className="see-more-btn" to="/services">See more</NavLink>
             </section>
-            <section className="prices-container">
-                {/* <div className="iluminator1 iluminator"></div>
-                <div className="iluminator2 iluminator"></div> */}
+            <section id="prices" className="prices-container">
                 <h3>
                     Looking for our latest rates?
                 </h3>
@@ -135,10 +135,10 @@ const Home = () => {
             <PricesTable />
             <Gallery />
             <div className="btn-bottom-container">
-                <Link className="see-more-btn" to="services">See more</Link>
-                <Link className="contact-btn" to="services">Contact me</Link>
+                <NavLink className="see-more-btn" to="/services">See more</NavLink>
+                <NavLink className="contact-btn" to="/contact">Contact me</NavLink>
             </div>
-            <section className="cnc-shop-section beige-section beige-section">
+            <section id="cnc-shop" className="cnc-shop-section beige-section beige-section">
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-orange.webp`} alt="mano decorativa con producto" className="hand orange" />
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-white.webp`} alt="mano decorativa con producto" className="hand white" />
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-transparent.webp`} alt="mano decorativa con producto" className="hand transparent" />
@@ -160,8 +160,23 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <Link to="https://shop.cnc-cosmetic.de/" className="cnc-shop">Go to Store Now <img src={`${import.meta.env.BASE_URL}assets/icons/arrow-right-white.svg`} alt="icono a la flecha a la derecha" /></Link>
+                <Link to="https://shop.cnc-cosmetic.de/" className="cnc-shop">
+                    Go to Store Now
+                    <div className="arrow-right"></div>
+                </Link>
                 <h1 className="access-code">Access Code: 1180011</h1>
+            </section>
+            <section className="location-info-container">
+                <h4 >Come Visit Us</h4>
+                <h1>We’re just a few clicks away</h1>
+                <span className="address">Hochstädter Str.1a, 63477 Maintal</span>
+                <Map />
+                <NavLink className="contact-btn" to="/contact">Contact me</NavLink>
+            </section>
+            <section className="beige-section help-section">
+                <h4>Get in touch</h4>
+                <h1>We’re here to help</h1>
+                <p>Give us call or send us a message and one of our friendly team members will be in touch shortly.</p>
             </section>
             <WhatsappButton />
             <Footer />

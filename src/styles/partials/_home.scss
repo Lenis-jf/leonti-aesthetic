@@ -463,7 +463,19 @@ a.cnc-shop {
     padding: 5px;
     @include hoverBtn;
 
-    img {
+    
+    div.arrow-right {
         width: 14px;
+        height: 14px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url("/public/assets/icons/arrow-right-white.svg");
     }
+
+    &:hover {
+        div.arrow-right{
+            background-image: url("/public/assets/icons/arrow-right.svg");
+        }
+    }  
 }

@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Service = ({path, name, description}) => {
     return(
-        <Link to={path} className="service">
+        <HashLink smooth to={path} className="service">
             <h2>{name}</h2>
             <p>{description}</p>
             <div className="arrow-container"></div>
-        </Link>
+        </HashLink>
     );
 }
 

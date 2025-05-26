@@ -26,7 +26,7 @@ const Gallery = () => {
     }, []);
 
     return (
-        <section className="picture-gallery">
+        <section id="gallery" className="picture-gallery">
             <h1>Picture Gallery</h1>
             <div className="picture-gallery-container">
                 <div className="pictures-scroll" ref={containerRef}>

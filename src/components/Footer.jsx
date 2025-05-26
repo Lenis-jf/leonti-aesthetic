@@ -5,18 +5,6 @@ import Map from "../components/Map";
 const Footer = () => {
     return (
         <div>
-            <section className="location-info-container">
-                <h4 >Come Visit Us</h4>
-                <h1>We’re just a few clicks away</h1>
-                <span className="address">Hochstädter Str.1a, 63477 Maintal</span>
-                <Map />
-                <Link className="contact-btn" to="/contact">Contact me</Link>
-            </section>
-            <section className="beige-section help-section">
-                <h4>Get in touch</h4>
-                <h1>We’re here to help</h1>
-                <p>Give us call or send us a message and one of our friendly team members will be in touch shortly.</p>
-            </section>
             <footer className="dark-section">
                 <img className="main-logo-white" src={mainLogoWhite} alt="Leonti Aesthetics logo" />
                 <div className="addresses">
