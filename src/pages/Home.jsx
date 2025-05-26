@@ -7,12 +7,21 @@ import Gallery from '../components/Gallery';
 import mainFoto from "../assets/principal-assets/main-foto.webp";
 import mainFoto2 from "../assets/principal-assets/main-foto-2.webp";
 import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
+import Loader from '../components/Loader';
 
 import { useState, useRef, useEffect } from 'react';
+import { useImagePreloader } from '../hooks/useImagePreloader';
 
 import { Link } from "react-router-dom";
 
-const Home = ({ imagesLoaded }) => {
+const Home = () => {
+    const images = [];
+
+    images.push(mainFoto);
+    images.push(mainFoto2);
+
+    const imagesLoaded = useImagePreloader(images);
+
     const titleRef = useRef(null);
     const greetingImgRef = useRef(null);
     const greetingTextRef = useRef(null);
@@ -53,6 +62,8 @@ const Home = ({ imagesLoaded }) => {
 
         return () => observer.disconnect();
     }, []);
+
+    if(!imagesLoaded) return <Loader />;
 
     return (
         <div className='home'>

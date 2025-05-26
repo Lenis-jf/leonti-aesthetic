@@ -3,10 +3,25 @@ import WhatsappButton from '../components/WhatsappButton';
 import Footer from '../components/Footer';
 import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
 import mainLogo from "../assets/principal-assets/main-logo.svg";
+import Loader from '../components/Loader';
 
 import { Link } from "react-router-dom";
+import { useImagePreloader } from '../hooks/useImagePreloader';
 
 const Services = () => {
+    const images = [];
+
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/main-bg-img.webp`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/pure-glow.webp`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/rosa-gloves.webp`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/eyelash-extensions.webp`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/eyelash-lifting.webp`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/eyebrow-lifting.webp`);
+
+    const imagesLoaded = useImagePreloader(images);
+
+    if(!imagesLoaded) return <Loader />;
+
     return(
         <div className='services-page'>
             <Menu />

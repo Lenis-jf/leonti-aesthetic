@@ -84,7 +84,7 @@ section.mainDescription {
         // width: 220px;
         width: 80%;
         min-width: 220px;
-        max-width: 320px;
+        max-width: 260px;
         height: 30px;
         color: $botones-dorados;
         background-color: $third-color;
@@ -111,7 +111,7 @@ section.service-cards-section {
     position: relative;
 
     div.service-card {
-        width: 80%;
+        width: 90%;
         max-width: 380px;
         min-height: 400px;
         background-color: $white-base;
@@ -169,6 +169,14 @@ section.service-cards-section {
             color: $color-fuente-titulos;
             font-size: $tamano-titulos-pequenos;
             margin-bottom: 10px;
+        }
+
+        h4 {
+            @include titles-font;
+            color: $botones-dorados;
+            font-size: $tamano-texto-mediano;
+            font-weight: 600;
+            margin: 10px 0 5px 0;
         }
 
         p {
@@ -263,7 +271,38 @@ section.service-cards-section {
 
     div.service-card.microneedling {
         div.rosa-subtitle {
-            margin-top: 120px;
+            margin-top: 255px;
+        }
+
+        p + div.subservice {
+            margin-top: 20px;
+        }
+
+        div.subservice:last-of-type {
+            background-color: $primary-color;
+            border: none;
+
+            h3, p {
+                color: $white-base;
+            }
+        }
+    }
+    
+    div.service-card.eyelash-lifting {
+        div.rosa-subtitle {
+            margin-top: 150px;
+        }
+    }
+    
+    div.service-card.eyelashextensions {
+        div.rosa-subtitle {
+            margin-top: 160px;
+        }
+    }
+
+    div.service-card.eyebrow-lifting {
+        div.rosa-subtitle {
+            margin-top: 135px;
         }
     }
 
