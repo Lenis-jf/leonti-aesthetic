@@ -2,11 +2,10 @@ import Menu from "../components/Menu";
 import WhatsappButton from "../components/WhatsappButton";
 import Map from "../components/Map";
 import Footer from "../components/Footer";
+import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect } from "react";
-
-
 
 const Contact = () => {
     useEffect(() => {
@@ -18,6 +17,11 @@ const Contact = () => {
     return (
         <div className="contact-page">
             <Menu />
+            <section className="dark-section contact-page">
+                <NavLink to="/" className='mainLogo-top'>
+                    <img src={mainLogoWhite} alt="Leonti Aesthetics Logo" />
+                </NavLink>
+            </section>
             <section className="help-section contact-page">
                 <h4>Get in touch</h4>
                 <h1>We’re here to help</h1>
