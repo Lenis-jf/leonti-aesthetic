@@ -135,7 +135,7 @@ const Home = () => {
             <PricesTable />
             <Gallery />
             <div className="btn-bottom-container">
-                <NavLink className="see-more-btn" to="/services">See more</NavLink>
+                <NavLink className="see-more-btn" to="/">See more</NavLink>
                 <NavLink className="contact-btn" to="/contact">Contact me</NavLink>
             </div>
             <section id="cnc-shop" className="cnc-shop-section beige-section beige-section">

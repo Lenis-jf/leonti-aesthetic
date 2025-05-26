@@ -4,8 +4,17 @@ import Map from "../components/Map";
 import Footer from "../components/Footer";
 
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
+
 
 const Contact = () => {
+    useEffect(() => {
+        document.title = "Leonti Aesthetics | Contact Us";
+        window.scrollTo(0, 0);
+    }
+    , []);
+
     return (
         <div className="contact-page">
             <Menu />

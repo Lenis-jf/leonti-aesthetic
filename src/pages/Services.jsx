@@ -6,6 +6,7 @@ import mainLogo from "../assets/principal-assets/main-logo.svg";
 import Loader from '../components/Loader';
 import Map from "../components/Map";
 
+import { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useImagePreloader } from '../hooks/useImagePreloader';
 
@@ -20,6 +21,12 @@ const Services = () => {
     images.push(`${import.meta.env.BASE_URL}assets/imgs/eyebrow-lifting.webp`);
 
     const imagesLoaded = useImagePreloader(images);
+
+    useEffect(() => {
+        document.title = "Leonti Aesthetics | Services";
+        window.scrollTo(0, 0);
+    }
+    , []);
 
     if (!imagesLoaded) return <Loader />;
 

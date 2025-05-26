@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import { useEffect, useRef } from 'react';
+import { scrollFunction } from '../utils/scrollFunction';
 
 const Menu = () => {
     const menuToggleRef = useRef(null);
@@ -58,11 +59,11 @@ const Menu = () => {
                     <div className="divider"></div>
                     <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/services">Services</NavLink></li>
                     <div className="divider"></div>
-                    <li><HashLink smooth to="/#prices" onClick={closeMenu}>Prices</HashLink></li>
+                    <li><HashLink scroll={scrollFunction} smooth to="/#prices" onClick={closeMenu}>Prices</HashLink></li>
                     <div className="divider"></div>
-                    <li><HashLink smooth to="/#gallery" onClick={closeMenu}>Gallery</HashLink></li>
+                    <li><HashLink scroll={scrollFunction} smooth to="/#gallery" onClick={closeMenu}>Gallery</HashLink></li>
                     <div className="divider"></div>
-                    <li><HashLink smooth to="/#cnc-shop" onClick={closeMenu}>CNC Shop</HashLink></li>
+                    <li><HashLink scroll={scrollFunction} smooth to="/#cnc-shop" onClick={closeMenu}>CNC Shop</HashLink></li>
                     <div className="divider"></div>
                     <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/contact">Contact Us</NavLink></li>
                 </ul>

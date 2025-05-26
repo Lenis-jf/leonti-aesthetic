@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
-import Map from "../components/Map";
+import { HashLink } from "react-router-hash-link";
+import { scrollFunction } from '../utils/scrollFunction'
 
 const Footer = () => {
     return (
@@ -21,15 +22,15 @@ const Footer = () => {
                 <nav className="footer-menu">
                     <ul>
                         <div className="divider"></div>
-                        <li><Link to="/">Services</Link></li>
+                        <li><NavLink to="/services">Services</NavLink></li>
                         <div className="divider"></div>
-                        <li><Link to="/about">Prices</Link></li>
+                        <li><HashLink smooth scroll={scrollFunction} to="/#prices">Prices</HashLink></li>
                         <div className="divider"></div>
-                        <li><Link to="/services">Gallery</Link></li>
+                        <li><HashLink smooth scroll={scrollFunction} to="/#gallery">Gallery</HashLink></li>
                         <div className="divider"></div>
-                        <li><Link to="/cnc-shop">CNC Shop</Link></li>
+                        <li><HashLink smooth scroll={scrollFunction} to="/#cnc-shop">CNC Shop</HashLink></li>
                         <div className="divider"></div>
-                        <li><Link to="/contact">Contact Us</Link></li>
+                        <li><NavLink to="/contact">Contact Us</NavLink></li>
                         <div className="divider"></div>
                     </ul>
                 </nav>
