@@ -101,7 +101,7 @@ nav.menu {
     outline: none;
     z-index: 3;
 
-    ul {
+    ul.menu-main-list {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -124,7 +124,7 @@ nav.menu {
             visibility: hidden;
         }
 
-        li {
+        li.main-list-item {
             @include titles-font;
             width: 100%;
             height: 10%;
@@ -167,7 +167,7 @@ input.menuToggle:checked~nav.menu {
     height: 80vh;
     padding: 20px;
 
-    ul {
+    ul.menu-main-list {
         opacity: 1;
         visibility: visible;
 

@@ -1,8 +1,7 @@
-// i18next-scanner.config.js
 module.exports = {
     input: [
         'src/**/*.{js,jsx}',
-        '!src/app.js',          // ajusta según tu estructura
+        '!src/app.js',         
         '!**/node_modules/**'
     ],
     output: './',
@@ -14,9 +13,9 @@ module.exports = {
             list: ['t', 'i18n.t'],
             extensions: ['.js', '.jsx']
         },
-        lngs: ['en', 'de'],      // generará EN y DE
+        lngs: ['en', 'de'],
         ns: ['translation'],
-        defaultLng: 'en',
+        defaultLng: 'de',
         defaultNs: 'translation',
         resource: {
             loadPath: 'locales/{{lng}}/{{ns}}.json',
@@ -25,7 +24,6 @@ module.exports = {
         },
         defaultValueFromDescription: false,
         defaultValue: (lng, ns, key, options) => {
-            // si es inglés, toma el defaultValue pasado en t()
             return (lng === 'en' && options.defaultValue)
                 ? options.defaultValue
                 : '';

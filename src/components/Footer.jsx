@@ -38,11 +38,11 @@ const Footer = () => {
                     </ul>
                 </nav>
                 <div className="sub-footer">
-                    <div>{t("footer.privacyPolicy", "Privacy Policy")}</div>
-                    <div className="vertical-divider"></div>
+                    {/* <div>{t("footer.privacyPolicy", "Privacy Policy")}</div>
+                    <div className="vertical-divider"></div> */}
                     <div>{t("footer.rightsReserved", "© 2025 LEONTI. All Rights Reserved.")}</div>
-                    <div className="vertical-divider"></div>
-                    <div>{t("footer.termsOfService", "Terms of Service")}</div>
+                    {/* <div className="vertical-divider"></div>
+                    <div>{t("footer.termsOfService", "Terms of Service")}</div> */}
                 </div>
             </footer>
         </div>
