@@ -12,7 +12,7 @@ const Contact = () => {
         document.title = "Leonti Aesthetics | Contact Us";
         window.scrollTo(0, 0);
     }
-    , []);
+        , []);
 
     return (
         <div className="contact-page">
@@ -23,9 +23,9 @@ const Contact = () => {
                 </NavLink>
             </section>
             <section className="help-section contact-page">
-                <h4>Get in touch</h4>
-                <h1>We’re here to help</h1>
-                <p>Give us call or send us a message and one of our friendly team members will be in touch shortly.</p>
+                <h4>{t("help.title", "Get in touch")}</h4>
+                <h1>{t("help.subtitle", "We’re here to help")}</h1>
+                <p>{t("help.description", "Give us call or send us a message and one of our friendly team members will be in touch shortly.")}</p>
             </section>
             <section className="icons-container black">
                 <div className="icons-container black">
@@ -38,9 +38,9 @@ const Contact = () => {
                 <span className="email-address">aesthetic@leonti.eu</span>
             </section>
             <section className="location-info-container">
-                <h4 >Come Visit Us</h4>
-                <h1>We’re just a few clicks away</h1>
-                <span className="address">Hochstädter Str.1a, 63477 Maintal</span>
+                <h4>{t("location.title", "Come Visit Us")}</h4>
+                <h1>{t("location.subtitle", "We’re just a few clicks away")}</h1>
+                <span className="address">{t("location.address", "Hochstädter Str.1a, 63477 Maintal")}</span>
                 <Map />
             </section>
             <WhatsappButton />

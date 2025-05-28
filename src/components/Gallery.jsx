@@ -1,6 +1,9 @@
+import { t } from 'i18next';
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Gallery = () => {
+    const { t } = useTranslation();
     const imagesIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16];
     const containerRef = useRef(null);
     const [activeId, setActiveId] = useState(null);
@@ -27,7 +30,7 @@ const Gallery = () => {
 
     return (
         <section id="gallery" className="picture-gallery">
-            <h1>Picture Gallery</h1>
+            <h1>{t("gallery.title", "Picture Gallery")}</h1>
             <div className="picture-gallery-container">
                 <div className="pictures-scroll" ref={containerRef}>
                     {imagesIndex.map((id) => (

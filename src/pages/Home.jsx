@@ -11,12 +11,15 @@ import Loader from '../components/Loader';
 import Map from "../components/Map";
 
 import { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useImagePreloader } from '../hooks/useImagePreloader';
 
 import { Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
+    const { t } = useTranslation();
+
     const images = [];
 
     images.push(mainFoto);
@@ -73,12 +76,12 @@ const Home = () => {
             <section className="firstSection">
                 <section className="main-fotos-container dark-section">
                     <img className="mainLogo-top" src={mainLogoWhite} alt="Leonti Aesthetic"></img>
-                    <Link className="contact-btn" to="contact">Contact me</Link>
-                    <img className="mainFoto" src={mainFoto2} alt="dueña del local en primer plano" />
+                    <Link className="contact-btn" to="contact">{t("buttons.contact", "Contact me")}</Link>
+                    <img className="mainFoto" src={mainFoto2} alt={t("mainFoto2", "studio owner in the foreground")} />
                 </section>
                 <div className='mainTitle-container'>
                     <h1 ref={titleRef} className={playTitle ? 'running' : ''}>
-                        Welcome to <strong>Leonti Aesthetic</strong> a place where we care about you</h1>
+                        {t("welcome.title", "Welcome to")} <strong>{t("welcome.brand", "Leonti Aesthetic")}</strong> {t("welcome.subtitle", "a place where we care about you")}</h1>
                 </div>
             </section>
             <section className='services beige-section'>
@@ -86,57 +89,57 @@ const Home = () => {
                     <div className="greetingImg-container">
                         <img className={`mainFoto-greeting ${playGreetingImg ? 'running' : ''}`}
                             src={mainFoto}
-                            alt="dueña del local en primer plano cruzada de brazos"
+                            alt={t("mainFoto", "studio owner in the foreground with her arms crossed")}
                             ref={greetingImgRef} />
                     </div>
                     <div className={`greeting ${playGreetingText ? 'running' : ''}`}
                         ref={greetingTextRef}>
                         <h1>
-                            <strong>Crafting Confidence</strong>
+                            <strong>{t("greeting.title", "Crafting Confidence")}</strong>
                         </h1>
                         <br />
                         <h4>
-                            Welcome to Leonti Aesthetic - your place for natural beauty and stylish care.
+                            {t("greeting.subtitle", "Welcome to Leonti Aesthetic - your place for natural beauty and stylish care.")}
                         </h4>
                         <br />
                         <p>
-                            My name is Ecaterina Leonti, I am a certified beautician and eyelash stylist - as well as the founder of <strong>Leonti Aesthetic</strong>. My studio stands for quality, aesthetics and genuine, natural results.
+                            {t("greeting.paragraph1", "My name is Ecaterina Leonti, I am a certified beautician and eyelash stylist - as well as the founder of")} <strong>{t("greeting.brand", "Leonti Aesthetic")}</strong>. {t("greeting.paragraph2", "My studio stands for quality, aesthetics and genuine, natural results.")}
                         </p>
                         <br />
                         <p>
-                            A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!
+                            {t("greeting.paragraph2", "A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!")}
                         </p>
                     </div>
                 </section>
-                <h2 className='services-title'>OUR SERVICES</h2>
-                <Service path="/services#pure-glow" name="Pure Glow"
-                    description="Classic facial cleaning" />
-                <Service path="/services#microneedling" name="Microneedling"
-                    description="Naturally beautiful skin through targeted deep care" />
-                <Service path="/services#eyelash-extensions" name="Eyelash extensions"
-                    description="Your look, your expression" />
-                <Service path="/services#eyelash-lifting" name="Eyelash lifting"
-                    description="Natural curl, without extensions" />
-                <Service path="/services#eyebrow-lifting" name="Eyebrow lifting"
-                    description="Volume & shape that last" />
+                <h2 className='services-title'>{t("services.title", "OUR SERVICES")}</h2>
+                <Service path="/services#pure-glow" name={t("services.pureGlow.name", "Pure Glow")}
+                    description={t("services.pureGlow.description", "Classic facial cleaning")} />
+                <Service path="/services#microneedling" name={t("services.microneedling.name", "Microneedling")}
+                    description={t("services.microneedling.description", "Naturally beautiful skin through targeted deep care")} />
+                <Service path="/services#eyelash-extensions" name={t("services.eyelashExtensions.name", "Eyelash extensions")}
+                    description={t("services.eyelashExtensions.description", "Your look, your expression")} />
+                <Service path="/services#eyelash-lifting" name={t("services.eyelashLifting.name", "Eyelash lifting")}
+                    description={t("services.eyelashLifting.description", "Natural curl, without extensions")} />
+                <Service path="/services#eyebrow-lifting" name={t("services.eyebrowLifting.name", "Eyebrow lifting")}
+                    description={t("services.eyebrowLifting.description", "Volume & shape that last")} />
                 <NavLink className="see-more-btn" to="/services">See more</NavLink>
             </section>
             <section id="prices" className="prices-container">
                 <h3>
-                    Looking for our latest rates?
+                    {t("prices.title", "Looking for our latest rates?")}
                 </h3>
                 <p>
-                    Download our full pricingto explore all services and pacakages in detail
+                    {t("prices.description", "Download our full pricing to explore all services and packages in detail")}
                 </p>
-                <button className='price-list btn'>Price List - Download
+                <button className='price-list btn'>{t("prices.button", "Price List - Download")}
                     <div className="download-icon-container"></div>
                 </button>
             </section>
             <PricesTable />
             <Gallery />
             <div className="btn-bottom-container">
-                <NavLink className="see-more-btn" to="/">See more</NavLink>
-                <NavLink className="contact-btn" to="/contact">Contact me</NavLink>
+                <NavLink className="see-more-btn" to="/">{t("buttons.see", "See more")}</NavLink>
+                <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
             </div>
             <section id="cnc-shop" className="cnc-shop-section beige-section beige-section">
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-orange.webp`} alt="mano decorativa con producto" className="hand orange" />
@@ -144,39 +147,39 @@ const Home = () => {
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-transparent.webp`} alt="mano decorativa con producto" className="hand transparent" />
                 <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-rounded.webp`} alt="mano decorativa con producto" className="hand rounded" />
                 <div className="cnc-card">
-                    <h2>CNC DIRECT SHOP</h2>
+                    <h2>{t("cncShop.title", "CNC DIRECT SHOP")}</h2>
                     <img className="cnc-shop-logo"
                         src={`${import.meta.env.BASE_URL}assets/icons/cnc-shop.svg`}
                         alt="cnc-shop logo"
                     />
                     <div className="divider"></div>
                     <p>
-                        An exclusive selection of professional cosmetic products from the CNC brand — developed for all skin types and every skin need.
+                        {t("cncShop.description", "An exclusive selection of professional cosmetic products from the CNC brand — developed for all skin types and every skin need.")}
                     </p>
                     <div className="blue-info">
                         <div className="notch"></div>
                         <p>
-                            Whether it’s anti-ageing, blemished skin, couperose, pigmentation, dryness or sensitivity — find targeted skincare solutions tailored to you.
+                            {t("cncShop.blueInfo", "Whether it’s anti-ageing, blemished skin, couperose, pigmentation, dryness or sensitivity — find targeted skincare solutions tailored to you.")}
                         </p>
                     </div>
                 </div>
                 <Link to="https://shop.cnc-cosmetic.de/" className="cnc-shop">
-                    Go to Store Now
+                    {t("cncShop.button", "Go to Store Now")}
                     <div className="arrow-right"></div>
                 </Link>
-                <h1 className="access-code">Access Code: 1180011</h1>
+                <h1 className="access-code">{t("cncShop.accessCode", "Access Code: 1180011")}</h1>
             </section>
             <section className="location-info-container">
-                <h4 >Come Visit Us</h4>
-                <h1>We’re just a few clicks away</h1>
-                <span className="address">Hochstädter Str.1a, 63477 Maintal</span>
+                <h4>{t("location.title", "Come Visit Us")}</h4>
+                <h1>{t("location.subtitle", "We’re just a few clicks away")}</h1>
+                <span className="address">{t("location.address", "Hochstädter Str.1a, 63477 Maintal")}</span>
                 <Map />
-                <NavLink className="contact-btn" to="/contact">Contact me</NavLink>
+                <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
             </section>
             <section className="beige-section help-section">
-                <h4>Get in touch</h4>
-                <h1>We’re here to help</h1>
-                <p>Give us call or send us a message and one of our friendly team members will be in touch shortly.</p>
+                <h4>{t("help.title", "Get in touch")}</h4>
+                <h1>{t("help.subtitle", "We’re here to help")}</h1>
+                <p>{t("help.description", "Give us call or send us a message and one of our friendly team members will be in touch shortly.")}</p>
             </section>
             <WhatsappButton />
             <Footer />

@@ -2,8 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import { useEffect, useRef } from 'react';
 import { scrollFunction } from '../utils/scrollFunction';
+import { useTranslation } from 'react-i18next';
 
 const Menu = () => {
+    const { t } = useTranslation();
+
     const menuToggleRef = useRef(null);
 
     useEffect(() => {
@@ -55,17 +58,17 @@ const Menu = () => {
 
             <nav className="menu">
                 <ul>
-                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/">Home</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/">{t("menu.home", "Home")}</NavLink></li>
                     <div className="divider"></div>
-                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/services">Services</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/services">{t("menu.services", "Services")}</NavLink></li>
                     <div className="divider"></div>
-                    <li><HashLink scroll={scrollFunction} smooth to="/#prices" onClick={closeMenu}>Prices</HashLink></li>
+                    <li><HashLink scroll={scrollFunction} smooth to="/#prices" onClick={closeMenu}>{t("menu.prices", "Prices")}</HashLink></li>
                     <div className="divider"></div>
-                    <li><HashLink scroll={scrollFunction} smooth to="/#gallery" onClick={closeMenu}>Gallery</HashLink></li>
+                    <li><HashLink scroll={scrollFunction} smooth to="/#gallery" onClick={closeMenu}>{t("menu.gallery", "Gallery")}</HashLink></li>
                     <div className="divider"></div>
-                    <li><HashLink scroll={scrollFunction} smooth to="/#cnc-shop" onClick={closeMenu}>CNC Shop</HashLink></li>
+                    <li><HashLink scroll={scrollFunction} smooth to="/#cnc-shop" onClick={closeMenu}>{t("menu.cncShop", "CNC Shop")}</HashLink></li>
                     <div className="divider"></div>
-                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/contact">Contact Us</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/contact">{t("menu.contact", "Contact Us")}</NavLink></li>
                 </ul>
             </nav>
         </div>
