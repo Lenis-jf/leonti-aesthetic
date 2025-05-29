@@ -5,9 +5,12 @@ import Footer from "../components/Footer";
 import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
 
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import { useEffect } from "react";
 
 const Contact = () => {
+    const { t } = useTranslation();
+    
     useEffect(() => {
         document.title = "Leonti Aesthetics | Contact Us";
         window.scrollTo(0, 0);
