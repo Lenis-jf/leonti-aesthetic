@@ -122,6 +122,8 @@ const Home = () => {
                     description={t("services.eyelashLifting.description", "Natural curl, without extensions")} />
                 <Service path="/services#eyebrow-lifting" name={t("services.eyebrowLifting.name", "Eyebrow lifting")}
                     description={t("services.eyebrowLifting.description", "Volume & shape that last")} />
+                <Service path="/services#aquafacial" name={t("services.aquafacial.name", "Aquafacial")}
+                    description={t("services.aquafacial.description", "For Clear and Radiant Skin")} />
                 <NavLink className="see-more-btn" to="/services">See more</NavLink>
             </section>
             <section id="prices" className="prices-container">
@@ -142,10 +144,10 @@ const Home = () => {
                 <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
             </div>
             <section id="cnc-shop" className="cnc-shop-section beige-section beige-section">
-                <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-orange.webp`} alt="mano decorativa con producto" className="hand orange" />
-                <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-white.webp`} alt="mano decorativa con producto" className="hand white" />
-                <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-transparent.webp`} alt="mano decorativa con producto" className="hand transparent" />
-                <img src={`${import.meta.env.BASE_URL}assets/imgs/hand-rounded.webp`} alt="mano decorativa con producto" className="hand rounded" />
+                <img src={`${import.meta.env.BASE_URL}assets/icons/right-top.svg`} alt="mano decorativa con producto" className="hand orange" />
+                <img src={`${import.meta.env.BASE_URL}assets/icons/left-top.svg`} alt="mano decorativa con producto" className="hand white" />
+                <img src={`${import.meta.env.BASE_URL}assets/icons/left-bottom.svg`} alt="mano decorativa con producto" className="hand transparent" />
+                <img src={`${import.meta.env.BASE_URL}assets/icons/right-bottom.svg`} alt="mano decorativa con producto" className="hand rounded" />
                 <div className="cnc-card">
                     <h2>{t("cncShop.title", "CNC DIRECT SHOP")}</h2>
                     <img className="cnc-shop-logo"

@@ -16,13 +16,14 @@ const Services = () => {
 
     const images = [];
 
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/main-bg-img.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/pure-glow.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/rosa-gloves.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/eyelash-extensions.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/eyelash-lifting.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/eyebrow-lifting.webp`);
-
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.svg`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-1.svg`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-2.svg`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-3.svg`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-4.svg`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-5.svg`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-6.svg`);
+    
     const imagesLoaded = useImagePreloader(images);
 
     useEffect(() => {
@@ -43,7 +44,7 @@ const Services = () => {
                 <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
             </section>
             <div className='principal-img-container'>
-                <img className="principal-img" src={`${import.meta.env.BASE_URL}assets/imgs/main-bg-img.webp`} alt={t("mainServicesPage.principalImg.alt", "decorative close-up of a woman's eye area")} />
+                <img className="principal-img" src={`${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.svg`} alt={t("mainServicesPage.principalImg.alt", "decorative close-up of a woman's eye area")} />
             </div>
             <section className="mainDescription">
                 <h4>{t("mainServicesPage.title", "Leonti Aesthetic")}</h4>
@@ -55,7 +56,7 @@ const Services = () => {
             </section>
             <section className="service-cards-section">
                 <div id="pure-glow" className="service-card pure-glow">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/pure-glow.webp`} alt={t("mainServicesPage.pureGlow.alt", "pure-glow service image")} className="pure-glow-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-1.svg`} alt={t("mainServicesPage.pureGlow.alt", "pure-glow service image")} className="pure-glow-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.pureGlow.name.rosa", "Pure Glow")}</div>
                     <h2>{t("mainServicesPage.pureGlow.name", "Pure Glow")}</h2>
                     <p>
@@ -64,10 +65,22 @@ const Services = () => {
                     <p>
                         <strong>{t("mainServicesPage.pureGlow.result", "Result: A clear, radiant, and healthy-looking")} </strong><br />{t("mainServicesPage.pureGlow.resultDescription", "complexion.")}
                     </p>
+                    <div className='subservice basic-care'>
+                        <h2>Basic Care</h2>
+                        <p>
+                            A clear, refreshing facial treatment for well-groomed skin in everyday life. With a gentle peel and the Skin Scrubber, impurities are gently removed, the skin is deeply cleansed, and it is provided with moisture—perfect for regular, straightforward skincare.
+                        </p>
+                    </div>
+                    <div className='subservice'>
+                        <h2>Intensive & Relaxing</h2>
+                        <p>
+                            A deep-acting facial cleansing with enzymatic peel and the Skin Scrubber, combined with a nourishing active ingredient ampoule, a relaxing face and décolleté massage, and calming light therapy. Ideal for those who want visible results and a moment of relaxation.
+                        </p>
+                    </div>
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="microneedling" className="service-card microneedling">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/rosa-gloves.webp`} alt={t("mainServicesPage.microneedling.alt", "microneedling service image")} className="microneedling-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-2.svg`} alt={t("mainServicesPage.microneedling.alt", "microneedling service image")} className="microneedling-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.microneedling.name.rosa", "Naturally beautiful skin through targeted deep care")}</div>
                     <h2>{t("mainServicesPage.microneedling.name", "Microneedling")}</h2>
                     <p>
@@ -101,7 +114,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyelash-extensions" className="service-card eyelashextensions">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/eyelash-extensions.webp`} alt={t("mainServicesPage.eyelashExtensions.alt", "eyelash extensions service image")} className="eyelashextensions-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-3.svg`} alt={t("mainServicesPage.eyelashExtensions.alt", "eyelash extensions service image")} className="eyelashextensions-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyelashExtensions.name.rosa", "Your look, your expression")}</div>
                     <h2>{t("mainServicesPage.eyelashExtensions.name", "Eyelash Extensions")}</h2>
                     <p>
@@ -129,7 +142,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyelash-lifting" className="service-card eyelash-lifting">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/eyelash-lifting.webp`} alt={t("mainServicesPage.eyelashLifting.alt", "eyelash lifting service image")} className="eyelash-lifting-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-4.svg`} alt={t("mainServicesPage.eyelashLifting.alt", "eyelash lifting service image")} className="eyelash-lifting-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyelashLifting.name.rosa", "Natural curl, no extensions")}</div>
                     <h2>{t("mainServicesPage.eyelashLifting.name", "Eyelash Lifting")}</h2>
                     <p>
@@ -139,12 +152,36 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyebrow-lifting" className="service-card eyebrow-lifting">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/eyebrow-lifting.webp`} alt={t("mainServicesPage.eyebrowLifting.alt", "eyebrow lifting service image")} className="eyebrow-lifting-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-5.svg`} alt={t("mainServicesPage.eyebrowLifting.alt", "eyebrow lifting service image")} className="eyebrow-lifting-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyebrowLifting.name.rosa", "Lasting Volume & Shape")}</div>
                     <h2>{t("mainServicesPage.eyebrowLifting.name", "Eyebrow Lifting")}</h2>
                     <p>
                         {t("mainServicesPage.eyebrowLifting.description", "Enhance your natural beauty with lash styles ranging from subtle to bold — no mascara needed. We use top-quality materials and precision techniques to deliver the look that suits you best:")}
                     </p>
+                    <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                </div>
+                <div id="aquafacial" className="service-card aquafacial">
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-6.svg`} alt={t("mainServicesPage.aquafacial.alt", "aquafacial service image")} className="aquafacial-img" />
+                    <div className="rosa-subtitle">{t("mainServicesPage.aquafacial.name.rosa", "For clear and radiant skin")}</div>
+                    <h2>{t("mainServicesPage.aquafacial.name", "Aquafacial")}</h2>
+                    <p>
+                        {t("mainServicesPage.aquafacial.description", "The AquaFacial treatment by Cure-Concept offers a gentle, non-invasive way to deeply cleanse and hydrate your skin. Using advanced aqua dermabrasion, vacuum technology, and nutrient-rich serums, it removes dead skin cells, oil, and impurities without irritation—perfect for all skin types.")}
+                    </p>
+                    <div className="divider"></div>
+                    <p>Benefits:</p>
+                    <ul>
+                        <li>• {t("mainServicesPage.aquafacial.list.1", "Suitable for dry, oily, sensitive, or acne-prone skin.")}</li>
+                        <li>• {t("mainServicesPage.aquafacial.list.2", "Immediate, looks smoother")}</li>
+                        <li>• {t("mainServicesPage.aquafacial.list.3", "No downtime—no redness or irritation.")}</li>
+                        <li>• {t("mainServicesPage.aquafacial.list.4", "Deep pore cleansing and hydration.")}</li>
+                    </ul>
+                    <p>Steps:</p>
+                    <ul>
+                        <li>{t("mainServicesPage.aquafacial.steps.1", "Cleansing & gentle exfoliation")}</li>
+                        <li>{t("mainServicesPage.aquafacial.steps.2", "Mild acid peel to renew skin")}</li>
+                        <li>{t("mainServicesPage.aquafacial.steps.3", "Deep vacuum pore cleansing")}</li>
+                        <li>{t("mainServicesPage.aquafacial.steps.4", "Hydration with nutrient-rich serums")}</li>
+                    </ul>
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <NavLink to="/" className='mainLogo-bottom'>

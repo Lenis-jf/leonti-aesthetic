@@ -51,7 +51,6 @@ div.principal-img-container {
     overflow: hidden;
     position: absolute;
     top: 90px;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 65%);
 
     img.principal-img {
         width: 100%;
@@ -130,32 +129,42 @@ section.service-cards-section {
         margin-bottom: 35px;
 
         &.pure-glow {
-            img {
-                clip-path: polygon(0 0, 100% 0, 100% 84%, 0 71%);
+            div.rosa-subtitle {
+                margin: clamp(85px, 40vw + 10px, 200px) 0 10px 0;
+            }
+
+            div.subservice.basic-care {
+                margin-top: 20px;
             }
         }
 
         &.microneedling {
-            img {
-                clip-path: polygon(0 0, 100% 0, 85% 93%, 0 93%);
+            div.rosa-subtitle {
+                margin: clamp(210px, 50vw + 60px, 280px) 0 10px 0;
             }
         }
 
         &.eyelashextensions {
-            img {
-                clip-path: polygon(0 0, 100% 0, 94% 93%, 0 86%);
+            div.rosa-subtitle {
+                margin: clamp(100px, 45vw, 200px) 0 10px 0;
             }
         }
 
         &.eyelash-lifting {
-            img {
-                clip-path: polygon(0 0, 100% 0, 89% 95%, 0 95%);
+            div.rosa-subtitle {
+                margin: clamp(210px, 50vw + 60px, 290px) 0 10px 0;
             }
         }
 
         &.eyebrow-lifting {
-            img {
-                clip-path: polygon(0 0, 100% 0, 97% 96%, 0 88%);
+            div.rosa-subtitle {
+                margin: clamp(85px, 40vw + 10px, 200px) 0 10px 0;
+            }
+        }
+        
+        &.aquafacial {
+            div.rosa-subtitle {
+                margin: clamp(210px, 50vw + 60px, 280px) 0 10px 0;
             }
         }
 
@@ -187,7 +196,7 @@ section.service-cards-section {
             @include text-font;
             color: $color-fuente;
             font-size: $tamano-texto-mediano;
-            line-height: 1.5rem;
+            line-height: clamp(1.7rem, 1.25rem + 0.8vw, 2rem);
         }
 
         p:first-of-type {
@@ -206,7 +215,6 @@ section.service-cards-section {
             color: $primary-color;
             font-size: 1rem;
             font-weight: 600;
-            margin: 40vw 0 10px 0;
         }
 
         ul {
@@ -224,6 +232,7 @@ section.service-cards-section {
             border: 1px solid #707070;
             border-radius: 5px;
             margin: 5px 0;
+            box-shadow: $neo-morphism-static;
 
             h3 {
                 @include titles-font;
@@ -243,6 +252,7 @@ section.service-cards-section {
             border: 1px solid #707070;
             border-radius: 5px;
             margin: 5px 0;
+            box-shadow: $neo-morphism-static;
 
             span {
                 @include titles-font;
@@ -269,55 +279,35 @@ section.service-cards-section {
         }
     }
 
-    div.service-card.microneedling {
+    div.service-card.aquafacial {
         div.divider {
             width: 100%;
-            height: 1px;
+            height: 1.5px;
             background-color: #707070;
+            opacity: 0.1;
             margin: 10px 0;
         }
-
-        div.rosa-subtitle {
-            margin-top: 80vw;
+        
+        div.divider {
+            width: 100%;
+            height: 1.5px;
+            background-color: #707070;
+            opacity: 0.1;
+            margin: 10px 0;
         }
-
-        p + div.subservice {
+        
+        p:last-of-type {
             margin-top: 20px;
         }
-
-        div.subservice:last-of-type {
-            background-color: $primary-color;
-            border: none;
-
-            h3, p {
-                color: $white-base;
-            }
-        }
-    }
-    
-    div.service-card.eyelash-lifting {
-        div.rosa-subtitle {
-            margin-top: 55vw;
-        }
-    }
-    
-    div.service-card.eyelashextensions {
-        div.rosa-subtitle {
-            margin-top: 50vw;
-        }
-    }
-
-    div.service-card.eyebrow-lifting {
-        div.rosa-subtitle {
-            margin-top: clamp(45vw, 40vw + 45px, 60vw);
-        }
+        
     }
 
     a.contact-btn {
-        width: fit-content;
-        padding: 5px;
+        width: 65px;
+        padding: 6px;
         border-radius: 4px;
         margin-top: 20px;
+        margin-bottom: 20px;
         @include text-font;
         font-size: $tamano-texto-pequeno;
         font-weight: 800;
