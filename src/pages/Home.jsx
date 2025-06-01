@@ -124,7 +124,7 @@ const Home = () => {
                     description={t("services.eyebrowLifting.description", "Volume & shape that last")} />
                 <Service path="/services#aquafacial" name={t("services.aquafacial.name", "Aquafacial")}
                     description={t("services.aquafacial.description", "For Clear and Radiant Skin")} />
-                <NavLink className="see-more-btn" to="/services">See more</NavLink>
+                <NavLink className="see-more-btn" to="/services">{t("buttons.see", "See more")}</NavLink>
             </section>
             <section id="prices" className="prices-container">
                 <h3>
@@ -140,7 +140,7 @@ const Home = () => {
             <PricesTable />
             <Gallery />
             <div className="btn-bottom-container">
-                <NavLink className="see-more-btn" to="/">{t("buttons.see", "See more")}</NavLink>
+                {/* <NavLink className="see-more-btn" to="/">{t("buttons.see", "See more")}</NavLink> */}
                 <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
             </div>
             <section id="cnc-shop" className="cnc-shop-section beige-section beige-section">

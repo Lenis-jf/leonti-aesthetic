@@ -83,12 +83,12 @@ section.mainDescription {
         @include text-font;
         color: $color-fuente;
         font-size: $tamano-texto-mediano;
-        line-height: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
+        line-height: clamp(1.8rem, 1.5rem + 1vw, 2.3rem);
     }
 
     div.decorationText {
         min-width: 220px;
-        max-width: 280px;
+        max-width: 320px;
         height: 30px;
         color: $botones-dorados;
         background-color: $third-color;
@@ -196,7 +196,7 @@ section.service-cards-section {
             @include text-font;
             color: $color-fuente;
             font-size: $tamano-texto-mediano;
-            line-height: clamp(1.7rem, 1.25rem + 0.8vw, 2rem);
+            line-height: clamp(1.8rem, 1.5rem + 1vw, 2.3rem);
         }
 
         p:first-of-type {
@@ -217,10 +217,16 @@ section.service-cards-section {
             font-weight: 600;
         }
 
-        ul {
+        ul, ol {
             color: $color-fuente;
             list-style: none;
             font-size: $tamano-texto-mediano;
+            line-height: clamp(2rem, 1.5rem + 1vw, 2.6rem);
+        }
+
+        ol {
+            list-style: decimal;
+            padding-left: 10px;
         }
 
         div.subservice {
@@ -275,6 +281,25 @@ section.service-cards-section {
                 margin: 0;
                 padding-left: 5px;
                 font-size: $tamano-texto-mediano;
+            }
+        }
+    }
+
+    div.service-card.microneedling {
+        div.divider {
+            width: 100%;
+            height: 1.5px;
+            background-color: #707070;
+            opacity: 0.1;
+            margin: 10px 0;
+        }
+        
+        div.subservice.rosa-subservice {
+            background-color: $primary-color;
+            border: none;
+            
+            p, h3 {
+                color: $white-base;
             }
         }
     }

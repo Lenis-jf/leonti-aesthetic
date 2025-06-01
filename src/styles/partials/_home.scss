@@ -189,7 +189,7 @@ section.mainGreeting {
             @include titles-font;
             text-align: left;
             font-size: $tamano-titulos-grandes;
-            line-height: clamp(3.1rem, 2vw, 3.8rem);
+            line-height: clamp(3.3rem, 2vw, 4rem);
             color: $color-fuente-titulos;
         }
 
@@ -197,14 +197,14 @@ section.mainGreeting {
             @include text-font;
             font-weight: 800;
             font-size: $tamano-titulos-pequenos;
-            line-height: clamp(1.8rem, 1.2vw, 2rem);
+            line-height: clamp(2.3rem, 1.8vw, 3.5rem);
             color: $color-fuente-titulos;
         }
 
         p {
             @include text-font;
             font-size: $tamano-texto;
-            line-height: clamp(1.9rem, 1.4vw, 2.8rem);
+            line-height: clamp(2.2rem, 2vw, 3.2rem);
             color: $color-fuente;
         }
     }   
@@ -243,8 +243,9 @@ h1~button.btn {
 
 a.see-more-btn {
     @include titles-font;
-    width: 88px;
+    width: max-content;
     height: 30px;
+    padding: 0px 10px;
     font-size: $tamano-texto-pequeno;
     line-height: clamp(1.5rem, 0.8vw, 1.8rem);
     text-align: center;
@@ -262,13 +263,14 @@ a.see-more-btn {
 
 div.btn-bottom-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     
-    a.see-more-btn {
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
+    // a.see-more-btn {
+    //     margin-left: 50%;
+    //     transform: translateX(-50%);
+    // }
 
     a.contact-btn {
         width: 88px;
@@ -277,7 +279,7 @@ div.btn-bottom-container {
         line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         border-radius: 8px;
         box-shadow: $neo-morphism-static;
-        transform: translateX(-40%);
+        // transform: translateX(-40%);
     }
 }
 
@@ -315,7 +317,7 @@ section.prices-container {
         @include text-font;
         
         font-size: $tamano-texto-mediano;
-        line-height: clamp(1.5rem, 1.2vw, 1.8rem);
+        line-height: clamp(1.7rem, 1.5vw, 2.1rem);
         max-width: 300px;
         text-align: center;
         margin-top: 5px;
@@ -328,6 +330,7 @@ section.prices-container {
         align-items: center;
         margin: 25px 0;
         font-size: $tamano-texto-mediano;
+        width: fit-content;
 
         div.download-icon-container {
             width: 30px;
@@ -366,7 +369,7 @@ section.cnc-shop-section {
         h2 {
             @include titles-font;
             font-size: $tamano-texto-mediano;
-            line-height: clamp(1.5rem, 0.8vw, 1.8rem);
+            line-height: clamp(1.8rem, 1vw, 2.2rem);
             text-align: center;
             color: $botones-dorados;
             font-weight: 800;
@@ -386,8 +389,7 @@ section.cnc-shop-section {
         p {
             @include text-font;
             font-size: $tamano-texto-mediano;
-            line-height: clamp(1.8rem, 1vw, 2.3rem);
-            line-height: 100%;
+            line-height: clamp(1.6rem, 1vw, 2rem);
             font-weight: 500;
             color: $color-fuente;
             text-align: center;
@@ -424,7 +426,7 @@ section.cnc-shop-section {
                 @include text-font;
                 font-weight: 500;
                 font-size: $tamano-texto-mediano;
-                line-height: clamp(1.2rem, 0.5vw, 1.4rem);
+                line-height: clamp(1.4rem, 1vw, 2.3rem);
                 color: $white-base;
                 text-align: center;
                 padding: 10px;

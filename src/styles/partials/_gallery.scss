@@ -14,8 +14,17 @@ section.picture-gallery {
         top: -80px;
     }
 
-    h1 {
+    h1, h2 {
+        @include titles-font;
+        color: $color-fuente-titulos;
+        font-size: $tamano-titulos-medianos;
         margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: $tamano-titulos-pequenos;
+        margin-bottom: 10px;
+        color: $primary-color;
     }
 
     .picture-gallery-container {
@@ -40,8 +49,8 @@ section.picture-gallery {
                 flex: 0 0 auto;
                 width: clamp(280px, calc(80% - 20px), 320px);
                 height: 350px;
-                background: #fff;
-                padding: 10px;
+                background: $white-base;
+                padding: 10px 10px 30px 10px;
                 // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 box-shadow: 1px 3px 6px 2px rgba($botones-dorados, 0.2);
                 border-radius: 8px;
