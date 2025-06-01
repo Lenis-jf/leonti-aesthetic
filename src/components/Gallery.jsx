@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const Gallery = () => {
     const { t } = useTranslation();
-    const imagesIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16];
+    const imagesIndex = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11];
     const containerRef = useRef(null);
     const [activeId, setActiveId] = useState(null);
 
@@ -12,7 +12,7 @@ const Gallery = () => {
         if (!containerRef.current) return;
         const options = {
             root: containerRef.current,
-            threshold: 1.0, // trigger when 100% visible
+            threshold: 0.8, // trigger when 80% visible
         };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {

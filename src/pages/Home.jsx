@@ -112,8 +112,10 @@ const Home = () => {
                     </div>
                 </section>
                 <h2 className='services-title'>{t("services.title", "OUR SERVICES")}</h2>
-                <Service path="/services#pure-glow" name={t("services.pureGlow.name", "Pure Glow")}
-                    description={t("services.pureGlow.description", "Classic facial cleaning")} />
+                <Service path="/services#pure-glow" name={t("services.pureGlow.name", "Classic Facial Treatments")}
+                    description={t("services.pureGlow.description", "Facial cleaning treatments")} />
+                <Service path="/services#aquafacial" name={t("services.aquafacial.name", "Aquafacial")}
+                    description={t("services.aquafacial.description", "For Clear and Radiant Skin")} />
                 <Service path="/services#microneedling" name={t("services.microneedling.name", "Microneedling")}
                     description={t("services.microneedling.description", "Naturally beautiful skin through targeted deep care")} />
                 <Service path="/services#eyelash-extensions" name={t("services.eyelashExtensions.name", "Eyelash extensions")}
@@ -122,8 +124,6 @@ const Home = () => {
                     description={t("services.eyelashLifting.description", "Natural curl, without extensions")} />
                 <Service path="/services#eyebrow-lifting" name={t("services.eyebrowLifting.name", "Eyebrow lifting")}
                     description={t("services.eyebrowLifting.description", "Volume & shape that last")} />
-                <Service path="/services#aquafacial" name={t("services.aquafacial.name", "Aquafacial")}
-                    description={t("services.aquafacial.description", "For Clear and Radiant Skin")} />
                 <NavLink className="see-more-btn" to="/services">{t("buttons.see", "See more")}</NavLink>
             </section>
             <section id="prices" className="prices-container">
