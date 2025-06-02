@@ -80,8 +80,9 @@ const Home = () => {
                     <img className="mainFoto" src={mainFoto2} alt={t("mainFoto2", "studio owner in the foreground")} />
                 </section>
                 <div className='mainTitle-container'>
+                    <h2>{t("welcome.h2", "Welcome to")}</h2>
                     <h1 ref={titleRef} className={playTitle ? 'running' : ''}>
-                        {t("welcome.title", "Welcome to")} <strong>{t("welcome.brand", "Leonti Aesthetic")}</strong> {t("welcome.subtitle", "a place where we care about you")}</h1>
+                        {t("welcome.title", "Leonti Aesthetic, where precision and well-being take center stage.")}</h1>
                 </div>
             </section>
             <section className='services beige-section'>
@@ -103,12 +104,15 @@ const Home = () => {
                         </h4>
                         <br />
                         <p>
-                            {t("greeting.paragraph1", "My name is Ecaterina Leonti, I am a certified beautician and eyelash stylist - as well as the founder of")} <strong>{t("greeting.brand", "Leonti Aesthetic")}</strong>. {t("greeting.paragraph2", "My studio stands for quality, aesthetics and genuine, natural results.")}
+                            {t("greeting.paragraph1", "In ruhiger, stilvoller Atmosphäre nehme ich mir Zeit, um Ihre Wünsche und Bedürfnisse genau zu erfassen und Ihnen individuelle Behandlungen auf höchstem Niveau zu bieten. Ob Gesichtsbehandlungen, Wimpernverlängerung oder Lash- und Brow-Lifting – jede Anwendung erfolgt mit großer Sorgfalt, Feingefühl sowie unter Einhaltung strengster Hygiene- und Qualitätsstandards.")}
                         </p>
                         <br />
                         <p>
-                            {t("greeting.paragraph2", "A calm, elegant atmosphere awaits you here, where every treatment is carried out with care, high-quality products and great attention to detail. Nice to see you here!")}
+                            {t("greeting.paragraph2", "Gönnen Sie sich eine erholsame Auszeit vom Alltag und lassen Sie sich von sichtbaren Ergebnissen und einem frischen, gepflegten Erscheinungsbild überzeugen. Ich freue mich sehr darauf, Sie persönlich kennenzulernen und Ihnen bei Leonti Aesthetic ein angenehmes Wohlfühlerlebnis zu ermöglichen.")}
                         </p>
+                        <br />
+                        <p className='final-name'><strong>Ecaterina <span>Leonti</span></strong></p>
+                        <p className='final-certification'><em>{t("greeting.certification", "Certified Specialist Cosmetologist")}</em></p>
                     </div>
                 </section>
                 <h2 className='services-title'>{t("services.title", "OUR SERVICES")}</h2>

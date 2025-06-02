@@ -29,10 +29,10 @@ const PricesTable = () => {
                         },
                         {
                             name: t(
-                                'pricesTable.service.after4WeeksNewSet',
-                                'After 4 weeks: New Set'
+                                'pricesTable.service.refill4Weeks',
+                                'Refill (4 weeks)'
                             ),
-                            price: '€75',
+                            price: '€55',
                         },
                     ],
                 },
@@ -53,10 +53,10 @@ const PricesTable = () => {
                         },
                         {
                             name: t(
-                                'pricesTable.service.after4WeeksNewSet',
-                                'After 4 weeks: New Set'
+                                'pricesTable.service.refill4Weeks',
+                                'Refill (4 weeks)'
                             ),
-                            price: '€85',
+                            price: '€60',
                         },
                     ],
                 },
@@ -77,10 +77,10 @@ const PricesTable = () => {
                         },
                         {
                             name: t(
-                                'pricesTable.service.after4WeeksNewSet',
-                                'After 4 weeks: New Set'
+                                'pricesTable.service.refill4Weeks',
+                                'Refill (4 weeks)'
                             ),
-                            price: '€95',
+                            price: '€65',
                         },
                         {
                             name: t('pricesTable.service.eyelashRemoval', 'Eyelash Removal'),
@@ -91,7 +91,7 @@ const PricesTable = () => {
             ],
             note: t(
                 'pricesTable.note.wispyLook',
-                'Wispy Look, M-curls and L-curls available at no extra cost with same volume'
+                'Wispy Look, M-curls and L-curls available at no extra cost with same volume. After 4 weeks the price for a new set applies'
             ),
         },
         {

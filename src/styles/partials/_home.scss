@@ -23,27 +23,40 @@ section.firstSection {
 
     div.mainTitle-container {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 100%;
+        width: fit-content;
+        height: 50vh;
         padding: 0 20px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: clamp(5vh, 15vh, 20vh);
+        margin: 0 auto;
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
+        // margin-top: clamp(5vh, 15vh, 20vh);
+
+        h2 {
+            color: $botones-dorados;
+            font-weight: 650;
+            font-size: $tamano-titulos-medianos;
+            text-align: left;
+            margin-bottom: 5px;
+            max-width: 750px
+        }
 
         h1 {
             @include titles-font;
             color: $color-fuente-titulos;
-            font-size: 3.5rem;
-            line-height: 4rem;
+            font-size: clamp(2.8rem, 2rem + 2.5vw, 6rem);
+            line-height: clamp(3.2rem, 2.5rem + 2vw, 7rem);
             text-align: left;
-            max-width: 500px;
+            font-weight: 700;
+            max-width: 750px;
 
             @keyframes moveOut {
                 0% {
                     transform: translate(-50%, -50%) rotate(-45deg);
                 }
+
                 100% {
                     transform: translate(200%, 250%) rotate(-45deg);
                 }
@@ -69,7 +82,7 @@ section.firstSection {
             &.running::before {
                 animation-play-state: running;
             }
-        }             
+        }
     }
 
     section.main-fotos-container {
@@ -80,18 +93,18 @@ section.firstSection {
         width: 100%;
         background-color: $negro-fondo;
         clip-path: polygon(0 0, 100% 0, 97% 100%, 0 95%);
-    
+
         img.mainFoto {
             width: 100%;
             max-width: 350px;
         }
-    
+
         img.mainLogo-top {
             width: 40%;
             max-width: 220px;
             margin-top: 10px;
         }
-    
+
         a.contact-btn {
             position: absolute;
             top: 25px;
@@ -106,6 +119,8 @@ section.firstSection {
 
 
 section.mainGreeting {
+    width: 100%;
+    gap: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -126,6 +141,7 @@ section.mainGreeting {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -133,7 +149,7 @@ section.mainGreeting {
         }
 
         img.mainFoto-greeting {
-            width: 80%;
+            width: 100%;
             height: auto;
             z-index: 1;
             animation: fadeInUp 1s ease-out;
@@ -165,31 +181,37 @@ section.mainGreeting {
             opacity: 0;
             transform: translateX(40px);
         }
+
         to {
             opacity: 1;
             transform: translateX(0);
         }
-    }   
+    }
 
     div.greeting {
         width: 100%;
-        max-width: 320px;
+        max-width: 480px;
         animation: fadeInRight 1s ease-out;
         animation-fill-mode: forwards;
         animation-delay: 500m;
         animation-play-state: paused;
         opacity: 0;
         transform: translateX(40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         &.running {
             animation-play-state: running;
         }
-        
+
         h1 {
+            width: 100%;
             @include titles-font;
             text-align: left;
             font-size: $tamano-titulos-grandes;
-            line-height: clamp(3.3rem, 2vw, 4rem);
+            line-height: clamp(2rem, 5vw + 10px, 5.2rem);
             color: $color-fuente-titulos;
         }
 
@@ -197,7 +219,7 @@ section.mainGreeting {
             @include text-font;
             font-weight: 800;
             font-size: $tamano-titulos-pequenos;
-            line-height: clamp(2.3rem, 1.8vw, 3.5rem);
+            line-height: clamp(1.8rem, 4vw, 3.5rem);
             color: $color-fuente-titulos;
         }
 
@@ -207,7 +229,27 @@ section.mainGreeting {
             line-height: clamp(2.2rem, 2vw, 3.2rem);
             color: $color-fuente;
         }
-    }   
+
+        p.final-certification,
+        p.final-name {
+            @include text-font;
+            font-size: $tamano-texto;
+            width: 100%;
+            text-align: left;
+        }
+
+        p.final-certification {
+            opacity: 0.8;
+        }
+
+        p.final-name {
+            font-weight: 600;
+
+            span {
+                color: $botones-dorados;
+            }
+        }
+    }
 }
 
 h1 {
@@ -266,7 +308,7 @@ div.btn-bottom-container {
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+
     // a.see-more-btn {
     //     margin-left: 50%;
     //     transform: translateX(-50%);
@@ -300,10 +342,11 @@ section.prices-container {
     }
 
     @include topShadow;
+
     &::before {
         background-color: $primary-color;
     }
-    
+
     h3 {
         @include titles-font;
         font-size: $tamano-titulos-medianos;
@@ -311,11 +354,13 @@ section.prices-container {
         margin-top: 40px;
         margin-bottom: 5px;
         color: $white-base;
+        width: 90%;
+        line-height: clamp(2.5rem, 4vw, 3.8rem);
     }
 
     p {
         @include text-font;
-        
+
         font-size: $tamano-texto-mediano;
         line-height: clamp(1.7rem, 1.5vw, 2.1rem);
         max-width: 300px;
@@ -358,13 +403,13 @@ section.cnc-shop-section {
         justify-content: center;
         align-items: center;
         gap: 10px;
-        width: clamp(260px, 80%, 340px);
-        height: 280px;
+        width: 80%;
+        max-width: clamp(260px, 80vw, 420px);
+        height: clamp(280px, 80vw, 380px);
         background-color: $white-base;
         padding: 15px 15px 65px 15px;
         border-radius: 10px;
         box-shadow: $neo-morphism-static;
-        margin-bottom: 80px;
 
         h2 {
             @include titles-font;
@@ -402,13 +447,14 @@ section.cnc-shop-section {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 90%;
-            max-width: 240px;
-            height: 150px;
+            width: 80%;
+            max-width: clamp(240px, 50vw, 300px);
+            height: clamp(150px,50vw, 200px);
             background-color: $primary-color;
             border-radius: 10px;
             padding: 15px;
-            bottom: -90px;
+            bottom: 0;
+            transform: translateY(60%);
             box-shadow: $neo-morphism-static;
 
             div.notch {
@@ -416,7 +462,7 @@ section.cnc-shop-section {
                 width: 70%;
                 height: 20px;
                 border-radius: 10px;
-                top: -10%;
+                top: -18px;
                 transform: translateY(50%);
                 // background-color: #FFCBCB;
                 background-color: $primary-color;
@@ -440,16 +486,37 @@ section.cnc-shop-section {
         pointer-events: none;
     }
 
-    img.hand.orange {top: -60px; right: -20px; z-index: 2;}
-    img.hand.white {top: -50px; left: 0; z-index: 2;}
-    img.hand.transparent {bottom: 135px; left: -40px; z-index: 2; transform: rotate(45deg);}
-    img.hand.rounded {bottom: 120px; right: -20px; z-index: 2; transform: rotate(-90deg);}
+    img.hand.orange {
+        top: -60px;
+        right: -20px;
+        z-index: 2;
+    }
+
+    img.hand.white {
+        top: -40px;
+        left: 0;
+        z-index: 2;
+    }
+
+    img.hand.transparent {
+        bottom: 125px;
+        left: -50px;
+        z-index: 2;
+        transform: rotate(35deg);
+    }
+
+    img.hand.rounded {
+        bottom: 140px;
+        right: -20px;
+        z-index: 2;
+        transform: rotate(-90deg);
+    }
 }
 
 h1.access-code {
     @include titles-font;
     color: $color-fuente;
-    font-size: clamp(1rem, 0.8vw, 1.2rem);
+    font-size: $tamano-texto-mediano;
     line-height: clamp(1.5rem, 0.8vw, 1.8rem);
 }
 
@@ -467,11 +534,11 @@ a.cnc-shop {
     background-color: $color-fuente-titulos;
     color: $white-base;
     border-radius: 8px;
-    margin: 30px 0 20px 0;
+    margin: clamp(150px, 50vw, 200px) 0 20px 0;
     box-shadow: $neo-morphism-static;
     padding: 5px;
     @include hoverBtn;
-    
+
     div.arrow-right {
         width: 14px;
         height: 14px;
@@ -482,8 +549,32 @@ a.cnc-shop {
     }
 
     &:hover {
-        div.arrow-right{
+        div.arrow-right {
             background-image: url("/public/assets/icons/arrow-right.svg");
         }
-    }  
+    }
+}
+
+@media screen and (min-width: 750px) {
+    section.mainGreeting {
+        div.greetingImg-container {
+            max-width: 320px;
+        }
+
+        div.greeting {
+            max-width: 520px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section.mainGreeting {
+        div.greetingImg-container {
+            max-width: 420px;
+        }
+
+        div.greeting {
+            max-width: 580px;
+        }
+    }
 }

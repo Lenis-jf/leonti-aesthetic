@@ -18,19 +18,19 @@ section.picture-gallery {
         @include titles-font;
         color: $color-fuente-titulos;
         font-size: $tamano-titulos-medianos;
-        margin-bottom: 20px;
+        margin-bottom: clamp(25px, 2vw + 20px, 80px);
     }
 
     h2 {
         font-size: $tamano-titulos-pequenos;
-        margin-bottom: 10px;
+        margin-bottom: clamp(10px, 2vw, 30px);
         color: $primary-color;
     }
 
     .picture-gallery-container {
         position: relative;
         right: 0;
-        overflow: hidden;
+        overflow-x: hidden;
 
         .pictures-scroll {
             display: flex;
@@ -47,12 +47,12 @@ section.picture-gallery {
 
             .image-container {
                 flex: 0 0 auto;
-                width: clamp(280px, calc(80% - 20px), 320px);
-                height: 350px;
+                width: clamp(280px, 80vw, 380px);
+                height: clamp(380px, 80vw, 480px);
                 background: $white-base;
-                padding: 10px 10px 30px 10px;
+                padding: 10px 10px clamp(30px, 30vw, 50px) 10px;
                 // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                box-shadow: 1px 3px 6px 2px rgba($botones-dorados, 0.2);
+                box-shadow: $sombra-dorada;
                 border-radius: 8px;
                 scroll-snap-align: start;
                 display: flex;

@@ -63,7 +63,7 @@ const Services = () => {
                         {t("mainServicesPage.pureGlow.description", "A gentle yet effective treatment that deeply cleanses the skin. Using high-quality CNC products, enzymatic peeling, a skin scrubber, and a soothing mask, your skin will be refreshed and soothed. Includes a relaxing facial massage upon request.")}
                     </p>
                     <p>
-                        <strong>{t("mainServicesPage.pureGlow.result", "Result: A clear, radiant, and healthy-looking")} </strong><br />{t("mainServicesPage.pureGlow.resultDescription", "complexion.")}
+                        <strong>{t("mainServicesPage.pureGlow.result", "Result: A clear, radiant, and healthy-looking complexion.")}</strong>
                     </p>
                     <div className='subservice basic-care'>
                         <h2>{t("mainServicesPage.pureGlow.subservice.basicCare.title", "Basic Care")}</h2>
@@ -171,7 +171,7 @@ const Services = () => {
                     <h2>{t("mainServicesPage.eyelashLifting.name", "Eyelash Lifting")}</h2>
                     <p>
                         {t("mainServicesPage.eyelashLifting.description", "Get fuller, more defined brows without the daily effort. Your eyebrows are shaped, strengthened, and fixed for a clean, even look that stays in place.")}
-                        <strong>{t("mainServicesPage.eyelashLifting.result", "Result: A natural curl that lasts up to 6 weeks.")}</strong>
+                        <strong><br />{t("mainServicesPage.eyelashLifting.result", "Result: A natural curl that lasts up to 6 weeks.")}</strong>
                     </p>
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>

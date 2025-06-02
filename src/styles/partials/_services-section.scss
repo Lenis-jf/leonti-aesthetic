@@ -25,8 +25,8 @@ section.topMenu {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40%;
-        max-width: 220px;
+        width: 45%;
+        max-width: 180px;
         margin-top: 10px;
 
         img {
@@ -227,7 +227,7 @@ section.service-cards-section {
 
         ol {
             list-style: decimal;
-            padding-left: 10px;
+            padding-left: 15px;
         }
 
         div.subservice {
@@ -239,7 +239,7 @@ section.service-cards-section {
             border: 1px solid #707070;
             border-radius: 5px;
             margin: 5px 0;
-            box-shadow: $neo-morphism-static;
+            box-shadow: $sombra-dorada-subservices;
 
             h3 {
                 @include titles-font;
@@ -259,7 +259,7 @@ section.service-cards-section {
             border: 1px solid #707070;
             border-radius: 5px;
             margin: 5px 0;
-            box-shadow: $neo-morphism-static;
+            box-shadow: $sombra-dorada-subservices;
 
             span {
                 @include titles-font;

@@ -27,19 +27,18 @@ section.services.beige-section {
         padding: 15px 20px;
         box-shadow: $neo-morphism-static;
         width: 90%;
-        max-width: 320px;
+        max-width: 440px;
+        height: clamp(80px, 8vw, 115px);
 
         h2 {
             color: $color-fuente-titulos;
             font-size: $tamano-titulos-pequenos;
-            line-height: clamp(1.8rem, 1.2vw, 2.3rem);
-            margin-bottom: clamp(10px, 2vw, 25px);
+            line-height: clamp(1.8rem, 1vw, 2rem);
+            margin-bottom: clamp(10px, 1.5vw, 20px);
         }
 
         p {
             @include text-font;
-            top: 65%;
-            transform: translateY(-30%);
             z-index: 2;
             color: $color-fuente;
             font-size: $tamano-texto-mediano;
