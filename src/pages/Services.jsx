@@ -16,13 +16,13 @@ const Services = () => {
 
     const images = [];
 
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-1.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-2.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-3.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-4.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-5.webp`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-6.webp`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.png`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-1.png`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-2.png`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-3.png`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-4.png`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-5.png`);
+    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-6.png`);
 
     const imagesLoaded = useImagePreloader(images);
 
@@ -44,7 +44,7 @@ const Services = () => {
                 <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
             </section>
             <div className='principal-img-container'>
-                <img className="principal-img" src={`${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.webp`} alt={t("mainServicesPage.principalImg.alt", "decorative close-up of a woman's eye area")} />
+                <img className="principal-img" src={`${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.png`} alt={t("mainServicesPage.principalImg.alt", "decorative close-up of a woman's eye area")} />
             </div>
             <section className="mainDescription">
                 <h4>{t("mainServicesPage.title", "Leonti Aesthetic")}</h4>
@@ -56,7 +56,7 @@ const Services = () => {
             </section>
             <section className="service-cards-section">
                 <div id="pure-glow" className="service-card pure-glow">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-1.webp`} alt={t("mainServicesPage.pureGlow.alt", "pure-glow service image")} className="pure-glow-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-1.png`} alt={t("mainServicesPage.pureGlow.alt", "pure-glow service image")} className="pure-glow-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.pureGlow.name.rosa", "Pure Glow")}</div>
                     <h2>{t("mainServicesPage.pureGlow.name", "Classic Facial Cleaning")}</h2>
                     <p>
@@ -80,7 +80,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="aquafacial" className="service-card aquafacial">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-6.webp`} alt={t("mainServicesPage.aquafacial.alt", "aquafacial service image")} className="aquafacial-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-6.png`} alt={t("mainServicesPage.aquafacial.alt", "aquafacial service image")} className="aquafacial-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.aquafacial.name.rosa", "For clear and radiant skin")}</div>
                     <h2>{t("mainServicesPage.aquafacial.name", "Aquafacial")}</h2>
                     <p>
@@ -104,7 +104,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="microneedling" className="service-card microneedling">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-2.webp`} alt={t("mainServicesPage.microneedling.alt", "microneedling service image")} className="microneedling-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-2.png`} alt={t("mainServicesPage.microneedling.alt", "microneedling service image")} className="microneedling-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.microneedling.name.rosa", "Naturally beautiful skin through targeted deep care")}</div>
                     <h2>{t("mainServicesPage.microneedling.name", "Microneedling")}</h2>
                     <p>
@@ -138,7 +138,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyelash-extensions" className="service-card eyelashextensions">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-3.webp`} alt={t("mainServicesPage.eyelashExtensions.alt", "eyelash extensions service image")} className="eyelashextensions-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-3.png`} alt={t("mainServicesPage.eyelashExtensions.alt", "eyelash extensions service image")} className="eyelashextensions-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyelashExtensions.name.rosa", "Your look, your expression")}</div>
                     <h2>{t("mainServicesPage.eyelashExtensions.name", "Eyelash Extensions")}</h2>
                     <p>
@@ -166,7 +166,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyelash-lifting" className="service-card eyelash-lifting">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-5.webp`} alt={t("mainServicesPage.eyebrowLifting.alt", "eyebrow lifting service image")} className="eyebrow-lifting-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-5.png`} alt={t("mainServicesPage.eyebrowLifting.alt", "eyebrow lifting service image")} className="eyebrow-lifting-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyelashLifting.name.rosa", "Natural curl, no extensions")}</div>
                     <h2>{t("mainServicesPage.eyelashLifting.name", "Eyelash Lifting")}</h2>
                     <p>
@@ -176,7 +176,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyebrow-lifting" className="service-card eyebrow-lifting">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-4.webp`} alt={t("mainServicesPage.eyelashLifting.alt", "eyelash lifting service image")} className="eyelash-lifting-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-4.png`} alt={t("mainServicesPage.eyelashLifting.alt", "eyelash lifting service image")} className="eyelash-lifting-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyebrowLifting.name.rosa", "Lasting Volume & Shape")}</div>
                     <h2>{t("mainServicesPage.eyebrowLifting.name", "Eyebrow Lifting")}</h2>
                     <p>

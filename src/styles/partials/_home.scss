@@ -124,7 +124,7 @@ section.mainGreeting {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 15px;
+    padding: 0 25px;
     margin-bottom: 80px;
 
     div.greetingImg-container {
@@ -434,7 +434,7 @@ section.cnc-shop-section {
         p {
             @include text-font;
             font-size: $tamano-texto-mediano;
-            line-height: clamp(1.6rem, 1vw, 2rem);
+            line-height: clamp(1.6rem, 1.8vw, 2rem);
             font-weight: 500;
             color: $color-fuente;
             text-align: center;
@@ -449,12 +449,12 @@ section.cnc-shop-section {
             align-items: center;
             width: 80%;
             max-width: clamp(240px, 50vw, 300px);
-            height: clamp(150px,50vw, 200px);
+            height: clamp(150px, 50vw, 220px);
             background-color: $primary-color;
             border-radius: 10px;
             padding: 15px;
             bottom: 0;
-            transform: translateY(60%);
+            transform: translateY(68%);
             box-shadow: $neo-morphism-static;
 
             div.notch {
@@ -472,11 +472,9 @@ section.cnc-shop-section {
                 @include text-font;
                 font-weight: 500;
                 font-size: $tamano-texto-mediano;
-                line-height: clamp(1.4rem, 1vw, 2.3rem);
+                line-height: clamp(1.6rem, 1.8vw, 2rem);
                 color: $white-base;
                 text-align: center;
-                padding: 10px;
-                max-width: 200px;
             }
         }
     }
