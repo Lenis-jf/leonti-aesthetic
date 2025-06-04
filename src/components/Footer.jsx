@@ -10,8 +10,9 @@ const Footer = () => {
     return (
         <div>
             <footer className="dark-section">
-                <img className="main-logo-white" src={mainLogoWhite} alt="Leonti Aesthetics logo" />
-                <div className="addresses">
+                <NavLink to="/" className='mainLogo-bottom'>
+                    <img src={mainLogoWhite} alt={t("mainServicesPage.logo.alt", "Leonti Aesthetic Logo")} />
+                </NavLink>                <div className="addresses">
                     <span className="address white">Hochstädter Str.1a, 63477 Maintal</span>
                     <span className="email-address white">aesthetic@leonti.eu</span>
                 </div>

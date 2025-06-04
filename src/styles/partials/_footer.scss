@@ -2,6 +2,7 @@
 @use "mixins" as *;
 
 section.location-info-container {
+    position: relative;
     width: 100%;
     background-color: $secondary-color;
     display: flex;
@@ -10,6 +11,7 @@ section.location-info-container {
     flex-direction: column;
     gap: 15px;
     padding: 40px 0;
+    @include topShadow;
 
     h4 {
         @include titles-font;
@@ -74,9 +76,13 @@ footer {
     justify-content: space-between;
     align-items: center;  
 
-    img.main-logo-white {
-        display: block;
+    a.mainLogo-bottom {
+        width: max-content;
         margin: 120px auto 20px auto;
+
+        img.main-logo-white {
+            width: 100%;
+        }
     }
 
     nav.footer-menu {
@@ -180,7 +186,7 @@ footer {
 
 section.location-info-container + section.beige-section {
     gap: 15px;
-    padding: 80px 0;
+    padding: 80px 10px;
 
     h4 {
         @include text-font;
