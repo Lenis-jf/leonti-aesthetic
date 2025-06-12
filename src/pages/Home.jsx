@@ -36,6 +36,10 @@ const Home = () => {
     const [playGreetingText, setPlayGreetingText] = useState(false);
 
     useEffect(() => {
+        document.title = "Leonti Aesthetic";
+    }, []);
+
+    useEffect(() => {
         if (imagesLoaded && titleRef.current) {
             requestAnimationFrame(() => setPlayTitle(true));
         }

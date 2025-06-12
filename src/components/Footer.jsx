@@ -17,11 +17,22 @@ const Footer = () => {
                     <span className="email-address white">aesthetic@leonti.eu</span>
                 </div>
                 <div className="icons-container white">
-                    <span className="social-media-icon email white" alt="email icon"></span>
-                    <span className="social-media-icon instagram white" alt="instagram icon"></span>
-                    <span className="social-media-icon facebook white" alt="facebook icon"></span>
-                    <span className="social-media-icon phone white" alt="phone icon"></span>
-                    {/* <span className="social-media-icon"></span> */}
+                    {/* Correo Electrónico */}
+                    <a href="mailto:ecaterina.leonti06@gmail.com" className="social-media-icon email white" alt="email icon" aria-label="Enviar correo electrónico">
+                    </a>
+
+                    {/* Instagram */}
+                    <a href="https://www.instagram.com/leonti.aesthetic/" target="_blank" rel="noopener noreferrer" className="social-media-icon instagram white" alt="instagram icon" aria-label="Visitar Instagram">
+                    </a>
+
+                    {/* Facebook */}
+                    <a href="https://www.facebook.com/leonti.aesthetic.facebook" target="_blank" rel="noopener noreferrer" className="social-media-icon facebook white" alt="facebook icon" aria-label="Visitar Facebook">
+                    </a>
+
+                    {/* Teléfono */}
+                    <a href="tel:+4917620836261" className="social-media-icon phone white" alt="phone icon" aria-label="Llamar por teléfono">
+                    </a>
+                    {/* Puedes añadir más iconos aquí */}
                 </div>
                 <nav className="footer-menu">
                     <ul>

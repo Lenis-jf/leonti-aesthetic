@@ -6,17 +6,17 @@ const containerStyle = {
   height: '100%'
 };
 
-const maintalCenter = {
-  lat: 50.1533,
-  lng: 8.8349
+const leonti_aesthetic = {
+  lat: 50.15333716631024,
+  lng: 8.806611254970692
 };
 
 const mapOptions = {
-  disableDefaultUI: true,   
-  zoomControl: true,        
-  mapTypeControl: false,    
-  streetViewControl: false, 
-  fullscreenControl: true, 
+  disableDefaultUI: true,
+  zoomControl: true,
+  mapTypeControl: false,
+  streetViewControl: false,
+  fullscreenControl: true,
   zoomControlOptions: {
     position: window.google?.maps.ControlPosition.RIGHT_BOTTOM
   }
@@ -36,12 +36,12 @@ const MapComponent = () => {
     <div className="map-container">
       {isLoaded ? (
         <GoogleMap
-          mapContainerStyle={containerStyle} 
-          center={maintalCenter}             
-          zoom={15}                          
-          options={mapOptions}               
+          mapContainerStyle={containerStyle}
+          center={leonti_aesthetic}
+          zoom={15}
+          options={mapOptions}
         >
-          <Marker position={maintalCenter} />
+          <Marker position={leonti_aesthetic} />
         </GoogleMap>
       ) : (
         <div className="loading">loading map...</div>

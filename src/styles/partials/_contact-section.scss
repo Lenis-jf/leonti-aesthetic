@@ -67,7 +67,7 @@ section.icons-container.black {
     @include bottomShadow;
     height: 280px;
 
-    span.social-media-icon {
+    a.social-media-icon {
         width: 24px;
         height: 24px;
         background-repeat: no-repeat;
@@ -76,19 +76,19 @@ section.icons-container.black {
         cursor: pointer;
     }
 
-    span.email.black {
+    a.email.black {
         background-image: url("/public/assets/icons/email-icon-black.svg")
     }
 
-    span.instagram.black {
+    a.instagram.black {
         background-image: url("/public/assets/icons/instagram-icon-black.svg")
     }
 
-    span.facebook.black {
+    a.facebook.black {
         background-image: url("/public/assets/icons/facebook-icon-black.svg")
     }
 
-    span.phone.black {
+    a.phone.black {
         background-image: url("/public/assets/icons/phone-icon-black.svg")
     }
 

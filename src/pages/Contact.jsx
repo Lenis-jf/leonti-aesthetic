@@ -32,10 +32,22 @@ const Contact = () => {
             </section>
             <section className="icons-container black">
                 <div className="icons-container black">
-                    <span className="social-media-icon email black"></span>
-                    <span className="social-media-icon instagram black"></span>
-                    <span className="social-media-icon facebook black"></span>
-                    <span className="social-media-icon phone black"></span>
+                    {/* Correo Electrónico */}
+                    <a href="mailto:ecaterina.leonti06@gmail.com" className="social-media-icon email black" alt="email icon" aria-label="Enviar correo electrónico">
+                    </a>
+
+                    {/* Instagram */}
+                    <a href="https://www.instagram.com/leonti.aesthetic/" target="_blank" rel="noopener noreferrer" className="social-media-icon instagram black" alt="instagram icon" aria-label="Visitar Instagram">
+                    </a>
+
+                    {/* Facebook */}
+                    <a href="https://www.facebook.com/leonti.aesthetic.facebook" target="_blank" rel="noopener noreferrer" className="social-media-icon facebook black" alt="facebook icon" aria-label="Visitar Facebook">
+                    </a>
+
+                    {/* Teléfono */}
+                    <a href="tel:+4917620836261" className="social-media-icon phone black" alt="phone icon" aria-label="Llamar por teléfono">
+                    </a>
+                    {/* Puedes añadir más iconos aquí */}
                 </div>
                 <span className="address">Hochstädter Str.1a, 63477 Maintal</span>
                 <span className="email-address">aesthetic@leonti.eu</span>

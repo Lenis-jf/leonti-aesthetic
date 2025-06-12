@@ -145,19 +145,19 @@ footer {
     div.icons-container.white {
         margin: 25px auto;
 
-        span.email.white {
+        a.email.white {
             background-image: url("/public/assets/icons/email-icon-white.svg")
         }
 
-        span.instagram.white {
+        a.instagram.white {
             background-image: url("/public/assets/icons/instagram-icon-white.svg")
         }
 
-        span.facebook.white {
+        a.facebook.white {
             background-image: url("/public/assets/icons/facebook-icon-white.svg")
         }
 
-        span.phone.white {
+        a.phone.white {
             background-image: url("/public/assets/icons/phone-icon-white.svg")
         }
     }
