@@ -32,6 +32,9 @@ section.firstSection {
         flex-wrap: wrap;
         width: 100%;
         height: 50vh;
+        max-height: 1100px;
+        max-width: 1400px;
+        margin: 0 auto;
 
         div.welcome-text-container {
             width: fit-content;
@@ -92,6 +95,84 @@ section.firstSection {
 
         div.service-rating-desktop-container {
             display: none;
+            justify-content: center;
+            align-items: center;
+            width: calc(50vw - 10px);
+            max-width: 620px;
+
+            div.background-img-mask-desktop {
+                width: 100%;
+                aspect-ratio: 365/226.5;
+                background-image: url("/public/assets/imgs/desktop-hero-img.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                div.service-rating {
+                    position: relative;
+                    width: 60%;
+                    height: 40%;
+                    min-width: 220px;
+                    min-height: 70px;
+                    max-width: 400px;
+                    aspect-ratio: 206/68.97;
+                    background: rgba(255, 255, 255, 0.25);
+                    box-shadow: 0 8px 32px 0 rgba($black-base, 0.3);
+                    backdrop-filter: blur(4.5px);
+                    -webkit-backdrop-filter: blur(4.5px);
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    justify-content: center;
+                    align-items: center;
+
+                    &::before {
+                        content: "50+";
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include text-font;
+                        color: $white-base;
+                        font-weight: 600;
+                        font-size: $tamano-texto-mediano;
+                        padding: 5px 12px;
+                        border-radius: 20px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: $botones-dorados;
+                    }
+
+                    h2 {
+                        @include titles-font;
+                        font-size: clamp(1.5rem, 1.5rem + 1vw, 3rem);
+                        color: $white-base;
+                    }
+
+                    p {
+                        display: flex;
+                        justify-content: center;
+                        gap: 3px;
+                        align-items: center;
+                        @include text-font;
+                        font-size: $tamano-texto-mediano;
+                        color: $white-base;
+
+                        span {
+                            display: inline-block;
+                            width: 18px;
+                            height: 18px;
+                            background-image: url("/public/assets/icons/star.svg");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -324,13 +405,14 @@ section.mainFoto-mobile-hero {
 
 section.mainGreeting {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 1400px;
     gap: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 0 25px;
+    padding: 180px 25px 0 25px;
     margin-bottom: 100px;
 
     div.greetingImg-container {
@@ -476,80 +558,101 @@ section.mainGreeting {
     }
 }
 
-section.services-mini-cards {
-    div.mini-cards-group {}
+section.cristal-container {
+    width: 95vw;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
 
-    div.mini-cards-group-1 {}
-
-    div.mini-cards-group-2 {}
-
-    h1 {
-        @include titles-font;
-        text-align: center;
-        color: $black-base;
-    }
-
-    button.btn {
-        @include titles-font;
-        width: 240px;
-        height: 40px;
-        border-radius: 6px;
-        background-color: $white-base;
-        color: $black-base;
-        font-size: $tamano-texto-pequeno;
-        line-height: clamp(1.5rem, 0.8vw, 1.8rem);
-        font-weight: 800;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        -webkit-tap-highlight-color: transparent;
-        margin: 40px 0;
-
-        @include hoverBtn;
-    }
-
-    h1~button.btn {
-        font-size: $tamano-texto-pequeno;
-        line-height: clamp(1.9rem, 0.8vw, 2.2rem);
-        font-weight: 800;
-    }
-
-    a.see-more-btn {
-        @include titles-font;
-        width: max-content;
-        height: 30px;
-        padding: 0px 10px;
-        font-size: $tamano-texto-pequeno;
-        line-height: clamp(1.5rem, 0.8vw, 1.8rem);
-        text-align: center;
-        text-decoration: none;
-        color: $white-base;
-        background-color: $btn-color;
-        border-radius: 6px;
+    section.services-mini-cards {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        box-shadow: $neo-morphism-static;
-
-        @include hoverBtn;
-    }
-
-    div.btn-bottom-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        gap: 20px;
         width: 100%;
 
-        a.contact-btn {
-            width: 88px;
-            height: 30px;
-            font-size: $tamano-texto-pequeno;
-            line-height: clamp(1.5rem, 0.8vw, 1.8rem);
-            border-radius: 8px;
-            box-shadow: $neo-morphism-static;
+        div.mini-cards-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 20px;
+            width: 50%;
+            min-width: 260px;
+            max-width: 440px;
         }
     }
+}
 
+h1 {
+    @include titles-font;
+    text-align: center;
+    color: $black-base;
+}
+
+button.btn {
+    @include titles-font;
+    width: 240px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: $white-base;
+    color: $black-base;
+    font-size: $tamano-texto-pequeno;
+    line-height: clamp(1.5rem, 0.8vw, 1.8rem);
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    margin: 40px 0;
+
+    @include hoverBtn;
+}
+
+h1~button.btn {
+    font-size: $tamano-texto-pequeno;
+    line-height: clamp(1.9rem, 0.8vw, 2.2rem);
+    font-weight: 800;
+}
+
+div.btn-bottom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    a.contact-btn {
+        width: 88px;
+        height: 30px;
+        font-size: $tamano-texto-pequeno;
+        line-height: clamp(1.5rem, 0.8vw, 1.8rem);
+        border-radius: 8px;
+        box-shadow: $neo-morphism-static;
+    }
+}
+
+a.see-more-btn {
+    @include titles-font;
+    width: max-content;
+    height: 30px;
+    padding: 0px 10px;
+    font-size: $tamano-texto-pequeno;
+    line-height: clamp(1.5rem, 0.8vw, 1.8rem);
+    text-align: center;
+    text-decoration: none;
+    color: $white-base;
+    background-color: $btn-color;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $neo-morphism-static;
+
+    @include hoverBtn;
 }
 
 section.prices-container {
@@ -562,7 +665,7 @@ section.prices-container {
     flex-direction: column;
     background: #0D0D0D;
     background: linear-gradient(180deg,
-            $primary-color 70%,
+            $primary-color 40%,
             $third-color);
 
     @include topShadow;
@@ -796,6 +899,10 @@ a.cnc-shop {
             max-width: 520px;
         }
     }
+
+    section.services-mini-cards {
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (min-width: 460px) and (orientation: portrait) {
@@ -845,84 +952,6 @@ a.cnc-shop {
 
             div.service-rating-desktop-container {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                width: calc(50vw - 10px);
-                max-width: 620px;
-
-                div.background-img-mask-desktop {
-                    width: 100%;
-                    aspect-ratio: 365/226.5;
-                    background-image: url("/public/assets/imgs/desktop-hero-img.png");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    div.service-rating {
-                        position: relative;
-                        width: 60%;
-                        height: 40%;
-                        min-width: 220px;
-                        min-height: 70px;
-                        max-width: 400px;
-                        aspect-ratio: 206/68.97;
-                        background: rgba(255, 255, 255, 0.25);
-                        box-shadow: 0 8px 32px 0 rgba($black-base, 0.3);
-                        backdrop-filter: blur(4.5px);
-                        -webkit-backdrop-filter: blur(4.5px);
-                        border-radius: 20px;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 5px;
-                        justify-content: center;
-                        align-items: center;
-
-                        &::before {
-                            content: "50+";
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            @include text-font;
-                            color: $white-base;
-                            font-weight: 600;
-                            font-size: $tamano-texto-mediano;
-                            padding: 5px 12px;
-                            border-radius: 20px;
-                            position: absolute;
-                            left: 0;
-                            top: 50%;
-                            transform: translate(-50%, -50%);
-                            background-color: $botones-dorados;
-                        }
-
-                        h2 {
-                            @include titles-font;
-                            font-size: clamp(1.5rem, 1.5rem + 1vw, 3rem);
-                            color: $white-base;
-                        }
-
-                        p {
-                            display: flex;
-                            justify-content: center;
-                            gap: 3px;
-                            align-items: center;
-                            @include text-font;
-                            font-size: $tamano-texto-mediano;
-                            color: $white-base;
-
-                            span {
-                                display: inline-block;
-                                width: 18px;
-                                height: 18px;
-                                background-image: url("/public/assets/icons/star.svg");
-                                background-size: cover;
-                                background-repeat: no-repeat;
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -947,6 +976,20 @@ a.cnc-shop {
 
         div.greeting {
             max-width: 580px;
+        }
+    }
+
+    section.services.beige-section {
+        section.cristal-container {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: $neo-morphism-static;
+            backdrop-filter: blur(3.5px);
+            -webkit-backdrop-filter: blur(3.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 80px 20px;
+    
+            & > h2.services-title { margin-bottom: 65px; }
         }
     }
 }

@@ -68,7 +68,7 @@ const Home = () => {
         return () => observer.disconnect();
     }, [imagesLoaded]);
 
-    if(!imagesLoaded) return <Loader />;
+    if (!imagesLoaded) return <Loader />;
 
     return (
         <div className='home'>
@@ -109,9 +109,9 @@ const Home = () => {
                 </div>
                 <div className="mainFoto-container-hero">
                     <img className="mainFoto-mobile-hero"
-                            src={mainFoto}
-                            alt={t("mainFoto", "studio owner in the foreground with her arms crossed")}
-                            />
+                        src={mainFoto}
+                        alt={t("mainFoto", "studio owner in the foreground with her arms crossed")}
+                    />
                 </div>
             </section>
             <section className='services beige-section'>
@@ -144,26 +144,28 @@ const Home = () => {
                         <p className='final-certification'><em>{t("greeting.certification", "Certified Specialist Cosmetologist")}</em></p>
                     </div>
                 </section>
-                <section className="services-mini-cards">
+                <section className="cristal-container">
                     <h2 className='services-title'>{t("services.title", "OUR SERVICES")}</h2>
-                    <div className="mini-cards-group 1">
-                        <Service path="/services#pure-glow" name={t("services.pureGlow.name", "Classic Facial Treatments")}
-                            description={t("services.pureGlow.description", "Facial cleaning treatments")} />
-                        <Service path="/services#aquafacial" name={t("services.aquafacial.name", "Aquafacial")}
-                            description={t("services.aquafacial.description", "For Clear and Radiant Skin")} />
-                        <Service path="/services#microneedling" name={t("services.microneedling.name", "Microneedling")}
-                            description={t("services.microneedling.description", "Naturally beautiful skin through targeted deep care")} />
-                    </div>
-                    <div className="mini-cards-group 2">
-                        <Service path="/services#eyelash-extensions" name={t("services.eyelashExtensions.name", "Eyelash extensions")}
-                            description={t("services.eyelashExtensions.description", "Your look, your expression")} />
-                        <Service path="/services#eyelash-lifting" name={t("services.eyelashLifting.name", "Eyelash lifting")}
-                            description={t("services.eyelashLifting.description", "Natural curl, without extensions")} />
-                        <Service path="/services#eyebrow-lifting" name={t("services.eyebrowLifting.name", "Eyebrow lifting")}
-                            description={t("services.eyebrowLifting.description", "Volume & shape that last")} />mini-cards-group
-                    </div>
-                    <NavLink className="see-more-btn" to="/services">{t("buttons.see", "See more")}</NavLink>
+                    <section className="services-mini-cards">
+                        <div className="mini-cards-group 1">
+                            <Service path="/services#pure-glow" name={t("services.pureGlow.name", "Classic Facial Treatments")}
+                                description={t("services.pureGlow.description", "Facial cleaning treatments")} />
+                            <Service path="/services#aquafacial" name={t("services.aquafacial.name", "Aquafacial")}
+                                description={t("services.aquafacial.description", "For Clear and Radiant Skin")} />
+                            <Service path="/services#microneedling" name={t("services.microneedling.name", "Microneedling")}
+                                description={t("services.microneedling.description", "Naturally beautiful skin through targeted deep care")} />
+                        </div>
+                        <div className="mini-cards-group 2">
+                            <Service path="/services#eyelash-extensions" name={t("services.eyelashExtensions.name", "Eyelash extensions")}
+                                description={t("services.eyelashExtensions.description", "Your look, your expression")} />
+                            <Service path="/services#eyelash-lifting" name={t("services.eyelashLifting.name", "Eyelash lifting")}
+                                description={t("services.eyelashLifting.description", "Natural curl, without extensions")} />
+                            <Service path="/services#eyebrow-lifting" name={t("services.eyebrowLifting.name", "Eyebrow lifting")}
+                                description={t("services.eyebrowLifting.description", "Volume & shape that last")} />
+                        </div>
+                    </section>
                 </section>
+                <NavLink className="see-more-btn" to="/services">{t("buttons.see", "See more")}</NavLink>
             </section>
             <section id="prices" className="prices-container">
                 <h3>

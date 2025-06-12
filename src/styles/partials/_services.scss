@@ -5,6 +5,14 @@ section.services.beige-section {
     margin-top: 50px;
     gap: 25px;
     padding: 120px 0 200px 0;
+    background: linear-gradient(
+        to bottom,
+        $third-color 85%,
+        $primary-color
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     h2 {
         @include text-font;
@@ -13,6 +21,7 @@ section.services.beige-section {
         line-height: clamp(0.9rem, 1vw, 1.2rem);
         color: $primary-color;
         margin-bottom: 25px;
+
     }
 
     a.service {
@@ -27,6 +36,8 @@ section.services.beige-section {
         padding: 20px 20px;
         box-shadow: 4px 6px 10px 0 rgba($black-base, 0.15);
         width: 90%;
+        min-width: 260px;
+        min-height: 70px;
         max-width: 440px;
         min-height: 80px;
 
