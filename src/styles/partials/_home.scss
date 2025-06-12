@@ -214,11 +214,11 @@ section.mainFoto-mobile-hero {
     margin-top: 200px;
 
     div.mobile-hero-shadows {
-        position: relative;
+        position: absolute;
         width: 100%;
         height: min-content;
         left: 0;
-        top: calc(-28% + 5px);
+        top: calc(-25% + 5px);
 
         &::before,
         &::after {
@@ -266,8 +266,6 @@ section.mainFoto-mobile-hero {
 
         div.background-img-mask {
             position: relative;
-            // left: 0;
-            // top: calc(-28% + 5px);
             width: 100vw;
             aspect-ratio: 320/150;
             clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
@@ -366,6 +364,7 @@ section.mainFoto-mobile-hero {
         padding-bottom: 30px;
         margin-top: 40px;
         margin: 0 auto;
+        z-index: 2;
 
         &::before {
             content: "";
