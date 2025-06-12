@@ -1,0 +1,15 @@
+<!-- src/public/assets/icons/clip-path-service-1.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 165">
+  <defs>
+    <!-- Defino un clipPath con id="service1Clip" -->
+    <clipPath id="service1Clip">
+      <path
+        d="M4.84658 0H279.155C280.46 0.0207904 281.704 0.559163 282.613 1.49676C283.521 2.43436 284.021 3.69445 284.001 5V160C284.021 161.306 283.521 162.566 282.613 163.503C281.704 164.441 280.46 164.979 279.155 165L4.84658 149.12C3.54104 149.099 2.29719 148.561 1.38846 147.623C0.479741 146.686 -0.019468 145.426 0.000581396 144.12V5C-0.019468 3.69445 0.479741 2.43436 1.38846 1.49676C2.29719 0.559163 3.54104 0.0207904 4.84658 0Z"
+        fill="white"
+      />
+    </clipPath>
+  </defs>
+  <!-- (Opcional) Un rectángulo invisible que cubra todo el canvas, 
+       pero no es estrictamente necesario si solo usas <clipPath>. -->
+  <rect width="100%" height="100%" fill="black" opacity="0"/>
+</svg>

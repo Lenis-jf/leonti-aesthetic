@@ -1,0 +1,102 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+div.contact-page {
+    overflow: hidden;
+
+    section.location-info-container {
+        padding: 100px 0;
+
+        p {
+            padding: 0 10px;
+        }
+    }
+}
+
+section.contact-page.dark-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    clip-path: none;
+    background-color: $negro-fondo;
+}
+
+section.contact-page.help-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: $secondary-color;
+    font-size: $tamano-texto;
+    color: $color-fuente;
+    text-align: center;
+    line-height: clamp(1.9rem, 1.5vw, 2.5rem);
+    gap: 15px;
+    padding: 80px 0;
+
+    p {
+        @include text-font;
+        max-width: 280px;
+    }
+
+    h4 {
+        @include text-font;
+        font-weight: 600;
+        color: $botones-dorados;
+    }
+
+    h2 {
+        color: $color-fuente-titulos;
+        @include titles-font;
+    }
+}
+
+section.icons-container.black {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $third-color;
+    @include topShadow;
+    @include bottomShadow;
+    height: 280px;
+
+    span.social-media-icon {
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    span.email.black {
+        background-image: url("/public/assets/icons/email-icon-black.svg")
+    }
+
+    span.instagram.black {
+        background-image: url("/public/assets/icons/instagram-icon-black.svg")
+    }
+
+    span.facebook.black {
+        background-image: url("/public/assets/icons/facebook-icon-black.svg")
+    }
+
+    span.phone.black {
+        background-image: url("/public/assets/icons/phone-icon-black.svg")
+    }
+
+    span.address {
+        margin-top: 20px;
+    }
+
+    span.email-address {
+        color: $color-fuente;
+    }
+}

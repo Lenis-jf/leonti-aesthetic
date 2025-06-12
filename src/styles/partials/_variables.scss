@@ -1,0 +1,28 @@
+$primary-color: #E08B8B; // Main rosa color
+$secondary-color: #FFFBF8; // Main beige color
+$third-color: #FFF2E6; // Main yellow color
+$black-base: #363636;
+$white-base: #FFFBF8;
+$btn-color: #453728;
+$thumb-color: $primary-color;
+$neo-morphism-static:
+    4px 6px 6px rgba(0, 0, 0, 0.07),      // sombra suave
+    -4px -4px 8px rgba(255, 255, 255, 0.6);// highlight
+
+    
+$negro-fondo: #080404;
+$botones-dorados: #F7BD61;
+$color-fuente: #585149;
+$color-fuente-titulos: #453728;
+    
+$sombra-dorada: 1px 3px 6px 2px rgba($botones-dorados, 0.2);
+$sombra-dorada-subservices: 0px 3px 6px 0px rgba($botones-dorados, 0.345);
+
+$tamano-titulos-grandes:  clamp(2.5rem, 2rem + 2.5vw, 4rem);
+$tamano-titulos-medianos: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+$tamano-titulos-pequenos: clamp(1.75rem, 1.25rem + 1.5vw, 2.8rem);
+
+$tamano-texto:           clamp(1.5rem, 1.25rem + 1vw, 1.8rem);
+$tamano-texto-mediano:   clamp(1.1rem, 1rem + 0.8vw, 1.6rem);
+$tamano-texto-pequeno:   clamp(0.8rem, 0.8rem + 0.5vw, 1.1rem);
+$tamano-texto-menu:   clamp(1.2rem, 3vw + 0.4rem, 2rem);
