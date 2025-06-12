@@ -411,7 +411,7 @@ section.mainGreeting {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 180px 25px 0 25px;
+    padding: 0 25px 0 25px;
     margin-bottom: 100px;
 
     div.greetingImg-container {
@@ -956,6 +956,8 @@ a.cnc-shop {
     }
 
     section.mainGreeting {
+        padding-top: 180px;
+        
         div.greetingImg-container {
             display: block;
         }
