@@ -77,7 +77,7 @@ const Home = () => {
     return (
         <div className='home'>
             <Menu />
-            <section className="firstSection">
+            <section className="firstSection white-section">
                 <section className="main-fotos-container dark-section">
                     <img className="mainLogo-top" src={mainLogoWhite} alt="Leonti Aesthetic"></img>
                     <Link className="contact-btn" to="contact">{t("buttons.contact", "Contact me")}</Link>
@@ -93,7 +93,10 @@ const Home = () => {
                         <div className="background-img-mask-desktop">
                             <div className="service-rating">
                                 <h2>{t("service-rating.title", "Service Rating")}</h2>
-                                <p><span></span>(5/5) from 89 customers</p>
+                                <p>
+                                    <span></span>
+                                    {t("customers-rating", "(5/5) from 89 customers")}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -107,7 +110,10 @@ const Home = () => {
                         <div className="sombra-circular"></div>
                         <div className="service-rating">
                             <h2>{t("service-rating.title", "Service Rating")}</h2>
-                            <p><span></span>(5/5) from 89 customers</p>
+                            <p>
+                                <span></span>
+                                {t("customers-rating", "(5/5) from 89 customers")}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -216,7 +222,7 @@ const Home = () => {
                 </Link>
                 <h1 className="access-code">{t("cncShop.accessCode", "Access Code: 1180011")}</h1>
             </section>
-            <section className="location-info-container">
+            <section className="location-info-container white-section">
                 <h4>{t("location.title", "Come Visit Us")}</h4>
                 <h1>{t("location.subtitle", "We’re just a few clicks away")}</h1>
                 <span className="address">{t("location.address", "Hochstädter Str.1a, 63477 Maintal")}</span>

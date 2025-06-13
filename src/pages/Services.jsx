@@ -1,62 +1,118 @@
+// src/pages/Services.jsx
+
+import React, { useState, useEffect } from 'react';  // ← Importar useState
+import { Link, NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import Menu from '../components/Menu';
 import WhatsappButton from '../components/WhatsappButton';
 import Footer from '../components/Footer';
-import mainLogoWhite from "../assets/principal-assets/main-logo-white.svg";
-import mainLogo from "../assets/principal-assets/main-logo.svg";
 import Loader from '../components/Loader';
-import Map from "../components/Map";
+import Map from '../components/Map';
 
-import { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import mainLogoWhite from '../assets/principal-assets/main-logo-white.svg';
+import mainLogo from '../assets/principal-assets/main-logo.svg';
+
 import { useImagePreloader } from '../hooks/useImagePreloader';
 
-const Services = () => {
-    const { t } = useTranslation();
+const PrincipalImg = ({ imagesLoaded, alt }) => {
+    const smallSrc = `${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.webp`;
+    const largeSrc = `${import.meta.env.BASE_URL}assets/imgs/main-bg-foto-big.webp`;
 
-    const images = [];
+    const getSrcForWidth = (width) =>
+        width >= 768 ? largeSrc : smallSrc;
 
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.png`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-1.png`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-2.png`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-3.png`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-4.png`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-5.png`);
-    images.push(`${import.meta.env.BASE_URL}assets/imgs/services-6.png`);
-
-    const imagesLoaded = useImagePreloader(images);
+    const [imgSrc, setImgSrc] = useState(() =>
+        getSrcForWidth(window.innerWidth)
+    );
 
     useEffect(() => {
-        document.title = "Leonti Aesthetics | Services";
-        window.scrollTo(0, 0);
-    }
-        , []);
+        const onResize = () => {
+            setImgSrc(getSrcForWidth(window.innerWidth));
+        };
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, []);
 
     if (!imagesLoaded) return <Loader />;
 
     return (
-        <div className='services-page'>
+        <div className="principal-img-container">
+            <img
+                className="principal-img"
+                src={imgSrc}
+                alt={alt}
+            />
+        </div>
+    );
+};
+
+
+const Services = () => {
+    const { t } = useTranslation();
+
+    const images = [
+        'assets/imgs/main-bg-foto.webp',
+        'assets/imgs/main-bg-foto-big.webp',
+        'assets/imgs/services-1.webp',
+        'assets/imgs/services-2.webp',
+        'assets/imgs/services-3.webp',
+        'assets/imgs/services-4.webp',
+        'assets/imgs/services-5.webp',
+        'assets/imgs/services-6.webp',
+    ].map(path => `${import.meta.env.BASE_URL}${path}`);
+
+    const imagesLoaded = useImagePreloader(images);
+
+    useEffect(() => {
+        document.title = 'Leonti Aesthetics | Services';
+        window.scrollTo(0, 0);
+    }, []);
+
+    if (!imagesLoaded) return <Loader />;
+
+    return (
+        <div className="services-page">
             <Menu />
+
             <section className="topMenu dark-section">
-                <NavLink to="/" className='mainLogo-top'>
-                    <img src={mainLogoWhite} alt={t("mainServicesPage.logoWhite.alt", "Leonti Aesthetic Logo")} />
+                <NavLink to="/" className="mainLogo-top">
+                    <img
+                        src={mainLogoWhite}
+                        alt={t('mainServicesPage.logoWhite.alt', 'Leonti Aesthetic Logo')}
+                    />
                 </NavLink>
-                <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                <NavLink className="contact-btn" to="/contact">
+                    {t('buttons.contact', 'Contact me')}
+                </NavLink>
             </section>
-            <div className='principal-img-container'>
-                <img className="principal-img" src={`${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.png`} alt={t("mainServicesPage.principalImg.alt", "decorative close-up of a woman's eye area")} />
-            </div>
+
+            {/* Imagen principal */}
+            <PrincipalImg
+                imagesLoaded={imagesLoaded}
+                alt={t(
+                    'mainServicesPage.principalImg.alt',
+                    "decorative close-up of a woman's eye area"
+                )}
+            />
+
             <section className="mainDescription">
-                <h4>{t("mainServicesPage.title", "Leonti Aesthetic")}</h4>
-                <h1>{t("mainServicesPage.subtitle", "Our Services")}</h1>
+                <h4>{t('mainServicesPage.title', 'Leonti Aesthetic')}</h4>
+                <h1>{t('mainServicesPage.subtitle', 'Our Services')}</h1>
                 <p>
-                    {t("mainServicesPage.description", "At Leonti Aesthetic, we offer personalized beauty treatments focused on enhancing your natural glow. Using high-quality products and state-of-the-art techniques, every service is tailored to your skin and style needs.")}
+                    {t(
+                        'mainServicesPage.description',
+                        'At Leonti Aesthetic, we offer personalized beauty treatments focused on enhancing your natural glow. Using high-quality products and state-of-the-art techniques, every service is tailored to your skin and style needs.'
+                    )}
                 </p>
-                <div className="decorationText">{t("mainServicesPage.discover", "Discover what we can do for you:")}</div>
+                <div className="decorationText">
+                    {t('mainServicesPage.discover', 'Discover what we can do for you:')}
+                </div>
             </section>
-            <section className="service-cards-section">
+
+            <section className="service-cards-section beige-section">
                 <div id="pure-glow" className="service-card pure-glow">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-1.png`} alt={t("mainServicesPage.pureGlow.alt", "pure-glow service image")} className="pure-glow-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-1.webp`} alt={t("mainServicesPage.pureGlow.alt", "pure-glow service image")} className="pure-glow-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.pureGlow.name.rosa", "Pure Glow")}</div>
                     <h2>{t("mainServicesPage.pureGlow.name", "Classic Facial Cleaning")}</h2>
                     <p>
@@ -80,7 +136,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="aquafacial" className="service-card aquafacial">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-6.png`} alt={t("mainServicesPage.aquafacial.alt", "aquafacial service image")} className="aquafacial-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-6.webp`} alt={t("mainServicesPage.aquafacial.alt", "aquafacial service image")} className="aquafacial-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.aquafacial.name.rosa", "For clear and radiant skin")}</div>
                     <h2>{t("mainServicesPage.aquafacial.name", "Aquafacial")}</h2>
                     <p>
@@ -104,7 +160,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="microneedling" className="service-card microneedling">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-2.png`} alt={t("mainServicesPage.microneedling.alt", "microneedling service image")} className="microneedling-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-2.webp`} alt={t("mainServicesPage.microneedling.alt", "microneedling service image")} className="microneedling-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.microneedling.name.rosa", "Naturally beautiful skin through targeted deep care")}</div>
                     <h2>{t("mainServicesPage.microneedling.name", "Microneedling")}</h2>
                     <p>
@@ -138,7 +194,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyelash-extensions" className="service-card eyelashextensions">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-3.png`} alt={t("mainServicesPage.eyelashExtensions.alt", "eyelash extensions service image")} className="eyelashextensions-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-3.webp`} alt={t("mainServicesPage.eyelashExtensions.alt", "eyelash extensions service image")} className="eyelashextensions-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyelashExtensions.name.rosa", "Your look, your expression")}</div>
                     <h2>{t("mainServicesPage.eyelashExtensions.name", "Eyelash Extensions")}</h2>
                     <p>
@@ -166,7 +222,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyelash-lifting" className="service-card eyelash-lifting">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-5.png`} alt={t("mainServicesPage.eyebrowLifting.alt", "eyebrow lifting service image")} className="eyebrow-lifting-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-5.webp`} alt={t("mainServicesPage.eyebrowLifting.alt", "eyebrow lifting service image")} className="eyebrow-lifting-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyelashLifting.name.rosa", "Natural curl, no extensions")}</div>
                     <h2>{t("mainServicesPage.eyelashLifting.name", "Eyelash Lifting")}</h2>
                     <p>
@@ -176,7 +232,7 @@ const Services = () => {
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyebrow-lifting" className="service-card eyebrow-lifting">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-4.png`} alt={t("mainServicesPage.eyelashLifting.alt", "eyelash lifting service image")} className="eyelash-lifting-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-4.webp`} alt={t("mainServicesPage.eyelashLifting.alt", "eyelash lifting service image")} className="eyelash-lifting-img" />
                     <div className="rosa-subtitle">{t("mainServicesPage.eyebrowLifting.name.rosa", "Lasting Volume & Shape")}</div>
                     <h2>{t("mainServicesPage.eyebrowLifting.name", "Eyebrow Lifting")}</h2>
                     <p>
@@ -184,21 +240,26 @@ const Services = () => {
                     </p>
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
-                <NavLink to="/" className='mainLogo-bottom'>
-                    <img src={mainLogo} alt={t("mainServicesPage.logo.alt", "Leonti Aesthetic Logo")} />
+                <NavLink to="/" className="mainLogo-bottom">
+                    <img src={mainLogo} alt={t('mainServicesPage.logo.alt', 'Leonti Aesthetic Logo')} />
                 </NavLink>
             </section>
-            <section className="location-info-container">
-                <h4>{t("location.title", "Come Visit Us")}</h4>
-                <h1>{t("location.subtitle", "We’re just a few clicks away")}</h1>
-                <span className="address">{t("location.address", "Hochstädter Str.1a, 63477 Maintal")}</span>
+            <section className="location-info-container white-section">
+                <h4>{t('location.title', 'Come Visit Us')}</h4>
+                <h1>{t('location.subtitle', "We’re just a few clicks away")}</h1>
+                <span className="address">
+                    {t('location.address', 'Hochstädter Str.1a, 63477 Maintal')}
+                </span>
                 <Map />
-                <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                <NavLink className="contact-btn" to="/contact">
+                    {t('buttons.contact', 'Contact me')}
+                </NavLink>
             </section>
+
             <WhatsappButton />
             <Footer />
         </div>
     );
-}
+};
 
 export default Services;

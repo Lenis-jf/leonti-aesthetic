@@ -63,8 +63,6 @@ section.icons-container.black {
     justify-content: center;
     align-items: center;
     background-color: $third-color;
-    @include topShadow;
-    @include bottomShadow;
     height: 280px;
 
     a.social-media-icon {

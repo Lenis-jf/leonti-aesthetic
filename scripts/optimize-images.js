@@ -41,8 +41,7 @@ async function processDir(dir) {
 async function main() {
   const root = process.cwd();
   await Promise.all([
-    processDir(path.join(root, 'src/assets')),
-    processDir(path.join(root, 'public/assets'))
+    processDir(path.join(root, 'fotos-to-compress')),
   ]);
 }
 

@@ -65,7 +65,7 @@ const Gallery = () => {
 
 
     return (
-        <section id="gallery" className="picture-gallery">
+        <section id="gallery" className="picture-gallery white-section">
             <h2>{t("gallery.title", "Gallery")}</h2>
             <h1>{t("gallery.description", "See What We Do Best")}</h1>
             <div className="picture-gallery-container">

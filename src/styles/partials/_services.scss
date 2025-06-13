@@ -1,18 +1,28 @@
 @use "variables" as *;
 @use "mixins" as *;
+@use 'sass:color';
 
 section.services.beige-section {
-    margin-top: 50px;
     gap: 25px;
     padding: 120px 0 200px 0;
-    background: linear-gradient(
-        to bottom,
-        $third-color 85%,
-        $primary-color
-    );
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(
+        to bottom,
+        $secondary-color 0%,
+        $secondary-color 5%,
+        color.mix($secondary-color, $third-color, 50%) 7%,
+        $third-color 10%,
+        $third-color 80%,
+        color.mix($third-color, $primary-color, 50%) 88%,
+        $primary-color 92%,
+        $primary-color 100%
+    );
+
+    a.see-more-btn {
+        box-shadow: 2px 1px 6px 1px rgba($black-base, 0.37);
+    }
 
     h2 {
         @include text-font;
@@ -20,7 +30,7 @@ section.services.beige-section {
         font-size: $tamano-texto;
         line-height: clamp(0.9rem, 1vw, 1.2rem);
         color: $primary-color;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
 
     }
 

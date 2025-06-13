@@ -30,7 +30,7 @@ const Contact = () => {
                 <h1>{t("help.subtitle", "We’re here to help")}</h1>
                 <p>{t("help.description", "Give us call or send us a message and one of our friendly team members will be in touch shortly.")}</p>
             </section>
-            <section className="icons-container black">
+            <section className="icons-container black beige-section">
                 <div className="icons-container black">
                     {/* Correo Electrónico */}
                     <a href="mailto:ecaterina.leonti06@gmail.com" className="social-media-icon email black" alt="email icon" aria-label="Enviar correo electrónico">
@@ -52,7 +52,7 @@ const Contact = () => {
                 <span className="address">Hochstädter Str.1a, 63477 Maintal</span>
                 <span className="email-address">aesthetic@leonti.eu</span>
             </section>
-            <section className="location-info-container">
+            <section className="location-info-container white-section">
                 <h4>{t("location.title", "Come Visit Us")}</h4>
                 <h1>{t("location.subtitle", "We’re just a few clicks away")}</h1>
                 <span className="address">{t("location.address", "Hochstädter Str.1a, 63477 Maintal")}</span>

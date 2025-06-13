@@ -11,7 +11,6 @@ section.location-info-container {
     flex-direction: column;
     gap: 15px;
     padding: 40px 0;
-    @include topShadow;
 
     h4 {
         @include titles-font;
@@ -54,12 +53,8 @@ section.location-info-container {
     }
 
     a.contact-btn {
-        padding: 8px 15px;
-        border-radius: 4px;
         @include text-font;
         color: $color-fuente-titulos;
-        font-size: $tamano-texto-pequeno;
-        line-height: clamp(1.5rem, 0.8vw, 1.8rem);
         font-weight: 800;
         margin-top: 10px;
         box-shadow: $neo-morphism-static;
@@ -192,6 +187,11 @@ footer {
 section.location-info-container + section.beige-section {
     gap: 15px;
     padding: clamp(120px, 30%, 180px) 0px;
+        background: linear-gradient(
+        to top,
+        $third-color 90%,
+        $secondary-color
+    );
 
     h4 {
         @include text-font;

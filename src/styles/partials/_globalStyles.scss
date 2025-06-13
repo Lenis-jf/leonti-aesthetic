@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
+@use 'sass:color';
 
 * {
     box-sizing: border-box;
@@ -45,10 +46,19 @@ section.beige-section {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    background-color: $third-color;
+    background: linear-gradient(
+        to top,
+        $secondary-color 0%,
+        color.mix($secondary-color, $third-color, 60%) 4%,
+        $third-color 6%,
+        $third-color 80%,
+        color.mix($third-color, $secondary-color, 60%) 94%,
+        $secondary-color 96%,
+        $secondary-color 100%
+    );
+
     font-size: $tamano-texto;
     line-height: clamp(1.5rem, 1vw, 1.8rem);
-    @include topShadow;
 }
 
 a.contact-btn {
@@ -58,8 +68,11 @@ a.contact-btn {
     background-color: $botones-dorados;
     text-decoration: none;
     @include text-font;
+    font-size: $tamano-texto-contact-button;
     font-weight: 800;
     color: $black-base;
+    padding: 4px 10px;
+    border-radius: 4px;
 }
 
 div.icons-container {

@@ -19,7 +19,7 @@ section.topMenu {
     width: 100%;
     height: 20vh;
     background-color: $negro-fondo;
-    clip-path: polygon(0 0, 100% 0, 97% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 0 90%);
 
     a.mainLogo-top {
         display: flex;
@@ -37,20 +37,17 @@ section.topMenu {
     a.contact-btn {
         position: absolute;
         top: 25px;
-        right: 8px;
-        width: 62px;
-        height: 22px;
-        font-size: $tamano-texto-pequeno;
-        border-radius: 2px;
+        right: 2.5vw;
+        padding: 4px 5px;
     }
 }
 
 div.principal-img-container {
-    max-width: max-content;
+    max-width: 80vw;
     border-radius: 10px;
     overflow: hidden;
     position: absolute;
-    top: 90px;
+    top: 13vh;
 
     img.principal-img {
         width: 100%;
@@ -59,7 +56,7 @@ div.principal-img-container {
 }
 
 section.mainDescription {
-    padding: 140px 20px 40px 20px;
+    padding: clamp(140px, 13vh + 8vw, 350px) 20px 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,9 +105,10 @@ section.mainDescription {
 section.service-cards-section {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
     background-color: $third-color;
-    @include topShadow;
-    padding: 80px 0px;
+    padding: 80px 20px;
     width: 100%;
     flex-wrap: wrap;
     gap: 20px;
@@ -131,6 +129,16 @@ section.service-cards-section {
         position: relative;
         margin-bottom: 35px;
 
+        a.contact-btn {
+            width: fit-content;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            @include text-font;
+            font-weight: 800;
+            color: $color-fuente-titulos;
+            padding: 6px 12px;
+        }
+
         &.pure-glow {
             div.rosa-subtitle {
                 margin: calc(100% * 0.58 + 10px) 0 10px 0;
@@ -150,6 +158,10 @@ section.service-cards-section {
         &.eyelashextensions {
             div.rosa-subtitle {
                 margin: calc(100% * 0.58 + 10px) 0 10px 0;
+            }
+
+            h4 {
+                line-height: clamp(1.2rem, 1.3rem + 2.2vw, 2.2rem);
             }
         }
 
@@ -329,18 +341,6 @@ section.service-cards-section {
             margin-top: 20px;
         }
         
-    }
-
-    a.contact-btn {
-        width: 65px;
-        padding: 6px;
-        border-radius: 4px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        @include text-font;
-        font-size: $tamano-texto-pequeno;
-        font-weight: 800;
-        color: $color-fuente;
     }
 
     a.mainLogo-bottom {
