@@ -70,6 +70,7 @@ div.dropdown-list {
             display: flex;
             list-style: none;
             padding: 0.5rem 0.8rem;
+            cursor: pointer;
 
             button.lang-text {
                 @include text-font;
@@ -78,7 +79,6 @@ div.dropdown-list {
                 border: none;
                 text-align: left;
                 font-size: clamp(1rem, 1rem + 0.8vw, 1.4rem);
-                cursor: pointer;
                 padding: 0;
             }
 

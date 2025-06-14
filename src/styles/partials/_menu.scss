@@ -127,6 +127,7 @@ nav.menu {
         li.main-list-item {
             @include titles-font;
             width: 100%;
+            max-width: 400px;
             height: 10%;
             display: flex;
             justify-content: center;
@@ -136,9 +137,21 @@ nav.menu {
             font-weight: 400;
             text-align: center;
             text-decoration: none;
-            transition: all 0.3s ease-in-out;
+            border-radius: 50px;
+            border: 1px solid transparent;
+            transition:
+                background-color 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out,
+                backdrop-filter 0.3s ease-in-out,
+                border-radius 0.3s ease-in-out,
+                border 0.3s ease-in-out;
 
             a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
                 text-decoration: none;
                 color: $secondary-color;
             }

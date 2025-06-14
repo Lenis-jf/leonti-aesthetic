@@ -56,7 +56,7 @@ div.principal-img-container {
 }
 
 section.mainDescription {
-    padding: clamp(140px, 13vh + 8vw, 350px) 20px 40px 20px;
+    padding: clamp(140px, 13vh + 12vw, 350px) 20px 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,7 +111,7 @@ section.service-cards-section {
     padding: 80px 20px;
     width: 100%;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     position: relative;
     padding-bottom: 250px;
 
@@ -124,7 +124,6 @@ section.service-cards-section {
         padding: 10px;
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         box-shadow: $neo-morphism-static;
         position: relative;
         margin-bottom: 35px;
@@ -135,8 +134,12 @@ section.service-cards-section {
             margin-bottom: 20px;
             @include text-font;
             font-weight: 800;
-            color: $color-fuente-titulos;
             padding: 6px 12px;
+            color: $color-fuente-titulos;
+
+            &:hover {
+                color: $primary-color;
+            }
         }
 
         &.pure-glow {
@@ -152,6 +155,47 @@ section.service-cards-section {
         &.microneedling {
             div.rosa-subtitle {
                 margin: calc(100% * 0.77 + 10px) 0 10px 0;
+            }
+
+            div.contraindication-icon-title-contrainer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 45px auto 25px auto;
+
+                span {
+                    display: inline-block;
+                    width: 48px;
+                    height: 48px;
+                    padding-right: 5px;
+                    margin-right: 5px;
+                    background-image: url("/public/assets/icons/alert-icon.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                div.vertical-divider {
+                    width: 2px;
+                    border-radius: 1px;
+                    background-color: $color-fuente-titulos;
+                }
+
+                div.contraindication-title-subtitle-container {
+                    border-left: 2px solid $color-fuente-titulos;
+                    padding-left: 10px;
+
+                    h3 {
+                        color: $color-fuente-titulos;
+                        margin-bottom: 10px;
+                    }
+
+                    p { 
+                        line-height: clamp(1rem, 1rem + 1.8vw, 1.6em); 
+                        margin: 0;
+                    }
+                }
             }
         }
 

@@ -70,9 +70,11 @@ a.contact-btn {
     @include text-font;
     font-size: $tamano-texto-contact-button;
     font-weight: 800;
-    color: $black-base;
+    color: $color-fuente-titulos;
     padding: 4px 10px;
     border-radius: 4px;
+
+    @include hoverBtn;
 }
 
 div.icons-container {
@@ -89,6 +91,13 @@ div.icons-container {
         background-position: center;
         background-size: cover;
         cursor: pointer;
+        transition: all 0.2s ease-in;
+        
+        &:hover {
+            transform: scale(1.2);
+            color: $primary-color;
+            opacity: 0.5;
+        }
     }
 }
 

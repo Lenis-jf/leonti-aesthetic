@@ -168,7 +168,7 @@ const Services = () => {
                     </p>
                     <div className="divider"></div>
                     <ul>
-                        <li>• {t("mainServicesPage.microneedling.list.1", "Dull or tired skin")}</li>
+                        <li>•  {t("mainServicesPage.microneedling.list.1", "Dull or tired skin")}</li>
                         <li>• {t("mainServicesPage.microneedling.list.2", "Enlarged pores")}</li>
                         <li>• {t("mainServicesPage.microneedling.list.3", "Wrinkles")}</li>
                         <li>• {t("mainServicesPage.microneedling.list.4", "Acne scars")}</li>
@@ -191,6 +191,36 @@ const Services = () => {
                         <h3>{t("mainServicesPage.microneedling.treatmentOptions.microneedlingPro", "MicroNeedling Pro")}</h3>
                         <p>{t("mainServicesPage.microneedling.treatmentOptions.microneedlingPro.description", "Intensive & deeply active — for powerful anti-aging and skin renewal.")}</p>
                     </div>
+                    <div className="contraindication-icon-title-contrainer">
+                        <span></span>
+                        <div className="vertical-divider"></div>
+                        <div className="contraindication-title-subtitle-container">
+                            <h3>{t("contraindication.title", "Contraindications")}</h3>
+                            <p>
+                                {t("contraindication.subtile", "Micro Needling should not be performed when:")}
+                            </p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            • {t("contraindication.li1", "There is active acne, open wounds, or inflammatory skin conditions")}
+                        </li>
+                        <li>
+                            • {t("contraindication.li2", "An acute herpes infection is present")}
+                        </li>
+                        <li>
+                            • {t("contraindication.li3", "During pregnancy or breastfeeding")}
+                        </li>
+                        <li>
+                            • {t("contraindication.li4", "You are on blood-thinning medication")}
+                        </li>
+                        <li>
+                            • {t("contraindication.li5", "You have very sensitive skin or low pain tolerance")}
+                        </li>
+                        <li>
+                            • {t("contraindication.li6", "You have chronic skin diseases or autoimmune conditions")}
+                        </li>
+                    </ul>
                     <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
                 </div>
                 <div id="eyelash-extensions" className="service-card eyelashextensions">

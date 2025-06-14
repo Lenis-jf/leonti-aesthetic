@@ -87,7 +87,8 @@ const Home = () => {
                     <div className="welcome-text-container">
                         <h2>{t("welcome.h2", "Welcome to")}</h2>
                         <h1 ref={titleRef} className={playTitle ? 'running' : ''}>
-                            {t("welcome.title", "Leonti Aesthetic, where precision and well-being take center stage.")}</h1>
+                            <strong>Leonti Aesthetic</strong>
+                            {t("welcome.title", ", where precision and well-being take center stage.")}</h1>
                     </div>
                     <div className="service-rating-desktop-container">
                         <div className="background-img-mask-desktop">
@@ -101,6 +102,14 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                <a
+                    href="https://wa.me/17620836261"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="first-reservation-button"
+                >
+                    {t("first-reservation-button", "Schedule your appointment")}
+                </a>
             </section>
             <section className="mainFoto-mobile-hero">
                 <div className="mobile-hero-shadows">
@@ -177,18 +186,20 @@ const Home = () => {
                 </section>
                 <NavLink className="see-more-btn" to="/services">{t("buttons.see", "See more")}</NavLink>
             </section>
-            <section id="prices" className="prices-container">
-                <h3>
-                    {t("prices.title", "Looking for our latest rates?")}
-                </h3>
-                <p>
-                    {t("prices.description", "Download our full pricing to explore all services and packages in detail")}
-                </p>
-                <button className='price-list btn'>{t("prices.button", "Price List - Download")}
-                    <div className="download-icon-container"></div>
-                </button>
+            <section className="prices-gradient-container">
+                <section id="prices" className="prices-container">
+                    <h3>
+                        {t("prices.title", "Looking for our latest rates?")}
+                    </h3>
+                    <p>
+                        {t("prices.description", "Download our full pricing to explore all services and packages in detail")}
+                    </p>
+                    <button className='price-list btn'>{t("prices.button", "Price List - Download")}
+                        <div className="download-icon-container"></div>
+                    </button>
+                </section>
+                <PricesTable />
             </section>
-            <PricesTable />
             <Gallery />
             <div className="btn-bottom-container">
                 {/* <NavLink className="see-more-btn" to="/">{t("buttons.see", "See more")}</NavLink> */}

@@ -123,7 +123,7 @@
   "services.pureGlow.name": "Classic Facial Treatments",
   "services.title": "OUR SERVICES",
   "welcome.h2": "Welcome to",
-  "welcome.title": "Leonti Aesthetic, where precision and well-being take center stage.",
+  "welcome.title": ", where precision and well-being take center stage.",
   "whatsapp.popup.button": "Chat on WhatsApp",
   "whatsapp.popup.message": "Book your appointment!",
   "pricesTable.section.eyelashExtensions": "Eyelash extensions",
@@ -154,5 +154,12 @@
   "pricesTable.button.showLess": "Show less",
   "pricesTable.button.showMore": "Show more",
   "service-rating.title": "Service Rating",
-  "customers-rating": "(5/5) from 89 customers"
+  "customers-rating": "(5/5) from 89 customers",
+  "first-reservation-button": "Schedule your appointment",
+  "contraindication.li1": "There is active acne, open wounds, or inflammatory skin conditions",
+  "contraindication.li2": "An acute herpes infection is present",
+  "contraindication.li3": "During pregnancy or breastfeeding",
+  "contraindication.li4": "You are on blood-thinning medication",
+  "contraindication.li5": "You have very sensitive skin or low pain tolerance",
+  "contraindication.li6": "You have chronic skin diseases or autoimmune conditions"
 }

@@ -1,6 +1,6 @@
-// src/components/LanguageSelector.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { closeMenu } from "../utils/menuUtilis";
 
 export default function LanguageSelector() {
     const { i18n, t } = useTranslation();
@@ -42,7 +42,10 @@ export default function LanguageSelector() {
             {open && (
                 <div className="dropdown-list">
                     <ul className="lang-dropdown">
-                        <li className="lang-item" onClick={() => select(other.code)}>
+                        <li className="lang-item" onClick={() => {
+                            select(other.code);
+                            closeMenu();
+                        }}>
                             <button className="lang-text">{other.label}</button>
                         </li>
                         <li className="lang-item" onClick={() => select(current.code)}>
