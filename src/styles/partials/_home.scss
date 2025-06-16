@@ -708,7 +708,7 @@ section.prices-gradient-container {
             color: $white-base;
         }
     
-        button.price-list {
+        a.price-list {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -716,6 +716,15 @@ section.prices-gradient-container {
             font-size: $tamano-texto-mediano;
             width: fit-content;
             box-shadow: 0 3px 10px 0px rgba($black-base, 0.3);
+            text-decoration: none;
+            color: $color-fuente-titulos;
+            background-color: $secondary-color;
+            @include text-font;
+            font-size: $tamano-texto;
+            font-weight: 600;
+            border-radius: 6px;
+            padding: 6px 15px;
+            transition: all 0.3s ease-in-out;
     
             div.download-icon-container {
                 width: 30px;
@@ -732,6 +741,8 @@ section.prices-gradient-container {
 
             &:hover { 
                 box-shadow: 0 3px 10px 0px rgba($black-base, 0.3);
+                transform: scale(1.05);
+                color: $primary-color;
 
                 div.download-icon-container {
                     background-color: $primary-color;

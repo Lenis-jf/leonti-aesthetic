@@ -156,6 +156,8 @@
   "service-rating.title": "Service Rating",
   "customers-rating": "(5/5) von 89 Kunden",
   "first-reservation-button": "Termin vereinbaren",
+  "contraindication.title": "Kontraindikationen",
+  "contraindication.subtile": "Micro Needling sollte nicht durchgeführt werden, wenn:",
   "contraindication.li1": "Es liegt aktive Akne, offene Wunden oder eine entzündliche Hauterkrankung vor",
   "contraindication.li2": "Es liegt eine akute Herpesinfektion vor",
   "contraindication.li3": "Während der Schwangerschaft oder Stillzeit",

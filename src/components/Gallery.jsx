@@ -4,10 +4,9 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const Gallery = () => {
     const { t } = useTranslation();
-    const imagesIndex = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11];
+    const imagesIndex = [1, 2, 3, 4, 5, 6, 7];
     const containerRef = useRef(null);
 
-    // Número de “pasos” y paso activo
     const [steps, setSteps] = useState(1);
     const [activeStep, setActiveStep] = useState(0);
 

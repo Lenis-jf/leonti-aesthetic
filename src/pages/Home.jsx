@@ -194,9 +194,10 @@ const Home = () => {
                     <p>
                         {t("prices.description", "Download our full pricing to explore all services and packages in detail")}
                     </p>
-                    <button className='price-list btn'>{t("prices.button", "Price List - Download")}
+                    <a className='price-list' download href={`${import.meta.env.BASE_URL}assets/imgs/preis-liste.png`}>
+                        {t("prices.button", "Price List - Download")}
                         <div className="download-icon-container"></div>
-                    </button>
+                    </a>
                 </section>
                 <PricesTable />
             </section>
