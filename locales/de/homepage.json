@@ -107,6 +107,7 @@
     "title": "CNC Shop",
     "description": "Eine exklusive Auswahl professioneller Kosmetikprodukte der Marke CNC – entwickelt für alle Hauttypen und jeden Hautbedarf.",
     "blueInfo": "Ob Anti-Aging, Hautunreinheiten, Couperose, Pigmentierung, Trockenheit oder Empfindlichkeit – finden Sie gezielte Hautpflege­lösungen, die auf Sie zugeschnitten sind.",
+    "accessCode": "Zugangscode: 1180011",
     "button": "Zum Shop"
   },
   "location": {
@@ -126,5 +127,9 @@
     "gallery": "Galerie",
     "cncShop": "CNC Shop",
     "contact": "Kontakt"
+  },
+  "whatsapp": {
+    "message": "Termin vereinbaren!",
+    "button": "Whatsapp Chat beginnen"
   }
 }

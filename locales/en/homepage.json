@@ -108,6 +108,7 @@
     "title": "CNC Shop",
     "description": "An exclusive selection of professional cosmetic products from the CNC brand — developed for all skin types and every skin need.",
     "blueInfo": "Whether it’s anti-aging, blemished skin, couperose, pigmentation, dryness or sensitivity — find targeted skincare solutions tailored to you.",
+    "accessCode": "Access Code: 1180011",
     "button": "Go to Store Now"
   },
   "location": {
@@ -127,5 +128,9 @@
     "gallery": "Gallery",
     "cncShop": "CNC Shop",
     "contact": "Contact"
+  },
+  "whatsapp": {
+    "message": "Book your appointment!",
+    "button": "Start Whatsapp Chat"
   }
 }

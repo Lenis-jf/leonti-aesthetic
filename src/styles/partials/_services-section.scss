@@ -321,7 +321,7 @@ section.service-cards-section {
                 @include titles-font;
                 color: $color-fuente-titulos;
                 font-size: $tamano-titulos-pequenos;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 line-height: clamp(1.8rem, 1.8rem + 2vw, 2.8rem);
             }
             
@@ -329,7 +329,7 @@ section.service-cards-section {
                 @include text-font;
                 color: $color-fuente;
                 font-size: $tamano-texto-mediano;
-                line-height: clamp(1.8rem, 1.8rem + 2vw, 2.6rem);
+                line-height: clamp(1.6rem, 1.6rem + 2vw, 2.5rem);
                 margin: 0;
             }
         }

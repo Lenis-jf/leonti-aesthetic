@@ -22,14 +22,14 @@ const WhatsappButton = () => {
             />
 
             <div className="whatsapp-popup">
-                <p>{t("whatsapp.popup.message", "Book your appointment!")}</p>
+                <p>{t("whatsapp.message", "Book your appointment!")}</p>
                 <a
                     href="https://wa.me/17620836261"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="popup-button"
                 >
-                    {t("whatsapp.popup.button", "Chat on WhatsApp")}
+                    {t("whatsapp.button", "Chat on WhatsApp")}
                 </a>
             </div>
         </div>

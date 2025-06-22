@@ -24,6 +24,7 @@ section.picture-gallery {
         @include titles-font;
         color: $color-fuente-titulos;
         font-size: $tamano-titulos-medianos;
+        line-height: clamp(1.5rem, 2vw + 1.8rem, 2.5rem);
         margin-bottom: clamp(45px, 2vw + 30px, 100px);
     }
 
@@ -37,6 +38,40 @@ section.picture-gallery {
         position: relative;
         right: 0;
         overflow-x: hidden;
+        max-width: calc(1024px + 15vw);
+        margin: 0 auto;
+
+        div.arrow {
+            display: none;
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            top: 50%;
+            background-image: url("/public/assets/icons/gallery-arrow.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-image: url("/public/assets/icons/gallery-arrow-hover.svg");
+            }
+
+            &.disabled {
+                opacity: 0.5;
+            }
+        }
+
+        div.arrow.right-arrow {
+            right: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        div.arrow.left-arrow {
+            left: 0;
+            transform: translate(50%, -50%) rotate(180deg);
+        }
 
         .pictures-scroll {
             position: relative;
@@ -131,6 +166,16 @@ section.picture-gallery {
             .pictures-scroll {
                 max-width: clamp(400px, 500px + 32vw, 1150px);
                 margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section.picture-gallery {
+        .picture-gallery-container {
+            div.arrow {
+                display: flex;
             }
         }
     }

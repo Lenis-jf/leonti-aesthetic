@@ -22,11 +22,10 @@ const Home = () => {
     const images = [mainFoto, mainFoto2];
     const imagesLoaded = useImagePreloader(images);
 
-    const titleRef = useRef(null);
     const greetingImgRef = useRef(null);
     const greetingTextRef = useRef(null);
 
-    const [playTitle, setPlayTitle] = useState(false);
+    const [playOverlay, setPlayOverlay] = useState(false);
     const [playGreetingImg, setPlayGreetingImg] = useState(false);
     const [playGreetingText, setPlayGreetingText] = useState(false);
 
@@ -35,10 +34,21 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        if (imagesLoaded && titleRef.current) {
-            requestAnimationFrame(() => setPlayTitle(true));
+        const htmlElement = document.documentElement;
+
+        if (imagesLoaded && htmlElement) {
+            requestAnimationFrame(() => setPlayOverlay(true));
         }
     }, [imagesLoaded]);
+
+    useEffect(() => {
+        if(playOverlay) {
+            const htmlElement = document.documentElement;
+
+            if(htmlElement) htmlElement.classList.add("running");
+            else htmlElement.classList.remove("running");
+        }
+    }, [playOverlay]);
 
     useEffect(() => {
         const targets = [greetingImgRef.current, greetingTextRef.current].filter(Boolean);
@@ -77,7 +87,7 @@ const Home = () => {
                 <div className='mainTitle-container'>
                     <div className="welcome-text-container">
                         <h2>{t("welcome.h2")}</h2>
-                        <h1 ref={titleRef} className={playTitle ? 'running' : ''}>
+                        <h1>
                             <strong>Leonti Aesthetic</strong>{t("welcome.title")}
                         </h1>
                     </div>

@@ -1,4 +1,3 @@
-// src/components/Gallery.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -46,10 +45,10 @@ const Gallery = () => {
 
         el.addEventListener('scroll', onScroll);
         onScroll();
+
         return () => el.removeEventListener('scroll', onScroll);
     }, [steps]);
 
-    // Lista combinada de imágenes + video
     const mediaItems = [
         ...imagesIndex.map((id) => ({
             key: `img-${id}`,
@@ -64,11 +63,36 @@ const Gallery = () => {
         }
     ];
 
+    const scrollAmount = () => {
+        const el = containerRef.current;
+        if (!el) return 0;
+        const gap = parseInt(getComputedStyle(el).gap || '0', 10);
+        const item = el.querySelector('.image-container');
+        const itemWidth = item?.clientWidth || el.clientWidth;
+        return itemWidth + gap;
+    };
+
+    const handleLeft = () => {
+        const el = containerRef.current;
+        if (!el || activeStep === 0) return;
+        el.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+    };
+
+    const handleRight = () => {
+        const el = containerRef.current;
+        if (!el || activeStep === steps - 1) return;
+        el.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+    };
+
     return (
         <section id="gallery" className="picture-gallery white-section">
             <h2>{t("gallery.title", "Gallery")}</h2>
             <h1>{t("gallery.description", "See What We Do Best")}</h1>
             <div className="picture-gallery-container">
+                <div
+                    className={`left-arrow arrow ${activeStep === 0 ? 'disabled' : ''}`}
+                    onClick={handleLeft}
+                />
                 <div className="pictures-scroll" ref={containerRef}>
                     {mediaItems.map((item, idx) => (
                         <div className="image-container" key={item.key} data-index={idx}>
@@ -85,11 +109,16 @@ const Gallery = () => {
                                     playsInline
                                     loop
                                     controls
+                                    poster={`${import.meta.env.BASE_URL}assets/imgs/video1-cover.webp`}
                                 />
                             )}
                         </div>
                     ))}
                 </div>
+                <div
+                    className={`right-arrow arrow ${activeStep === steps - 1 ? 'disabled' : ''}`}
+                    onClick={handleRight}
+                />
                 <div className="images-nav">
                     {Array.from({ length: steps }).map((_, i) => (
                         <div
