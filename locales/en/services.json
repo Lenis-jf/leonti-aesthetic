@@ -1,0 +1,139 @@
+{
+    "mainServicesPage": {
+        "title": "Leonti Aesthetic",
+        "subtitle": "Our Services",
+        "description": "At Leonti Aesthetic, we offer personalized beauty treatments focused on enhancing your natural glow. Using high-quality products and state-of-the-art techniques, every service is tailored to your skin and style needs.",
+        "discover": "Discover what we can do for you:",
+        "principalImg": {
+            "alt": "decorative close-up of a woman's eye area"
+        },
+        "pureGlow": {
+            "alt": "pure-glow service image",
+            "name": "Classic Facial Cleaning",
+            "tagline": "Deep pore cleansing, clarifying effect",
+            "description": "The classic facial cleaning is the foundation for healthy, radiant skin. It removes impurities and dead cells, allowing your skin to breathe. We use professional CNC Cosmetic products throughout.",
+            "subservices": {
+                "basicCare": {
+                    "title": "Fresh Clean – Basic Care",
+                    "description": "Thorough cleansing and freshness for everyday life—ultrasonic skin scrubber, gentle peel, soothing mask and finishing care."
+                },
+                "intensiveRelaxing": {
+                    "title": "Glow Balance Intensive & Relaxing",
+                    "description": "Deep cleansing plus wellness: ultrasonic scrubber, enzymatic peel, nutrient ampoule, relaxing face & décolleté massage, light therapy, finishing mask."
+                }
+            }
+        },
+        "aquafacial": {
+            "alt": "aquafacial service image",
+            "name": "Aquafacial",
+            "tagline": "Intensive hydration, skin tightening, increase elasticity",
+            "paragraph": [
+                "Aquafacial is a gentle, non-invasive facial treatment that combines skin cleansing, hydration, and care all in one. Using the power of water, vacuum, and nourishing serums, dead skin cells, sebum, and impurities are gently removed—without aggressive peels or mechanical irritation.",
+                "The special feature: During the treatment, the skin is not only deeply cleansed but also intensively supplied with moisture and valuable nutrients. An additional light therapy supports regeneration and makes the complexion glow.\nThe result: Instantly visibly fresher, smoother, and more radiant skin—ideal for all skin types, especially tired, impure, or dehydrated skin."
+            ],
+            "result": "The result: Instantly visibly fresher, smoother, and more radiant skin—ideal for all skin types, especially tired, impure, or dehydrated skin.",
+            "indicationsTitle": "Who is Aquafacial suitable for?",
+            "indications": [
+                "Tired, dull skin",
+                "Oily or congested pores",
+                "Dehydrated skin",
+                "Fine lines",
+                "Sensitive skin",
+                "Prep for microneedling"
+            ],
+            "stepsTitle": "Aquafacial treatment procedure",
+            "steps": [
+                "Gentle cleanse & prep",
+                "Water-jet & vacuum pore extraction",
+                "Nutrient serum infusion",
+                "Light therapy for calm & regeneration",
+                "Finishing care for protection & glow"
+            ]
+        },
+        "microneedling": {
+            "alt": "microneedling service image",
+            "name": "Microneedling Pro (CNC)",
+            "tagline": "Deep reconstruction, anti-aging, skin renewal",
+            "paragraph": [
+                "Discover the power of innovative skin regeneration with Micro Needling PRO – the effective anti-aging technology from CNC Cosmetic. Noticeably firm, rejuvenate, and revitalize your skin – completely without surgical intervention.",
+                "Through targeted stimulation, the natural production of collagen, elastin, and hyaluronic acid is activated. The result: A finer, smoother, and more youthful complexion – with immediate effect and lasting results."
+            ],
+            "treatmentOptionsTitle": "The three treatment methods at a glance",
+            "treatmentOptions": {
+                "nano": {
+                    "label": "NanoNeedling – Gentle Refresh",
+                    "description": "Boosts microcirculation and product absorption."
+                },
+                "basic": {
+                    "label": "MicroNeedling – Strength & Structure",
+                    "description": "Stimulates collagen and tightens fine lines."
+                },
+                "pro": {
+                    "label": "MicroNeedling Pro – Dual-Phase Anti-Aging",
+                    "description": "Deep stimulation plus high-concentration serums."
+                }
+            },
+            "targetGroupTitle": "Who is Microneedling suitable for?",
+            "targetGroup": [
+                "Wrinkles & first signs of skin aging",
+                "Sagging skin & loss of elasticity",
+                "Enlarged pores",
+                "Pigmentation spots & hyperpigmentation",
+                "Vascular unstable skin & redness",
+                "More glow & firmness desired"
+            ],
+            "contraindications": {
+                "title": "Contraindications",
+                "subtitle": "Micro Needling should not be performed when:",
+                "items": [
+                    "Active acne, open wounds or inflammation",
+                    "Acute herpes infection",
+                    "Pregnancy or breastfeeding",
+                    "Blood-thinning medication",
+                    "Very sensitive skin or low pain tolerance",
+                    "Chronic skin or autoimmune diseases"
+                ]
+            }
+        },
+        "eyelashExtensions": {
+            "alt": "eyelash extensions service image",
+            "name": "Eyelash Extensions",
+            "description": "Enhance your natural beauty with subtle to dramatic lash styles—no mascara needed. We use premium materials and precision technique.",
+            "treatmentOptions": {
+                "classic": {
+                    "label": "Classic (1:1)",
+                    "description": "Natural length & fullness."
+                },
+                "softVolume": {
+                    "label": "Soft Volume (3-4D)",
+                    "description": "Fluffy, soft volume."
+                },
+                "volume": {
+                    "label": "Volume (5-7D)",
+                    "description": "Bold volume, lightweight."
+                }
+            },
+            "chooseStyle": "Choose your style, we’ll take care of the rest"
+        },
+        "eyelashLifting": {
+            "alt": "eyelash lifting service image",
+            "name": "Eyelash Lifting",
+            "tagline": "Natural curl without mascara or curler",
+            "description": "Eyelash lifting gives your natural lashes an instant curl. Tinted and keratin-treated for up to six weeks of lift."
+        },
+        "eyebrowLifting": {
+            "alt": "eyebrow lifting service image",
+            "name": "Eyebrow Lifting",
+            "tagline": "More volume and structure for a harmonious look",
+            "description": "Shape, tint, and keratin-treat your brows for defined, ready-to-go arches."
+        }
+    },
+    "location": {
+        "title": "Come Visit Us",
+        "subtitle": "We’re just a few clicks away",
+        "address": "Hochstädter Str.1a, 63477 Maintal"
+     },
+    "buttons": {
+        "contact": "Contact"
+    }
+}

@@ -37,6 +37,8 @@ const Footer = () => {
                 <nav className="footer-menu">
                     <ul>
                         <div className="divider"></div>
+                        <li><NavLink to="/">{t("footer.home", "Home")}</NavLink></li>
+                        <div className="divider"></div>
                         <li><NavLink to="/services">{t("footer.services", "Services")}</NavLink></li>
                         <div className="divider"></div>
                         <li><HashLink smooth scroll={scrollFunction} to="/#prices">{t("footer.prices", "Prices")}</HashLink></li>

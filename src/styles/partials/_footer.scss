@@ -69,13 +69,12 @@ footer {
     position: relative;
     width: 100%;
     min-width: 100vw;
-    height: 100vh;
-    max-height: 1400px;
+    min-height: 100vh;
     background-color: $btn-color;
-    padding-top: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     align-items: center;  
 
     a.mainLogo-bottom {
@@ -89,6 +88,7 @@ footer {
 
     nav.footer-menu {
         min-width: 100vw;
+        margin-bottom: 40px;
 
         ul {
             display: flex;
@@ -172,7 +172,7 @@ footer {
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        height: 60px;
+        height: 40px;
         background-color: $botones-dorados;
 
         div {
@@ -181,7 +181,6 @@ footer {
             line-height: clamp(1.5rem, 0.8vw, 1.8rem);
             color: $black-base;
             font-weight: 800;
-            cursor: pointer;
         }
 
         div.vertical-divider {

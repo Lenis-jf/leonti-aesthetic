@@ -1,0 +1,131 @@
+{
+  "welcome": {
+    "h2": "Welcome to",
+    "title": ", where your beauty and well-being come first."
+  },
+  "ratings": {
+    "serviceTitle": "Service Rating",
+    "customers": "(5/5) from 89 customers"
+  },
+  "buttons": {
+    "contact": "Contact",
+    "firstReservation": "Schedule your appointment",
+    "seeMore": "See more"
+  },
+  "greeting": {
+    "title": "Crafting Confidence",
+    "subtitle": "Your Beauty, Our Passion",
+    "paragraphs": [
+      "In a serene, stylish setting, I take the time to understand your wishes and needs in order to provide you with personalized treatments of the highest standard. Whether it’s facial treatments, eyelash extensions, or lash and brow lifting, every procedure is carried out with utmost care, sensitivity, and adherence to the strictest hygiene and quality standards.",
+      "Treat yourself to a restorative break from everyday life and experience visible results along with a fresh, well-groomed appearance. I am very much looking forward to meeting you in person and providing you with a pleasant, feel-good experience at Leonti Aesthetic."
+    ],
+    "name": "Ecaterina Leonti",
+    "certification": "Certified Specialist Cosmetologist"
+  },
+  "servicesOverview": {
+    "title": "OUR SERVICES",
+    "items": {
+      "pureGlow": {
+        "name": "Classic Facial Cleaning",
+        "description": "Deep pore cleansing, clarifying effect"
+      },
+      "aquafacial": {
+        "name": "Aquafacial",
+        "description": "Intensive hydration, skin tightening, increase elasticity"
+      },
+      "microneedling": {
+        "name": "Microneedling Pro (CNC)",
+        "description": "Deep reconstruction, anti-aging, skin renewal"
+      },
+      "eyelashExtensions": {
+        "name": "Eyelash extensions",
+        "description": "Eye-catcher"
+      },
+      "eyelashLifting": {
+        "name": "Eyelash lifting",
+        "description": "Natural curl without mascara or curler"
+      },
+      "eyebrowLifting": {
+        "name": "Eyebrow lifting",
+        "description": "More volume and structure for a harmonious look"
+      }
+    }
+  },
+  "prices": {
+    "title": "Looking for our latest rates?",
+    "description": "Download our full pricing to explore all services and packages in detail",
+    "button": "Price List - Download"
+  },
+  "pricesTable": {
+    "sections": {
+      "facial": "Facial Treatments",
+      "eyelashExtensions": "Eyelash Extensions",
+      "lashBrow": "Lash & Brow Treatments"
+    },
+    "categories": {
+      "classicFacial": "Classic Facial Cleansing",
+      "aquafacial": "Aquafacial",
+      "microneedling": "Microneedling Pro (CNC)",
+      "classicLook": "Classic Look 1:1",
+      "softVolume": "Soft Volume 2-3D",
+      "megaVolume": "Mega Volume 4-6D",
+      "nanoNeedling": "Microneedling Pro (CNC)"
+    },
+    "services": {
+      "basicCareRefreshment": "Basic Care (Refreshment) from",
+      "hydrationElasticity": "Hydration & Elasticity",
+      "skinRejuvenation": "Skin Rejuvenation from",
+      "newSet": "New Set",
+      "refill2Weeks": "Refill (2 weeks)",
+      "refill3Weeks": "Refill (3 weeks)",
+      "refill4Weeks": "Refill (4 weeks)",
+      "newSetSoft": "New Set",
+      "refill2WeeksSoft": "Refill (2 weeks)",
+      "refill3WeeksSoft": "Refill (3 weeks)",
+      "refill4WeeksSoft": "Refill (4 weeks)",
+      "newSetMega": "New Set",
+      "refill2WeeksMega": "Refill (2 weeks)",
+      "refill3WeeksMega": "Refill (3 weeks)",
+      "refill4WeeksMega": "Refill (4 weeks)",
+      "eyelashRemoval": "Eyelash Removal",
+      "eyelashLiftingTint": "Eyelash Lifting (incl. Tint & Keratin Care)",
+      "eyebrowTint": "Eyebrow Treatment (incl. Tint & Keratin Care)",
+      "comboPackage": "Combo Package (Eyelash & Brow Lifting)"
+    },
+    "notes": {
+      "wispyLook": "After 4 weeks the new-set price applies\nWispy Look, M-curls and L-curls at no extra cost with same volume"
+    },
+    "buttons": {
+      "showMore": "Show more",
+      "showLess": "Show less"
+    } 
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "See What We Do Best"
+  },
+  "cncShop": {
+    "title": "CNC Shop",
+    "description": "An exclusive selection of professional cosmetic products from the CNC brand — developed for all skin types and every skin need.",
+    "blueInfo": "Whether it’s anti-aging, blemished skin, couperose, pigmentation, dryness or sensitivity — find targeted skincare solutions tailored to you.",
+    "button": "Go to Store Now"
+  },
+  "location": {
+    "title": "Come Visit Us",
+    "subtitle": "We’re just a few clicks away",
+    "address": "Hochstädter Str.1a, 63477 Maintal"
+  },
+  "help": {
+    "title": "Get in touch",
+    "subtitle": "We’re here to help",
+    "description": "Give us a call or send us a message and one of our friendly team members will be in touch shortly."
+  },
+  "footer": {
+    "home": "Home",
+    "services": "Services",
+    "prices": "Prices",
+    "gallery": "Gallery",
+    "cncShop": "CNC Shop",
+    "contact": "Contact"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "welcome": {
+    "h2": "Willkommen bei",
+    "title": ", wo deine Schönheit und dein Wohlbefinden an erste Stelle stehen."
+  },
+  "ratings": {
+    "serviceTitle": "Service Rating",
+    "customers": "(5/5) von 89 Kunden"
+  },
+  "buttons": {
+    "contact": "Kontakt",
+    "firstReservation": "Termin vereinbaren",
+    "seeMore": "Mehr ansehen"
+  },
+  "greeting": {
+    "title": "Selbstbewusstsein gestalten",
+    "paragraphs": [
+      "In ruhiger, stilvoller Atmosphäre nehme ich mir Zeit, um Ihre Wünsche und Bedürfnisse genau zu erfassen und Ihnen individuelle Behandlungen auf höchstem Niveau zu bieten. Ob Gesichtsbehandlungen, Wimpernverlängerung oder Lash und Brow Lifting – jede Anwendung erfolgt mit großer Sorgfalt, Feingefühl sowie unter Einhaltung strengster Hygiene- und Qualitätsstandards.",
+      "Gönnen Sie sich eine erholsame Auszeit vom Alltag und lassen Sie sich von sichtbaren Ergebnissen und einem frischen, gepflegten Erscheinungsbild überzeugen. Ich freue mich sehr darauf, Sie persönlich kennenzulernen und Ihnen bei Leonti Aesthetic ein angenehmes Wohlfühlerlebnis zu ermöglichen."
+    ],
+    "name": "Ecaterina Leonti",
+    "certification": "Geprüfte Fachkosmetikerin"
+  },
+  "servicesOverview": {
+    "title": "UNSERE LEISTUNGEN",
+    "items": {
+      "pureGlow": {
+        "name": "Klassische Gesichtsreinigung",
+        "description": "Porentiefe Reinigung, klärende Wirkung"
+      },
+      "aquafacial": {
+        "name": "Aquafacial",
+        "description": "Intensive Hydration, Hautstraffung, Elastizität steigern"
+      },
+      "microneedling": {
+        "name": "Microneedling Pro (CNC)",
+        "description": "Tiefenaufbau, Anti-Aging, Hauterneuerung"
+      },
+      "eyelashExtensions": {
+        "name": "Wimpernverlängerung",
+        "description": "Blickfang"
+      },
+      "eyelashLifting": {
+        "name": "Wimpernlifting",
+        "description": "Natürliche Schwung ohne Mascara oder Wimpernzange"
+      },
+      "eyebrowLifting": {
+        "name": "Augenbrauenlifting",
+        "description": "Mehr Volumen und Struktur für einen harmonischen Look"
+      }
+    }
+  },
+  "prices": {
+    "title": "Suchen Sie nach unseren aktuellen Preisen?",
+    "description": "Laden Sie unsere vollständige Preisliste herunter, um alle Services und Pakete im Detail zu entdecken",
+    "button": "Preisliste – Herunterladen"
+  },
+  "pricesTable": {
+    "sections": {
+      "facial": "Gesichtsbehandlungen",
+      "eyelashExtensions": "Wimpernverlängerung",
+      "lashBrow": "Wimpern- & Augenbrauen­behandlungen"
+    },
+    "categories": {
+      "classicFacial": "Klassische Gesichtsreinigung",
+      "aquafacial": "Aquafacial",
+      "microneedling": "Microneedling Pro (CNC)",
+      "classicLook": "Klassischer Look 1:1",
+      "softVolume": "Soft Volume 2-3D",
+      "megaVolume": "Mega Volume 4-6D",
+      "nanoNeedling": "Microneedling Pro (CNC)"
+    },
+    "services": {
+      "basicCareRefreshment": "Porentiefe Reinigung, klärende Wirkung ab",
+      "hydrationElasticity": "Intensive Hydration, Hautstraffung, Elastizität steigern",
+      "skinRejuvenation": "Tiefenaufbau, Anti-Aging, Hauterneuerung ab",
+      "newSet": "Neues Set",
+      "refill2Weeks": "Auffüllen (2 Wochen)",
+      "refill3Weeks": "Auffüllen (3 Wochen)",
+      "refill4Weeks": "Auffüllen (4 Wochen)",
+      "newSetSoft": "Neues Set",
+      "refill2WeeksSoft": "Auffüllen (2 Wochen)",
+      "refill3WeeksSoft": "Auffüllen (3 Wochen)",
+      "refill4WeeksSoft": "Auffüllen (4 Wochen)",
+      "newSetMega": "Neues Set",
+      "refill2WeeksMega": "Auffüllen (2 Wochen)",
+      "refill3WeeksMega": "Auffüllen (3 Wochen)",
+      "refill4WeeksMega": "Auffüllen (4 Wochen)",
+      "eyelashRemoval": "Wimpernentfernung",
+      "eyelashLiftingTint": "Wimpernlifting (inkl. Färben & Keratinpflege)",
+      "eyebrowTint": "Augenbrauenlifting (inkl. Färben & Keratinpflege)",
+      "comboPackage": "Kombi-Paket (Wimpern & Augenbrauenlifting)"
+    },
+    "notes": {
+      "wispyLook": "Nach 4 Wochen gilt der Preis für ein Neuset\nWispy Look, M-Curl und L-Curl ohne Aufpreis mit gleichem Volumen"
+    },
+    "buttons": {
+      "showMore": "Mehr anzeigen",
+      "showLess": "Weniger anzeigen"
+    } 
+  },
+  "gallery": {
+    "title": "Galerie",
+    "description": "Sehen Sie, was wir am besten können"
+  },
+  "cncShop": {
+    "title": "CNC Shop",
+    "description": "Eine exklusive Auswahl professioneller Kosmetikprodukte der Marke CNC – entwickelt für alle Hauttypen und jeden Hautbedarf.",
+    "blueInfo": "Ob Anti-Aging, Hautunreinheiten, Couperose, Pigmentierung, Trockenheit oder Empfindlichkeit – finden Sie gezielte Hautpflege­lösungen, die auf Sie zugeschnitten sind.",
+    "button": "Zum Shop"
+  },
+  "location": {
+    "title": "Besuchen Sie uns",
+    "subtitle": "Wir sind nur ein paar Klicks entfernt",
+    "address": "Hochstädter Str.1a, 63477 Maintal"
+  },
+  "help": {
+    "title": "Nehmen Sie Kontakt auf",
+    "subtitle": "Wir sind für Sie da",
+    "description": "Rufen Sie uns an oder senden Sie uns eine Nachricht, und eines unserer freundlichen Team­mitglieder wird sich in Kürze bei Ihnen melden."
+  },
+  "footer": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "prices": "Preise",
+    "gallery": "Galerie",
+    "cncShop": "CNC Shop",
+    "contact": "Kontakt"
+  }
+}

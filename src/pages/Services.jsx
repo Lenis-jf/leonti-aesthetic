@@ -1,7 +1,5 @@
-// src/pages/Services.jsx
-
-import React, { useState, useEffect } from 'react';  // ← Importar useState
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import Menu from '../components/Menu';
@@ -18,54 +16,41 @@ import { useImagePreloader } from '../hooks/useImagePreloader';
 const PrincipalImg = ({ imagesLoaded, alt }) => {
     const smallSrc = `${import.meta.env.BASE_URL}assets/imgs/main-bg-foto.webp`;
     const largeSrc = `${import.meta.env.BASE_URL}assets/imgs/main-bg-foto-big.webp`;
-
-    const getSrcForWidth = (width) =>
-        width >= 768 ? largeSrc : smallSrc;
-
-    const [imgSrc, setImgSrc] = useState(() =>
-        getSrcForWidth(window.innerWidth)
-    );
+    const getSrc = width => width >= 768 ? largeSrc : smallSrc;
+    const [src, setSrc] = useState(getSrc(window.innerWidth));
 
     useEffect(() => {
-        const onResize = () => {
-            setImgSrc(getSrcForWidth(window.innerWidth));
-        };
+        const onResize = () => setSrc(getSrc(window.innerWidth));
         window.addEventListener('resize', onResize);
         return () => window.removeEventListener('resize', onResize);
     }, []);
 
     if (!imagesLoaded) return <Loader />;
-
     return (
         <div className="principal-img-container">
-            <img
-                className="principal-img"
-                src={imgSrc}
-                alt={alt}
-            />
+            <img className="principal-img" src={src} alt={alt} />
         </div>
     );
 };
 
-
 const Services = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation("services");
 
     const images = [
-        'assets/imgs/main-bg-foto.webp',
-        'assets/imgs/main-bg-foto-big.webp',
-        'assets/imgs/services-1.webp',
-        'assets/imgs/services-2.webp',
-        'assets/imgs/services-3.webp',
-        'assets/imgs/services-4.webp',
-        'assets/imgs/services-5.webp',
-        'assets/imgs/services-6.webp',
-    ].map(path => `${import.meta.env.BASE_URL}${path}`);
+        'main-bg-foto.webp',
+        'main-bg-foto-big.webp',
+        'services-1.webp',
+        'services-2.webp',
+        'services-3.webp',
+        'services-4.webp',
+        'services-5.webp',
+        'services-6.webp',
+    ].map(f => `${import.meta.env.BASE_URL}assets/imgs/${f}`);
 
     const imagesLoaded = useImagePreloader(images);
 
     useEffect(() => {
-        document.title = 'Leonti Aesthetics | Services';
+        document.title = 'Leonti Aesthetic | Services';
         window.scrollTo(0, 0);
     }, []);
 
@@ -77,213 +62,203 @@ const Services = () => {
 
             <section className="topMenu dark-section">
                 <NavLink to="/" className="mainLogo-top">
-                    <img
-                        src={mainLogoWhite}
-                        alt={t('mainServicesPage.logoWhite.alt', 'Leonti Aesthetic Logo')}
-                    />
+                    <img src={mainLogoWhite} alt={t('mainServicesPage.logoWhite.alt')} />
                 </NavLink>
                 <NavLink className="contact-btn" to="/contact">
-                    {t('buttons.contact', 'Contact me')}
+                    {t('buttons.contact')}
                 </NavLink>
             </section>
 
-            {/* Imagen principal */}
             <PrincipalImg
                 imagesLoaded={imagesLoaded}
-                alt={t(
-                    'mainServicesPage.principalImg.alt',
-                    "decorative close-up of a woman's eye area"
-                )}
+                alt={t('mainServicesPage.principalImg.alt')}
             />
 
             <section className="mainDescription">
-                <h4>{t('mainServicesPage.title', 'Leonti Aesthetic')}</h4>
-                <h1>{t('mainServicesPage.subtitle', 'Our Services')}</h1>
-                <p>
-                    {t(
-                        'mainServicesPage.description',
-                        'At Leonti Aesthetic, we offer personalized beauty treatments focused on enhancing your natural glow. Using high-quality products and state-of-the-art techniques, every service is tailored to your skin and style needs.'
-                    )}
-                </p>
-                <div className="decorationText">
-                    {t('mainServicesPage.discover', 'Discover what we can do for you:')}
-                </div>
+                <h4>{t('mainServicesPage.title')}</h4>
+                <h1>{t('mainServicesPage.subtitle')}</h1>
+                <p>{t('mainServicesPage.description')}</p>
+                <div className="decorationText">{t('mainServicesPage.discover')}</div>
             </section>
 
             <section className="service-cards-section beige-section">
+                {/* Pure Glow */}
                 <div id="pure-glow" className="service-card pure-glow">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-1.webp`} alt={t("mainServicesPage.pureGlow.alt", "pure-glow service image")} className="pure-glow-img" />
-                    <div className="rosa-subtitle">{t("mainServicesPage.pureGlow.name.rosa", "Pure Glow")}</div>
-                    <h2>{t("mainServicesPage.pureGlow.name", "Classic Facial Cleaning")}</h2>
-                    <p>
-                        {t("mainServicesPage.pureGlow.description", "A gentle yet effective treatment that deeply cleanses the skin. Using high-quality CNC products, enzymatic peeling, a skin scrubber, and a soothing mask, your skin will be refreshed and soothed. Includes a relaxing facial massage upon request.")}
-                    </p>
-                    <p>
-                        <strong>{t("mainServicesPage.pureGlow.result", "Result: A clear, radiant, and healthy-looking complexion.")}</strong>
-                    </p>
-                    <div className='subservice basic-care'>
-                        <h2>{t("mainServicesPage.pureGlow.subservice.basicCare.title", "Basic Care")}</h2>
-                        <p>
-                            {t("mainServicesPage.pureGlow.subservice.basicCare.description", "A clear, refreshing facial treatment for well-groomed skin in everyday life. With a gentle peel and the Skin Scrubber, impurities are gently removed, the skin is deeply cleansed, and it is provided with moisture—perfect for regular, straightforward skincare.")}
-                        </p>
+                    <img
+                        src={`${import.meta.env.BASE_URL}assets/imgs/services-1.webp`}
+                        alt={t('mainServicesPage.pureGlow.alt')}
+                        className="pure-glow-img"
+                    />
+                    <div className="rosa-subtitle">{t('mainServicesPage.pureGlow.tagline')}</div>
+                    <h2>{t('mainServicesPage.pureGlow.name')}</h2>
+                    <p>{t('mainServicesPage.pureGlow.description')}</p>
+                    {/* <p><strong>{t('mainServicesPage.pureGlow.result')}</strong></p> */}
+                    <div className="divider"></div>
+                    <div className="subservice">
+                        <h3>{t('mainServicesPage.pureGlow.subservices.basicCare.title')}</h3>
+                        <p>{t('mainServicesPage.pureGlow.subservices.basicCare.description')}</p>
                     </div>
-                    <div className='subservice'>
-                        <h2>{t("mainServicesPage.pureGlow.subservice.intensiveRelaxing.title", "Intensive & Relaxing")}</h2>
-                        <p>
-                            {t("mainServicesPage.pureGlow.subservice.intensiveRelaxing.description", "A deep-acting facial cleansing with enzymatic peel and the Skin Scrubber, combined with a nourishing active ingredient ampoule, a relaxing face and décolleté massage, and calming light therapy. Ideal for those who want visible results and a moment of relaxation.")}
-                        </p>
+                    <div className="subservice">
+                        <h3>{t('mainServicesPage.pureGlow.subservices.intensiveRelaxing.title')}</h3>
+                        <p>{t('mainServicesPage.pureGlow.subservices.intensiveRelaxing.description')}</p>
                     </div>
-                    <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                    <NavLink className="contact-btn" to="/contact">{t('buttons.contact')}</NavLink>
                 </div>
+
+                {/* Aquafacial */}
                 <div id="aquafacial" className="service-card aquafacial">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-6.webp`} alt={t("mainServicesPage.aquafacial.alt", "aquafacial service image")} className="aquafacial-img" />
-                    <div className="rosa-subtitle">{t("mainServicesPage.aquafacial.name.rosa", "For clear and radiant skin")}</div>
-                    <h2>{t("mainServicesPage.aquafacial.name", "Aquafacial")}</h2>
-                    <p>
-                        {t("mainServicesPage.aquafacial.description", "The AquaFacial treatment by Cure-Concept offers a gentle, non-invasive way to deeply cleanse and hydrate your skin. Using advanced aqua dermabrasion, vacuum technology, and nutrient-rich serums, it removes dead skin cells, oil, and impurities without irritation—perfect for all skin types.")}
-                    </p>
+                    <img
+                        src={`${import.meta.env.BASE_URL}assets/imgs/services-6.webp`}
+                        alt={t('mainServicesPage.aquafacial.alt')}
+                        className="aquafacial-img"
+                    />
+                    <div className="rosa-subtitle">{t('mainServicesPage.aquafacial.tagline')}</div>
+                    <h2>{t('mainServicesPage.aquafacial.name')}</h2>
+                    <p>{t('mainServicesPage.aquafacial.paragraph.0')}</p>
+                    <p>{t('mainServicesPage.aquafacial.paragraph.1')}</p>
+                    <br />
+                    <strong><p>{t('mainServicesPage.aquafacial.result')}</p></strong>
                     <div className="divider"></div>
-                    <p>{t("mainServicesPage.aquafacial.benefits", "Benefits:")}</p>
+                    <h4>{t("mainServicesPage.aquafacial.indicationsTitle")}</h4>
                     <ul>
-                        <li>• {t("mainServicesPage.aquafacial.list.1", "Suitable for dry, oily, sensitive, or acne-prone skin.")}</li>
-                        <li>• {t("mainServicesPage.aquafacial.list.2", "Immediate, looks smoother")}</li>
-                        <li>• {t("mainServicesPage.aquafacial.list.3", "No downtime—no redness or irritation.")}</li>
-                        <li>• {t("mainServicesPage.aquafacial.list.4", "Deep pore cleansing and hydration.")}</li>
+                        <li>{t("mainServicesPage.aquafacial.indications.0")}</li>
+                        <li>{t("mainServicesPage.aquafacial.indications.1")}</li>
+                        <li>{t("mainServicesPage.aquafacial.indications.2")}</li>
+                        <li>{t("mainServicesPage.aquafacial.indications.3")}</li>
+                        <li>{t("mainServicesPage.aquafacial.indications.4")}</li>
+                        <li>{t("mainServicesPage.aquafacial.indications.5")}</li>
                     </ul>
-                    <p>{t("mainServicesPage.aquafacial.stepsTitle", "Steps:")}</p>
+                    <div className="divider"></div>
+                    <h4>{t('mainServicesPage.aquafacial.stepsTitle')}</h4>
                     <ol>
-                        <li>{t("mainServicesPage.aquafacial.steps.1", "Cleansing & gentle exfoliation")}</li>
-                        <li>{t("mainServicesPage.aquafacial.steps.2", "Mild acid peel to renew skin")}</li>
-                        <li>{t("mainServicesPage.aquafacial.steps.3", "Deep vacuum pore cleansing")}</li>
-                        <li>{t("mainServicesPage.aquafacial.steps.4", "Hydration with nutrient-rich serums")}</li>
+                        <li>{t('mainServicesPage.aquafacial.steps.0')}</li>
+                        <li>{t('mainServicesPage.aquafacial.steps.1')}</li>
+                        <li>{t('mainServicesPage.aquafacial.steps.2')}</li>
+                        <li>{t('mainServicesPage.aquafacial.steps.3')}</li>
+                        <li>{t('mainServicesPage.aquafacial.steps.4')}</li>
                     </ol>
-                    <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                    <NavLink className="contact-btn" to="/contact">{t('buttons.contact')}</NavLink>
                 </div>
+
+                {/* Microneedling */}
                 <div id="microneedling" className="service-card microneedling">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-2.webp`} alt={t("mainServicesPage.microneedling.alt", "microneedling service image")} className="microneedling-img" />
-                    <div className="rosa-subtitle">{t("mainServicesPage.microneedling.name.rosa", "Naturally beautiful skin through targeted deep care")}</div>
-                    <h2>{t("mainServicesPage.microneedling.name", "Microneedling")}</h2>
-                    <p>
-                        {t("mainServicesPage.microneedling.description", "Microneedling stimulates your skin’s natural regeneration using ultra-fine needles or nanotips that activate collagen, elastin, and hyaluronic acid production. Ideal for:")}
-                    </p>
+                    <img
+                        src={`${import.meta.env.BASE_URL}assets/imgs/services-2.webp`}
+                        alt={t('mainServicesPage.microneedling.alt')}
+                        className="microneedling-img"
+                    />
+                    <div className="rosa-subtitle">{t('mainServicesPage.microneedling.tagline')}</div>
+                    <h2>{t('mainServicesPage.microneedling.name')}</h2>
+                    <p>{t('mainServicesPage.microneedling.paragraph.0')}</p>
+                    <p>{t('mainServicesPage.microneedling.paragraph.1')}</p>
                     <div className="divider"></div>
+                    <h4>{t('mainServicesPage.microneedling.treatmentOptionsTitle')}</h4>
+                    <div className="subservice">
+                        <h3>{t('mainServicesPage.microneedling.treatmentOptions.nano.label')}</h3>
+                        <p>{t('mainServicesPage.microneedling.treatmentOptions.nano.description')}</p>
+                    </div>
+                    <div className="subservice">
+                        <h3>{t('mainServicesPage.microneedling.treatmentOptions.basic.label')}</h3>
+                        <p>{t('mainServicesPage.microneedling.treatmentOptions.basic.description')}</p>
+                    </div>
+                    <div className="subservice">
+                        <h3>{t('mainServicesPage.microneedling.treatmentOptions.pro.label')}</h3>
+                        <p>{t('mainServicesPage.microneedling.treatmentOptions.pro.description')}</p>
+                    </div>
+                    <div className="divider"></div>
+                    <h4>{t("mainServicesPage.microneedling.targetGroupTitle")}</h4>
                     <ul>
-                        <li>•  {t("mainServicesPage.microneedling.list.1", "Dull or tired skin")}</li>
-                        <li>• {t("mainServicesPage.microneedling.list.2", "Enlarged pores")}</li>
-                        <li>• {t("mainServicesPage.microneedling.list.3", "Wrinkles")}</li>
-                        <li>• {t("mainServicesPage.microneedling.list.4", "Acne scars")}</li>
-                        <li>• {t("mainServicesPage.microneedling.list.5", "Early signs of aging")}</li>
+                        <li>{t('mainServicesPage.microneedling.targetGroup.0')}</li>
+                        <li>{t('mainServicesPage.microneedling.targetGroup.1')}</li>
+                        <li>{t('mainServicesPage.microneedling.targetGroup.2')}</li>
+                        <li>{t('mainServicesPage.microneedling.targetGroup.3')}</li>
+                        <li>{t('mainServicesPage.microneedling.targetGroup.4')}</li>
+                        <li>{t('mainServicesPage.microneedling.targetGroup.5')}</li>
                     </ul>
                     <div className="divider"></div>
-                    <h4>{t("mainServicesPage.microneedling.treatmentOptions", "Our three treatment options:")}</h4>
-                    <p>
-                        {t("mainServicesPage.microneedling.treatmentOptions.description", "At Leonti Aesthetic, we offer three levels of Microneedling, tailored to your skin’s needs:")}
-                    </p>
-                    <div className="subservice">
-                        <h3>{t("mainServicesPage.microneedling.treatmentOptions.nanoneedling", "Nanoneedling")}</h3>
-                        <p>{t("mainServicesPage.microneedling.treatmentOptions.nanoneedling.description", "Gentle & superficial — perfect for a natural glow.")}</p>
-                    </div>
-                    <div className="subservice">
-                        <h3>{t("mainServicesPage.microneedling.treatmentOptions.microneedling", "MicroNeedling")}</h3>
-                        <p>{t("mainServicesPage.microneedling.treatmentOptions.microneedling.description", "Classic & effective — targets pores, wrinkles, and scars.")}</p>
-                    </div>
-                    <div className="subservice rosa-subservice">
-                        <h3>{t("mainServicesPage.microneedling.treatmentOptions.microneedlingPro", "MicroNeedling Pro")}</h3>
-                        <p>{t("mainServicesPage.microneedling.treatmentOptions.microneedlingPro.description", "Intensive & deeply active — for powerful anti-aging and skin renewal.")}</p>
-                    </div>
-                    <div className="contraindication-icon-title-contrainer">
+                    <div className="contraindication-icon-title-container">
                         <span></span>
                         <div className="vertical-divider"></div>
                         <div className="contraindication-title-subtitle-container">
-                            <h3>{t("contraindication.title", "Contraindications")}</h3>
+                            <h3>{t("mainServicesPage.microneedling.contraindications.title", "Contraindications")}</h3>
                             <p>
-                                {t("contraindication.subtile", "Micro Needling should not be performed when:")}
+                                {t("mainServicesPage.microneedling.contraindications.subtitle", "Micro Needling should not be performed when:")}
                             </p>
                         </div>
                     </div>
                     <ul>
-                        <li>
-                            • {t("contraindication.li1", "There is active acne, open wounds, or inflammatory skin conditions")}
-                        </li>
-                        <li>
-                            • {t("contraindication.li2", "An acute herpes infection is present")}
-                        </li>
-                        <li>
-                            • {t("contraindication.li3", "During pregnancy or breastfeeding")}
-                        </li>
-                        <li>
-                            • {t("contraindication.li4", "You are on blood-thinning medication")}
-                        </li>
-                        <li>
-                            • {t("contraindication.li5", "You have very sensitive skin or low pain tolerance")}
-                        </li>
-                        <li>
-                            • {t("contraindication.li6", "You have chronic skin diseases or autoimmune conditions")}
-                        </li>
+                        {t('mainServicesPage.microneedling.contraindications.items', { returnObjects: true }).map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                        ))}
                     </ul>
-                    <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                    <NavLink className="contact-btn" to="/contact">{t('buttons.contact')}</NavLink>
                 </div>
-                <div id="eyelash-extensions" className="service-card eyelashextensions">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-3.webp`} alt={t("mainServicesPage.eyelashExtensions.alt", "eyelash extensions service image")} className="eyelashextensions-img" />
-                    <div className="rosa-subtitle">{t("mainServicesPage.eyelashExtensions.name.rosa", "Your look, your expression")}</div>
-                    <h2>{t("mainServicesPage.eyelashExtensions.name", "Eyelash Extensions")}</h2>
-                    <p>
-                        {t("mainServicesPage.eyelashExtensions.description", "Enhance your natural beauty with lash styles ranging from subtle to bold — no mascara needed. We use top-quality materials and precision techniques to deliver the look that suits you best:")}
-                    </p>
+
+                {/* Eyelash Extensions */}
+                <div id="eyelash-extensions" className="service-card eyelash-extensions">
+                    <img
+                        src={`${import.meta.env.BASE_URL}assets/imgs/services-3.webp`}
+                        alt={t('mainServicesPage.eyelashExtensions.alt')}
+                        className="eyelash-extensions-img"
+                    />
+                    <div className="rosa-subtitle">{t('mainServicesPage.eyelashExtensions.tagline')}</div>
+                    <h2>{t('mainServicesPage.eyelashExtensions.name')}</h2>
+                    <p>{t('mainServicesPage.eyelashExtensions.description')}</p>
                     <div className="subservice-2">
-                        <span>{t("mainServicesPage.eyelashExtensions.treatmentOptions.classic", "Classic (1:1)")}</span>
-                        <p>
-                            {t("mainServicesPage.eyelashExtensions.treatmentOptions.classic.description", "Elegant and natural for everyday wear")}
-                        </p>
+                        <span>{t('mainServicesPage.eyelashExtensions.treatmentOptions.classic.label')}</span>
+                        <p>{t('mainServicesPage.eyelashExtensions.treatmentOptions.classic.description')}</p>
                     </div>
                     <div className="subservice-2">
-                        <span>{t("mainServicesPage.eyelashExtensions.treatmentOptions.softVolume", "Soft Volume (3-4D)")}</span>
-                        <p>
-                            {t("mainServicesPage.eyelashExtensions.treatmentOptions.softVolume.description", "Fuller lashes with a soft, fluffy finish")}
-                        </p>
+                        <span>{t('mainServicesPage.eyelashExtensions.treatmentOptions.softVolume.label')}</span>
+                        <p>{t('mainServicesPage.eyelashExtensions.treatmentOptions.softVolume.description')}</p>
                     </div>
                     <div className="subservice-2">
-                        <span>{t("mainServicesPage.eyelashExtensions.treatmentOptions.volume", "Volume (5-7D)")}</span>
-                        <p>
-                            {t("mainServicesPage.eyelashExtensions.treatmentOptions.volume.description", "Dramatic volume for a bold look")}
-                        </p>
+                        <span>{t('mainServicesPage.eyelashExtensions.treatmentOptions.volume.label')}</span>
+                        <p>{t('mainServicesPage.eyelashExtensions.treatmentOptions.volume.description')}</p>
                     </div>
-                    <h4>{t("mainServicesPage.eyelashExtensions.chooseStyle", "Choose your style We’ll take care of the rest")}</h4>
-                    <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                    <h4>{t('mainServicesPage.eyelashExtensions.chooseStyle')}</h4>
+                    <NavLink className="contact-btn" to="/contact">{t('buttons.contact')}</NavLink>
                 </div>
+
+                {/* Eyelash Lifting */}
                 <div id="eyelash-lifting" className="service-card eyelash-lifting">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-5.webp`} alt={t("mainServicesPage.eyebrowLifting.alt", "eyebrow lifting service image")} className="eyebrow-lifting-img" />
-                    <div className="rosa-subtitle">{t("mainServicesPage.eyelashLifting.name.rosa", "Natural curl, no extensions")}</div>
-                    <h2>{t("mainServicesPage.eyelashLifting.name", "Eyelash Lifting")}</h2>
+                    <img
+                        src={`${import.meta.env.BASE_URL}assets/imgs/services-5.webp`}
+                        alt={t('mainServicesPage.eyelashLifting.alt')}
+                        className="eyelash-lifting-img"
+                    />
+                    <div className="rosa-subtitle">{t('mainServicesPage.eyelashLifting.tagline')}</div>
+                    <h2>{t('mainServicesPage.eyelashLifting.name')}</h2>
                     <p>
-                        {t("mainServicesPage.eyelashLifting.description", "Get fuller, more defined brows without the daily effort. Your eyebrows are shaped, strengthened, and fixed for a clean, even look that stays in place.")}
-                        <strong><br />{t("mainServicesPage.eyelashLifting.result", "Result: A natural curl that lasts up to 6 weeks.")}</strong>
+                        {t('mainServicesPage.eyelashLifting.description')}
                     </p>
-                    <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                    <NavLink className="contact-btn" to="/contact">{t('buttons.contact')}</NavLink>
                 </div>
+
+                {/* Eyebrow Lifting */}
                 <div id="eyebrow-lifting" className="service-card eyebrow-lifting">
-                    <img src={`${import.meta.env.BASE_URL}assets/imgs/services-4.webp`} alt={t("mainServicesPage.eyelashLifting.alt", "eyelash lifting service image")} className="eyelash-lifting-img" />
-                    <div className="rosa-subtitle">{t("mainServicesPage.eyebrowLifting.name.rosa", "Lasting Volume & Shape")}</div>
-                    <h2>{t("mainServicesPage.eyebrowLifting.name", "Eyebrow Lifting")}</h2>
-                    <p>
-                        {t("mainServicesPage.eyebrowLifting.description", "Enhance your natural beauty with lash styles ranging from subtle to bold — no mascara needed. We use top-quality materials and precision techniques to deliver the look that suits you best:")}
-                    </p>
-                    <NavLink className="contact-btn" to="/contact">{t("buttons.contact", "Contact me")}</NavLink>
+                    <img
+                        src={`${import.meta.env.BASE_URL}assets/imgs/services-4.webp`}
+                        alt={t('mainServicesPage.eyebrowLifting.alt')}
+                        className="eyebrow-lifting-img"
+                    />
+                    <div className="rosa-subtitle">{t('mainServicesPage.eyebrowLifting.tagline')}</div>
+                    <h2>{t('mainServicesPage.eyebrowLifting.name')}</h2>
+                    <p>{t('mainServicesPage.eyebrowLifting.description')}</p>
+                    <NavLink className="contact-btn" to="/contact">{t('buttons.contact')}</NavLink>
                 </div>
+
                 <NavLink to="/" className="mainLogo-bottom">
-                    <img src={mainLogo} alt={t('mainServicesPage.logo.alt', 'Leonti Aesthetic Logo')} />
+                    <img src={mainLogo} alt={t('mainServicesPage.logo.alt')} />
                 </NavLink>
             </section>
+
             <section className="location-info-container white-section">
-                <h4>{t('location.title', 'Come Visit Us')}</h4>
-                <h1>{t('location.subtitle', "We’re just a few clicks away")}</h1>
-                <span className="address">
-                    {t('location.address', 'Hochstädter Str.1a, 63477 Maintal')}
-                </span>
+                <h4>{t("location.title")}</h4>
+                <h1>{t("location.subtitle")}</h1>
+                <span className="address">{t("location.address")}</span>
                 <Map />
-                <NavLink className="contact-btn" to="/contact">
-                    {t('buttons.contact', 'Contact me')}
-                </NavLink>
+                <NavLink className="contact-btn" to="/contact">{t("buttons.contact")}</NavLink>
             </section>
 
             <WhatsappButton />

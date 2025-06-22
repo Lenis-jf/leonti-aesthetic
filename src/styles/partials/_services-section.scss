@@ -39,6 +39,10 @@ section.topMenu {
         top: 25px;
         right: 2.5vw;
         padding: 4px 5px;
+
+        &:hover {
+            box-shadow: none;
+        }
     }
 }
 
@@ -121,12 +125,24 @@ section.service-cards-section {
         max-height: max-content;
         background-color: $white-base;
         border-radius: 10px;
-        padding: 10px;
+        padding: 10px 20px;
         display: flex;
         flex-direction: column;
         box-shadow: $neo-morphism-static;
         position: relative;
         margin-bottom: 35px;
+
+        strong p {
+            font-weight: 800;
+        }
+
+        div.divider {
+            width: 100%;
+            height: 2px;
+            background-color: #707070;
+            opacity: 0.1;
+            margin: 25px 0;
+        }
 
         a.contact-btn {
             width: fit-content;
@@ -144,7 +160,7 @@ section.service-cards-section {
 
         &.pure-glow {
             div.rosa-subtitle {
-                margin: calc(100% * 0.58 + 10px) 0 10px 0;
+                margin: calc(100% * 0.58 + 15px) 0 10px 0;
             }
 
             div.subservice.basic-care {
@@ -154,15 +170,15 @@ section.service-cards-section {
 
         &.microneedling {
             div.rosa-subtitle {
-                margin: calc(100% * 0.77 + 10px) 0 10px 0;
+                margin: calc(100% * 0.77 + 15px) 0 15px 0;
             }
 
-            div.contraindication-icon-title-contrainer {
+            div.contraindication-icon-title-container {
                 width: 100%;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
-                margin: 45px auto 25px auto;
+                margin: 0px 0 25px 0;
 
                 span {
                     display: inline-block;
@@ -177,13 +193,13 @@ section.service-cards-section {
                 }
 
                 div.vertical-divider {
-                    width: 2px;
+                    width: 1px;
                     border-radius: 1px;
                     background-color: $color-fuente-titulos;
                 }
 
                 div.contraindication-title-subtitle-container {
-                    border-left: 2px solid $color-fuente-titulos;
+                    border-left: 1px solid $color-fuente-titulos;
                     padding-left: 10px;
 
                     h3 {
@@ -194,14 +210,15 @@ section.service-cards-section {
                     p { 
                         line-height: clamp(1rem, 1rem + 1.8vw, 1.6em); 
                         margin: 0;
+                        max-width: 200px;
                     }
                 }
             }
         }
 
-        &.eyelashextensions {
+        &.eyelash-extensions {
             div.rosa-subtitle {
-                margin: calc(100% * 0.58 + 10px) 0 10px 0;
+                margin: calc(100% * 0.58 + 15px) 0 10px 0;
             }
 
             h4 {
@@ -211,19 +228,19 @@ section.service-cards-section {
 
         &.eyelash-lifting {
             div.rosa-subtitle {
-                margin: calc(100% * 0.58 + 10px) 0 10px 0;
+                margin: calc(100% * 0.58 + 15px) 0 10px 0;
             }
         }
 
         &.eyebrow-lifting {
             div.rosa-subtitle {
-                margin: calc(100% * 0.77 + 10px) 0 10px 0;
+                margin: calc(100% * 0.77 + 15px) 0 10px 0;
             }
         }
         
         &.aquafacial {
             div.rosa-subtitle {
-                margin: calc(100% * 0.77 + 10px) 0 10px 0;
+                margin: calc(100% * 0.77 + 15px) 0 10px 0;
             }
         }
 
@@ -279,21 +296,21 @@ section.service-cards-section {
 
         ul, ol {
             color: $color-fuente;
-            list-style: none;
+            list-style: disc;
             font-size: $tamano-texto-mediano;
             line-height: clamp(2rem, 1.5rem + 1vw, 2.6rem);
+            padding: 0 20px;
         }
 
         ol {
             list-style: decimal;
-            padding-left: 15px;
         }
 
         div.subservice {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            padding: 10px;
+            padding: 20px;
             background-color: $white-base;
             border: 1px solid #707070;
             border-radius: 5px;
@@ -304,16 +321,24 @@ section.service-cards-section {
                 @include titles-font;
                 color: $color-fuente-titulos;
                 font-size: $tamano-titulos-pequenos;
-                margin-bottom: 5px;
+                margin-bottom: 20px;
+                line-height: clamp(1.8rem, 1.8rem + 2vw, 2.8rem);
             }
-
+            
+            p {
+                @include text-font;
+                color: $color-fuente;
+                font-size: $tamano-texto-mediano;
+                line-height: clamp(1.8rem, 1.8rem + 2vw, 2.6rem);
+                margin: 0;
+            }
         }
 
         div.subservice-2 {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 5px;
+            padding: 15px 5px;
             background-color: $white-base;
             border: 1px solid #707070;
             border-radius: 5px;
@@ -327,7 +352,6 @@ section.service-cards-section {
                 margin-bottom: 5px;
                 padding: 0 5px;
                 min-width: fit-content;
-                border-right: 1px solid #707070;
                 height: 80%;
                 display: flex;
                 align-items: center;
@@ -339,21 +363,15 @@ section.service-cards-section {
 
             p {
                 margin: 0;
+                padding: 0 10px;
                 padding-left: 5px;
                 font-size: $tamano-texto-mediano;
+                border-left: 1px solid #707070;
             }
         }
     }
 
     div.service-card.microneedling {
-        div.divider {
-            width: 100%;
-            height: 1.5px;
-            background-color: #707070;
-            opacity: 0.1;
-            margin: 10px 0;
-        }
-        
         div.subservice.rosa-subservice {
             background-color: $primary-color;
             border: none;
@@ -362,29 +380,6 @@ section.service-cards-section {
                 color: $white-base;
             }
         }
-    }
-
-    div.service-card.aquafacial {
-        div.divider {
-            width: 100%;
-            height: 1.5px;
-            background-color: #707070;
-            opacity: 0.1;
-            margin: 10px 0;
-        }
-        
-        div.divider {
-            width: 100%;
-            height: 1.5px;
-            background-color: #707070;
-            opacity: 0.1;
-            margin: 10px 0;
-        }
-        
-        p:last-of-type {
-            margin-top: 20px;
-        }
-        
     }
 
     a.mainLogo-bottom {

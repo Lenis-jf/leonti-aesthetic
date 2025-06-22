@@ -1,0 +1,139 @@
+{
+    "mainServicesPage": {
+        "title": "Leonti Aesthetic",
+        "subtitle": "Unsere Leistungen",
+        "description": "Bei Leonti Aesthetic bieten wir personalisierte Schönheits­behandlungen, die darauf abzielen, Ihren natürlichen Glow zu unterstreichen. Mit hochwertigen Produkten und modernsten Techniken wird jede Behandlung auf Ihre Haut und Ihren Stil abgestimmt.",
+        "discover": "Entdecken Sie, was wir für Sie tun können:",
+        "principalImg": {
+            "alt": "Dekorativer Nahaufnahme­schuss des Augenbereichs einer Frau"
+        },
+        "pureGlow": {
+            "alt": "Bild der Pure-Glow-Behandlung",
+            "name": "Klassische Gesichtsreinigung",
+            "tagline": "Porentiefe Reinigung, klärende Wirkung",
+            "description": "Die klassische Gesichtsreinigung ist die Grundlage für eine gesunde und strahlende Haut. Sie entfernt Unreinheiten, abgestorbene Hautzellen und sorgt dafür, dass die Haut wieder frei atmen kann. Für alle Behandlungen werden hochwertige und professionelle Produkte von CNC Cosmetic verwendet.",
+            "subservices": {
+                "basicCare": {
+                    "title": "Fresh Clean – Basispflege",
+                    "description": "Gründliche Reinigung und Frische für den Alltag. Die Haut wird sanft gereinigt, Unreinheiten werden mit dem Ultraschall-Skin-Schrubber entfernt, gefolgt von einem sanften Peeling, einer beruhigenden Maske und einer pflegenden Abschlusspflege. Ideal für die regelmäßige, unkomplizierte Hautpflege."
+                },
+                "intensiveRelaxing": {
+                    "title": "Glow Balance Intensiv & Entspannend",
+                    "description": "Tiefenreinigung mit Pflege und Wellnessfaktor. Die Haut wird gründlich gereinigt, sanft mit Ultraschall-Skin-Schrubber und enzymatischem Peeling von Unreinheiten befreit. Eine hochwertige Wirkstoffampulle versorgt die Haut intensiv. Die entspannende Gesichts- und Dekolleté-Massage sowie die beruhigende Lichttherapie sorgen für pures Wohlbefinden. Abschließend wird die Haut mit einer pflegenden Maske verwöhnt. Ideal für alle, die sich tiefgehende Pflege und Entspannung wünschen."
+                }
+            }
+        },
+        "aquafacial": {
+            "alt": "Bild des Aquafacial-Services",
+            "name": "Aquafacial",
+            "tagline": "Intensive Hydration, Hautstraffung, Elastizität steigern",
+            "paragraph": [
+                "Aquafacial ist eine sanfte, nicht-invasive Gesichtsbehandlung, die Hautreinigung, Feuchtigkeitsversorgung und Pflege in einem vereint. Mit der Kraft von Wasser, Vakuum und pflegenden Seren werden abgestorbene Hautzellen, Talg und Unreinheiten schonend entfernt – ganz ohne aggressive Peelings oder mechanische Reizungen.",
+                "Das Besondere: Die Haut wird während der Behandlung nicht nur porentief gereinigt, sondern gleichzeitig intensiv mit Feuchtigkeit und wertvollen Nährstoffen versorgt. Eine ergänzende Lichttherapie unterstützt die Regeneration und bringt das Hautbild zusätzlich zum Strahlen.\nDas Ergebnis: Sofort sichtbar frischere, glattere und strahlender Haut – ideal für alle Hauttypen, besonders bei müder, unreiner oder feuchtigkeitsarmer Haut."
+            ],
+            "result": "Das Ergebnis: Sofort sichtbar frischere, glattere und strahlendere Haut – ideal für alle Hauttypen, besonders bei müder, unreiner oder feuchtigkeitsarmer Haut.",
+            "indicationsTitle": "Für wen ist Aquafacial geeignet?",
+            "indications": [
+                "Müde, fahle Haut",
+                "Unreine oder großporige Haut",
+                "Feuchtigkeitsarme Haut",
+                "Erste Fältchen und feine Linien",
+                "Sensible Haut (je nach Hautzustand)",
+                "Optimal als Vorbereitung für Microneedling – die Haut ist intensiv gereinigt und besonders aufnahmefähig für die anschließende Behandlung."
+            ],
+            "stepsTitle": "Ablauf der Aquafacial-Behandlung",
+            "steps": [
+                "Sanfte Reinigung und Vorbereitung der Haut",
+                "Porentiefe Ausreinigung durch Wasserstrahl und Vakuum",
+                "Versorgung mit feuchtigkeitsspendenden und pflegenden Wirkstoffen",
+                "Lichttherapie zur Beruhigung, Regeneration und Hautbildverbesserung",
+                "Abschlusspflege für Schutz und Frischegefühl"
+            ]
+        },
+        "microneedling": {
+            "alt": "Bild des Microneedlings",
+            "name": "Microneedling Pro (CNC)",
+            "tagline": "Tiefenaufbau, Anti-Aging, Hauterneuerung",
+            "paragraph": [
+                "Entdecke die Kraft innovativer Hautregeneration mit Micro Needling PRO – der effektiven Anti-Aging-Technologie von CNC Cosmetic. Straffe, verjünge und revitalisiere deine Haut spürbar – ganz ohne chirurgischen Eingriff.",
+                "Durch gezielte Stimulation wird die natürliche Produktion von Kollagen, Elastin und Hyaluron aktiviert. Das Ergebnis: Ein feineres, glatteres und jugendlicheres Hautbild – mit Soforteffekt und nachhaltiger Wirkung."
+            ],
+            "treatmentOptionsTitle": "Die drei Behandlungsmethoden im Überblick",
+            "treatmentOptions": {
+                "nano": {
+                    "label": "Nano Needling – Sanfte Hautauffrischung",
+                    "description": "Fördert die Mikrozirkulation und verbessert die Wirkstoffaufnahme. Ideal zur Porenverfeinerung, bei Rötungen oder als pflegende Auffrischung."
+                },
+                "basic": {
+                    "label": "Micro Needling – Struktur und Festigkeit",
+                    "description": "Regt die Kollagenproduktion an und stärkt das Bindegewebe. Besonders geeignet bei feinen Linien, Elastizitätsverlust, Pigmentflecken und erweiterten Poren."
+                },
+                "pro": {
+                    "label": "Micro Needling Pro – Intensives Anti-Aging in zwei Phasen",
+                    "description": "Tiefenwirksame Stimulation kombiniert mit hochkonzentrierten Seren. Perfekt für reife und anspruchsvolle Haut."
+                }
+            },
+            "targetGroupTitle": "Wann ist Micro Needling PRO das richtige für dich?",
+            "targetGroup": [
+                "Falten & erste Anzeichen der Hautalterung",
+                "Erschlaffte Haut & Elastizitätsverlust",
+                "Porenvergrößerung",
+                "Pigmentflecken & Hyperpigmentierung",
+                "Gefäßlabile Haut & Hautrötungen",
+                "Mehr Glow & Spannkraft gewünscht"
+            ],
+            "contraindications": {
+                "title": "Kontraindikationen",
+                "subtitle": "Micro Needling sollte nicht durchgeführt werden, wenn:",
+                "items": [
+                    "Es liegt aktive Akne, offene Wunden oder eine entzündliche Hauterkrankung vor",
+                    "Es liegt eine akute Herpesinfektion vor",
+                    "Während der Schwangerschaft oder Stillzeit",
+                    "Sie nehmen blutverdünnende Medikamente ein",
+                    "Sie haben sehr empfindliche Haut oder eine geringe Schmerzgrenze",
+                    "Sie haben chronische Hauterkrankungen oder Autoimmunerkrankungen"
+                ]
+            }
+        },
+        "eyelashExtensions": {
+            "alt": "Bild der Wimpernverlängerung",
+            "name": "Wimpernverlängerung",
+            "description": "Verbessern Sie Ihre natürliche Schönheit mit Wimpernstilen von dezent bis auffällig – keine Mascara nötig. Wir verwenden hochwertige Materialien und präzise Techniken, um den Look zu liefern, der am besten zu Ihnen passt:",
+            "treatmentOptions": {
+                "classic": {
+                    "label": "Classic (1:1)",
+                    "description": "Eine natürliche Verlängerung, bei der einzelne Wimpern sanft für mehr Länge und Fülle sorgen."
+                },
+                "softVolume": {
+                    "label": "Soft Volume (3-4D)",
+                    "description": "Weiches Volumen für einen fülligeren, aber immer noch leichten und natürlichen Look."
+                },
+                "volume": {
+                    "label": "Volume (5-7D)",
+                    "description": "Ein vollerer Look, der elegant bleibt und nicht überladen wirkt – perfekt ausbalanciert für mehr Ausdruck."
+                }
+            },
+            "chooseStyle": "Wählen Sie Ihren Stil, wir kümmern uns um den Rest"
+        },
+        "eyelashLifting": {
+            "alt": "Bild des Wimpernliftings",
+            "name": "Wimpernlifting",
+            "tagline": "Natürliche Schwung ohne Mascara oder Wimpernzange",
+            "description": "Wimpernlifting verleiht den eigenen Wimpern einen natürlichen Schwung. Die Wimpern werden während der Behandlung gefärbt und zum Abschluss mit einer pflegenden Keratinpflege gestärkt. Der Effekt kann bis zu sechs Wochen sichtbar bleiben."
+        },
+        "eyebrowLifting": {
+            "alt": "Bild des Augenbrauenliftings",
+            "name": "Augenbrauenlifting",
+            "tagline": "Mehr Volumen und Struktur für einen harmonischen Look",
+            "description": "Bring deine Brauen in Bestform – mit Augenbrauenlifting inklusive Färben und Keratinpflege für strahlende und definierte Brauen."
+        }
+    },
+    "location": {
+        "title": "Besuchen Sie uns",
+        "subtitle": "Wir sind nur ein paar Klicks entfernt",
+        "address": "Hochstädter Str.1a, 63477 Maintal"
+     },
+    "buttons": {
+        "contact": "Kontakt"
+    }
+}
