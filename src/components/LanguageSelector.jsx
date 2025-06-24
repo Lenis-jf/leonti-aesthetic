@@ -33,9 +33,9 @@ export default function LanguageSelector() {
 
     return (
         <div className="lang-selector" ref={ref}>
-            <button className="lang-label" onClick={toggle}>
+            <button className="lang-label" onClick={toggle} alt={t("languageSelector.alt")}>
                 <div className="language-globe lang-icon"></div>
-                <span className="lang-text">{current.label}</span>
+                <span className="lang-text" alt={current.label}>{current.label}</span>
                 <div className={`dropdown lang-icon ${open ? "rotated" : ""}`}></div>
             </button>
 
@@ -46,10 +46,10 @@ export default function LanguageSelector() {
                             select(other.code);
                             closeMenu();
                         }}>
-                            <button className="lang-text">{other.label}</button>
+                            <button className="lang-text" alt={other.label}>{other.label}</button>
                         </li>
                         <li className="lang-item" onClick={() => select(current.code)}>
-                            <button className="lang-text disabled">{current.label}</button>
+                            <button className="lang-text disabled" alt={current.label}>{current.label}</button>
                         </li>
                     </ul>
                 </div>

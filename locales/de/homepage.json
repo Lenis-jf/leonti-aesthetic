@@ -131,5 +131,17 @@
   "whatsapp": {
     "message": "Termin vereinbaren!",
     "button": "Whatsapp Chat beginnen"
+  },
+  "decorative-imgs": {
+    "hands": "Dekorative Hände mit Kosmetikprodukten"
+  },
+  "ariaLabels": {
+    "email": "Schicken Sie uns eine E-Mail",
+    "phone": "Rufen Sie uns an",
+    "facebook": "Besuchen Sie unsere Facebook-Seite",
+    "instagram": "Besuchen Sie unsere Instagram-Seite"
+  },
+  "languageSelector": {
+    "alt": "Sprachauswahl"
   }
 }

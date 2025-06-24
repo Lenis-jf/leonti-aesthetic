@@ -223,22 +223,22 @@ const Home = () => {
             <section id="cnc-shop" className="cnc-shop-section beige-section">
                 <img
                     src={`${import.meta.env.BASE_URL}assets/icons/right-top.svg`}
-                    alt="mano decorativa con producto"
+                    alt={t("decorative-imgs.hand")}
                     className="hand orange"
                 />
                 <img
                     src={`${import.meta.env.BASE_URL}assets/icons/left-top.svg`}
-                    alt="mano decorativa con producto"
+                    alt={t("decorative-imgs.hand")}
                     className="hand white"
                 />
                 <img
                     src={`${import.meta.env.BASE_URL}assets/icons/left-bottom.svg`}
-                    alt="mano decorativa con producto"
+                    alt={t("decorative-imgs.hand")}
                     className="hand transparent"
                 />
                 <img
                     src={`${import.meta.env.BASE_URL}assets/icons/right-bottom.svg`}
-                    alt="mano decorativa con producto"
+                    alt={t("decorative-imgs.hand")}
                     className="hand rounded"
                 />
                 <div className="cnc-card">

@@ -18,19 +18,19 @@ const Footer = () => {
                 </div>
                 <div className="icons-container white">
                     {/* Correo Electrónico */}
-                    <a href="mailto:ecaterina.leonti06@gmail.com" className="social-media-icon email white" alt="email icon" aria-label="Enviar correo electrónico">
+                    <a href="mailto:ecaterina.leonti06@gmail.com" className="social-media-icon email white" alt="email icon" aria-label={t("ariaLabels.email")}>
                     </a>
 
                     {/* Instagram */}
-                    <a href="https://www.instagram.com/leonti.aesthetic/" target="_blank" rel="noopener noreferrer" className="social-media-icon instagram white" alt="instagram icon" aria-label="Visitar Instagram">
+                    <a href="https://www.instagram.com/leonti.aesthetic/" target="_blank" rel="noopener noreferrer" className="social-media-icon instagram white" alt="instagram icon" aria-label={t("ariaLabels.instagram")}>
                     </a>
 
                     {/* Facebook */}
-                    <a href="https://www.facebook.com/leonti.aesthetic.facebook" target="_blank" rel="noopener noreferrer" className="social-media-icon facebook white" alt="facebook icon" aria-label="Visitar Facebook">
+                    <a href="https://www.facebook.com/leonti.aesthetic.facebook" target="_blank" rel="noopener noreferrer" className="social-media-icon facebook white" alt="facebook icon" aria-label={t("ariaLabels.facebook")}>
                     </a>
 
                     {/* Teléfono */}
-                    <a href="tel:+4917620836261" className="social-media-icon phone white" alt="phone icon" aria-label="Llamar por teléfono">
+                    <a href="tel:+4917620836261" className="social-media-icon phone white" alt="phone icon" aria-label={t("ariaLabels.phone")}>
                     </a>
                     {/* Puedes añadir más iconos aquí */}
                 </div>

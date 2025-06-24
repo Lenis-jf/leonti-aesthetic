@@ -132,5 +132,17 @@
   "whatsapp": {
     "message": "Book your appointment!",
     "button": "Start Whatsapp Chat"
+  },
+  "decorative-imgs": {
+    "hands": "Decorative hands with cosmetic products"
+  },
+  "ariaLabels": {
+    "email": "Email us",
+    "phone": "Call us",
+    "facebook": "Visit our Facebook page",
+    "instagram": "Visit our Instagram page"
+  },
+  "languageSelector": {
+    "alt": "Language selection"
   }
 }
