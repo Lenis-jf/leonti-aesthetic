@@ -37,10 +37,17 @@ div.whatsapp-floating {
     }
 
     .whatsapp-popup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
         position: absolute;
         bottom: 60px;
         right: 0;
-        width: 200px;
+        width: 60vw;
+        max-width: 240px;
+        height: 20vh;
+        max-height: 100px;
         padding: 18px 15px;
         background: white;
         border-radius: 8px;
