@@ -1,4 +1,12 @@
 {
+  "menu": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "prices": "Preise",
+    "gallery": "Galerie",
+    "cncShop": "CNC Shop",
+    "contact": "Kontakt"
+  },
   "welcome": {
     "h2": "Willkommen bei",
     "title": ", wo deine Schönheit und dein Wohlbefinden an erste Stelle stehen."

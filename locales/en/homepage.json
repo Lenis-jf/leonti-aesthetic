@@ -1,4 +1,12 @@
 {
+  "menu": {
+    "home": "Home",
+    "services": "Services",
+    "prices": "Prices",
+    "gallery": "Gallery",
+    "cncShop": "CNC Shop",
+    "contact": "Contact Us"
+  },
   "welcome": {
     "h2": "Welcome to",
     "title": ", where your beauty and well-being come first."
