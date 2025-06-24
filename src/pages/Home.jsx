@@ -250,7 +250,7 @@ const Home = () => {
                         <p>{t("cncShop.blueInfo")}</p>
                     </div>
                 </div>
-                <Link to="https://shop.cnc-cosmetic.de/" className="cnc-shop">
+                <Link to="https://cnc-direct.de/" className="cnc-shop">
                     {t("cncShop.button")}
                     <div className="arrow-right"></div>
                 </Link>
