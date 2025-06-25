@@ -35,9 +35,9 @@ const Contact = () => {
 
             <section className="icons-container black beige-section">
                 <div className="icons-container black">
-                    <a href="mailto:ecaterina.leonti06@gmail.com" className="social-media-icon email black" aria-label="email" />
+                    <a href="mailto:aesthetic@leonti.eu" className="social-media-icon email black" aria-label="email" />
                     <a href="https://www.instagram.com/leonti.aesthetic/" target="_blank" rel="noopener noreferrer" className="social-media-icon instagram black" aria-label="instagram" />
-                    <a href="https://www.facebook.com/leonti.aesthetic.facebook" target="_blank" rel="noopener noreferrer" className="social-media-icon facebook black" aria-label="facebook" />
+                    <a href="https://www.facebook.com/share/18KcYwoDpy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-media-icon facebook black" aria-label="facebook" />
                     <a href="tel:+4917620836261" className="social-media-icon phone black" aria-label="phone" />
                 </div>
                 <span className="address">{t("location.address")}</span>

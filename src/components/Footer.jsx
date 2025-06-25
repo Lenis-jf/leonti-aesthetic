@@ -18,7 +18,7 @@ const Footer = () => {
                 </div>
                 <div className="icons-container white">
                     {/* Correo Electrónico */}
-                    <a href="mailto:ecaterina.leonti06@gmail.com" className="social-media-icon email white" alt="email icon" aria-label={t("ariaLabels.email")}>
+                    <a href="mailto:aesthetic@leonti.eu" className="social-media-icon email white" alt="email icon" aria-label={t("ariaLabels.email")}>
                     </a>
 
                     {/* Instagram */}
@@ -26,7 +26,7 @@ const Footer = () => {
                     </a>
 
                     {/* Facebook */}
-                    <a href="https://www.facebook.com/leonti.aesthetic.facebook" target="_blank" rel="noopener noreferrer" className="social-media-icon facebook white" alt="facebook icon" aria-label={t("ariaLabels.facebook")}>
+                    <a href="https://www.facebook.com/share/18KcYwoDpy/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-media-icon facebook white" alt="facebook icon" aria-label={t("ariaLabels.facebook")}>
                     </a>
 
                     {/* Teléfono */}

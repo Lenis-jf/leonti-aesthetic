@@ -1,10 +1,73 @@
-# 1. Habilita mod_rewrite
-RewriteEngine On
+# ─────────────────────────────────────────────────────────────
+# 1. Habilitar el motor de reescritura
+# ─────────────────────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
 
-# 2. No reescribir solicitudes a archivos o carpetas reales
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+  # 1.1 Si la petición es a un fichero o carpeta real, servirlo directamente
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
-# 3. Redirige todo lo demás a index.html
-RewriteRule ^ index.html [L]
+  # 1.2 Si no existe, entregar index.html (tu SPA se encarga de la ruta)
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# ─────────────────────────────────────────────────────────────
+# 2. Desactivar listado de directorios
+# ─────────────────────────────────────────────────────────────
+Options -Indexes
+
+# ─────────────────────────────────────────────────────────────
+# 3. Cabeceras de seguridad
+# ─────────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  # Evita que te embeddeen en iframes de otros sitios
+  Header always set X-Frame-Options "SAMEORIGIN"
+  # Previene algunas XSS reflejadas
+  Header always set X-XSS-Protection "1; mode=block"
+  # Bloquea sniffing de MIME
+  Header always set X-Content-Type-Options "nosniff"
+  # Política de Referrer
+  Header always set Referrer-Policy "no-referrer-when-downgrade"
+  # Habilita CSP básica (ajusta si necesitas cargar externamente)
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+</IfModule>
+
+# ─────────────────────────────────────────────────────────────
+# 4. Caching de recursos estáticos
+# ─────────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Imágenes: 30 días
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  # Scripts y estilos: 7 días
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/css "access plus 7 days"
+  # Fuentes: 30 días
+  ExpiresByType font/woff2 "access plus 30 days"
+  ExpiresByType font/woff "access plus 30 days"
+  ExpiresByType application/font-woff "access plus 30 days"
+</IfModule>
+
+# ─────────────────────────────────────────────────────────────
+# 5. Optimización de compresión
+# ─────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  # Comprimir texto
+  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css text/javascript application/javascript application/json
+  # Excluir fuentes, imágenes y PDF (ya vienen comprimidos)
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|pdf)$ no-gzip
+</IfModule>
+
+# ─────────────────────────────────────────────────────────────
+# 6. Evitar servir dotfiles (.env, .gitignore, etc.)
+# ─────────────────────────────────────────────────────────────
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
