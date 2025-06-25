@@ -37,41 +37,6 @@ html {
             background-color: $thumb-color;
         }
     }
-
-    &::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: translate(-50%, -50%) rotate(0deg);
-        width: 300vw;
-        height: 300dvh;
-        border-radius: 0%;
-        background-color: $secondary-color;
-        filter: blur(30px);
-        z-index: 2;
-        animation: moveOut 2.5s ease-out;
-        animation-play-state: paused;
-        animation-fill-mode: forwards;
-        animation-delay: 220ms;
-        z-index: 200;
-    }
-
-    @keyframes moveOut {
-        0% {
-            transform: translate(-50%, -50%) rotate(-45deg);
-            border-radius: 50%;
-        }
-
-        100% {
-            transform: translate(200%, 250%) rotate(-45deg);
-            border-radius: 50%;
-        }
-    }
-
-    &.running::before {
-        animation-play-state: running;
-    }
 }
 
 section.beige-section {

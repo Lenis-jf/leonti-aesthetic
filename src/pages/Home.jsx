@@ -24,6 +24,7 @@ const Home = () => {
 
     const greetingImgRef = useRef(null);
     const greetingTextRef = useRef(null);
+    const mainHomeContainerRef = useRef(null);
 
     const [playOverlay, setPlayOverlay] = useState(false);
     const [playGreetingImg, setPlayGreetingImg] = useState(false);
@@ -34,19 +35,15 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        const htmlElement = document.documentElement;
-
-        if (imagesLoaded && htmlElement) {
+        if (imagesLoaded && mainHomeContainerRef.current) {
             requestAnimationFrame(() => setPlayOverlay(true));
         }
     }, [imagesLoaded]);
 
     useEffect(() => {
         if(playOverlay) {
-            const htmlElement = document.documentElement;
-
-            if(htmlElement) htmlElement.classList.add("running");
-            else htmlElement.classList.remove("running");
+            if(mainHomeContainerRef.current) mainHomeContainerRef.current.classList.add("running");
+            else mainHomeContainerRef.current.classList.remove("running");
         }
     }, [playOverlay]);
 
@@ -75,7 +72,7 @@ const Home = () => {
                 <title>{t('homePage.title')}</title>
                 <link rel="canonical" href={`${import.meta.env.VITE_BASE_URL}`} />
             </Helmet>
-            <div className='home'>
+            <div className='home' ref={mainHomeContainerRef}>
                 <Menu />
 
                 <section className="firstSection white-section">
