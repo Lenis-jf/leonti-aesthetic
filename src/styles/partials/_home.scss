@@ -101,24 +101,6 @@ section.firstSection {
                     justify-content: center;
                     align-items: center;
 
-                    &::before {
-                        content: "50+";
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        @include text-font;
-                        color: $white-base;
-                        font-weight: 600;
-                        font-size: $tamano-texto-mediano;
-                        padding: 5px 12px;
-                        border-radius: 20px;
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        background-color: $botones-dorados;
-                    }
-
                     h2 {
                         @include titles-font;
                         font-size: clamp(1.5rem, 1.5rem + 1vw, 3rem);
@@ -292,24 +274,6 @@ section.mainFoto-mobile-hero {
                 justify-content: center;
                 align-items: center;
 
-                &::before {
-                    content: "50+";
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    @include text-font;
-                    color: $white-base;
-                    font-weight: 600;
-                    font-size: $tamano-texto-mediano;
-                    padding: 5px 12px;
-                    border-radius: 20px;
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: $botones-dorados;
-                }
-
                 h2 {
                     @include titles-font;
                     font-size: $tamano-titulos-pequenos;
@@ -479,17 +443,9 @@ section.mainGreeting {
             text-align: left;
         }
 
-        p.final-certification {
-            opacity: 0.8;
-        }
+        p.final-certification { opacity: 0.8; }
 
-        p.final-name {
-            font-weight: 600;
-
-            span {
-                color: $botones-dorados;
-            }
-        }
+        p.final-name { font-weight: 600; }
     }
 }
 

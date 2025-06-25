@@ -1,9 +1,12 @@
 // scripts/optimize-images.js
 import fs from 'fs/promises';
 import path from 'path';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import sharp from 'sharp';
 
-const exts = ['.jpg', '.jpeg', '.png'];
+const exts = ['.jpg', '.jpeg', '.png', '.heic'];
+const execFileAsync = promisify(execFile);
 
 async function processDir(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -20,16 +23,28 @@ async function processDir(dir) {
 
       try {
         if (ext === '.png') {
-          // Convierte PNG a WebP lossless (sin pérdida)
+          // PNG → WebP lossless
           await sharp(fullPath)
             .webp({ lossless: true })
             .toFile(outPath);
+
+        } else if (ext === '.heic') {
+          // HEIC → PNG intermedio usando heif-convert
+          const tempPng = fullPath.replace(/\.heic$/, '.png');
+          await execFileAsync('heif-convert', [fullPath, tempPng]);
+          // Luego PNG → WebP (con pérdida leve)
+          await sharp(tempPng)
+            .webp({ quality: 85, effort: 4 })
+            .toFile(outPath);
+          await fs.unlink(tempPng); // limpia el PNG temporal
+
         } else {
-          // Convierte JPG/JPEG a WebP con pérdida leve (quality 85)
+          // JPG/JPEG → WebP con pérdida leve
           await sharp(fullPath)
             .webp({ quality: 85, effort: 4 })
             .toFile(outPath);
         }
+
         console.log(`✅ Converted ${fullPath} → ${outPath}`);
       } catch (err) {
         console.error(`❌ Error converting ${fullPath}:`, err);
@@ -40,9 +55,7 @@ async function processDir(dir) {
 
 async function main() {
   const root = process.cwd();
-  await Promise.all([
-    processDir(path.join(root, 'fotos-to-compress')),
-  ]);
+  await processDir(path.join(root, 'fotos-to-compress'));
 }
 
 main().catch(err => {

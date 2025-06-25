@@ -13,19 +13,19 @@ const PricesTable = () => {
                 {
                     name: t('pricesTable.categories.classicFacial'),
                     services: [
-                        { name: t('pricesTable.services.basicCareRefreshment'), price: '€60' },
+                        { name: t('pricesTable.services.basicCareRefreshment'), price: `${t('prices.complement')} €65` },
                     ],
                 },
                 {
                     name: t('pricesTable.categories.aquafacial'),
                     services: [
-                        { name: t('pricesTable.services.hydrationElasticity'), price: '€110' },
+                        { name: t('pricesTable.services.hydrationElasticity'), price: "€115" },
                     ],
                 },
                 {
                     name: t('pricesTable.categories.nanoNeedling'),
                     services: [
-                        { name: t('pricesTable.services.skinRejuvenation'), price: '€95' },
+                        { name: t('pricesTable.services.skinRejuvenation'), price: `${t('prices.complement')} €95` },
                     ],
                 },
             ],
@@ -63,6 +63,7 @@ const PricesTable = () => {
                     ],
                 },
             ],
+            noteTop: t('pricesTable.notes.wispyLook-top'),
             note: t('pricesTable.notes.wispyLook'),
         },
         {
@@ -72,7 +73,6 @@ const PricesTable = () => {
                 { name: t('pricesTable.services.eyebrowTint'), price: '€50' },
                 { name: t('pricesTable.services.comboPackage'), price: '€85' },
             ],
-            // note: t('pricesTable.notes.exclusiveWelcomeBenefit'),
         },
     ];
 
@@ -93,7 +93,10 @@ const PricesTable = () => {
                                 ))}
                             </div>
                         ))}
-                        {section.note && <p className="note">{section.note}</p>}
+                        {(section.note || section.noteTop) && <div className="note-block">
+                            {section.noteTop && <p className="note-top">{section.noteTop}</p>}
+                            {section.note && <p className="note">{section.note}</p>}
+                        </div>}
                     </section>
                 ))}
             </div>

@@ -88,7 +88,7 @@ const Home = () => {
                     <div className="welcome-text-container">
                         <h2>{t("welcome.h2")}</h2>
                         <h1>
-                            <strong>Leonti Aesthetic</strong>{t("welcome.title")}
+                            <strong>Leonti Aesthetic</strong><br />{t("welcome.title")}
                         </h1>
                     </div>
 
@@ -150,7 +150,7 @@ const Home = () => {
                         <br />
                         <p>{t("greeting.paragraphs.1")}</p>
                         <br />
-                        <p className='final-name'><strong>Ecaterina <span>Leonti</span></strong></p>
+                        <p className='final-name'><strong>Ecaterina Leonti</strong></p>
                         <p className='final-certification'><em>{t("greeting.certification")}</em></p>
                     </div>
                 </section>
@@ -205,7 +205,7 @@ const Home = () => {
                     <a
                         className='price-list'
                         download
-                        href={`${import.meta.env.BASE_URL}assets/imgs/preis-liste.png`}
+                        href={`${import.meta.env.BASE_URL}assets/imgs/preisliste.webp`}
                     >
                         {t("prices.button")}
                         <div className="download-icon-container"></div>

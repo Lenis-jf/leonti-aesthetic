@@ -9,7 +9,7 @@
   },
   "welcome": {
     "h2": "Welcome to",
-    "title": ", where your beauty and well-being come first."
+    "title": "Where your beauty and well-being come first."
   },
   "ratings": {
     "serviceTitle": "Service Rating",
@@ -62,7 +62,8 @@
   "prices": {
     "title": "Looking for our latest rates?",
     "description": "Download our full pricing to explore all services and packages in detail",
-    "button": "Price List - Download"
+    "button": "Price List - Download",
+    "complement": "from"
   },
   "pricesTable": {
     "sections": {
@@ -80,9 +81,9 @@
       "nanoNeedling": "Microneedling Pro (CNC)"
     },
     "services": {
-      "basicCareRefreshment": "Basic Care (Refreshment) from",
+      "basicCareRefreshment": "Basic Care (Refreshment)",
       "hydrationElasticity": "Hydration & Elasticity",
-      "skinRejuvenation": "Skin Rejuvenation from",
+      "skinRejuvenation": "Skin Rejuvenation",
       "newSet": "New Set",
       "refill2Weeks": "Refill (2 weeks)",
       "refill3Weeks": "Refill (3 weeks)",

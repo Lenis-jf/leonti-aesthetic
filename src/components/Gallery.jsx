@@ -1,11 +1,25 @@
+// src/components/Gallery.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Gallery = () => {
     const { t } = useTranslation();
-    const imagesIndex = [1, 2, 3, 4, 5, 6, 7];
-    const containerRef = useRef(null);
 
+    const mediaOrder = [
+        { type: 'image', id: 1 },
+        { type: 'image', id: 2 },
+        { type: 'video', id: 1 },
+        { type: 'image', id: 3 },
+        { type: 'image', id: 4 },
+        { type: 'video', id: 2 },
+        { type: 'image', id: 5 },
+        { type: 'image', id: 6 },
+        { type: 'image', id: 7 },
+        { type: 'image', id: 8 },
+        { type: 'image', id: 9 }
+    ];
+
+    const containerRef = useRef(null);
     const [steps, setSteps] = useState(1);
     const [activeStep, setActiveStep] = useState(0);
 
@@ -13,15 +27,14 @@ const Gallery = () => {
         const el = containerRef.current;
         if (!el) return;
 
-        const updateSteps = () => {
+        function updateSteps() {
             const items = Array.from(el.querySelectorAll('.image-container'));
             const gap = parseInt(getComputedStyle(el).gap || '0', 10);
             const itemWidth = items[0]?.clientWidth || 0;
             const visibleCount = Math.floor((el.clientWidth + gap) / (itemWidth + gap)) || 1;
-            const totalImages = items.length;
-            const n = Math.max(totalImages - visibleCount + 1, 1);
+            const n = Math.max(items.length - visibleCount + 1, 1);
             setSteps(n);
-        };
+        }
 
         updateSteps();
         window.addEventListener('resize', updateSteps);
@@ -32,7 +45,7 @@ const Gallery = () => {
         const el = containerRef.current;
         if (!el) return;
 
-        const onScroll = () => {
+        function onScroll() {
             const maxScroll = el.scrollWidth - el.clientWidth;
             if (maxScroll <= 0) {
                 setActiveStep(0);
@@ -41,27 +54,30 @@ const Gallery = () => {
             const progress = el.scrollLeft / maxScroll;
             const idx = Math.round(progress * (steps - 1));
             setActiveStep(Math.min(Math.max(idx, 0), steps - 1));
-        };
+        }
 
         el.addEventListener('scroll', onScroll);
         onScroll();
-
         return () => el.removeEventListener('scroll', onScroll);
     }, [steps]);
 
-    const mediaItems = [
-        ...imagesIndex.map((id) => ({
-            key: `img-${id}`,
-            type: 'image',
-            src: `${import.meta.env.BASE_URL}assets/imgs/photo${id}.webp`,
-            alt: `Photo ${id}`
-        })),
-        {
-            key: 'video-1',
-            type: 'video',
-            src: `${import.meta.env.BASE_URL}assets/videos/video1-compressed.mp4`
+    const mediaItems = mediaOrder.map((item, idx) => {
+        if (item.type === 'image') {
+            return {
+                key: `img-${item.id}`,
+                type: 'image',
+                src: `${import.meta.env.BASE_URL}assets/imgs/photo${item.id}.webp`,
+                alt: `Photo ${item.id}`
+            };
+        } else {
+            return {
+                key: `video-${item.id}`,
+                type: 'video',
+                src: `${import.meta.env.BASE_URL}assets/videos/video${item.id}-compressed.mp4`,
+                poster: `${import.meta.env.BASE_URL}assets/imgs/video${item.id}-cover.webp`
+            };
         }
-    ];
+    });
 
     const scrollAmount = () => {
         const el = containerRef.current;
@@ -77,7 +93,6 @@ const Gallery = () => {
         if (!el || activeStep === 0) return;
         el.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
     };
-
     const handleRight = () => {
         const el = containerRef.current;
         if (!el || activeStep === steps - 1) return;
@@ -109,7 +124,7 @@ const Gallery = () => {
                                     playsInline
                                     loop
                                     controls
-                                    poster={`${import.meta.env.BASE_URL}assets/imgs/video1-cover.webp`}
+                                    poster={item.poster}
                                 />
                             )}
                         </div>

@@ -9,7 +9,7 @@
   },
   "welcome": {
     "h2": "Willkommen bei",
-    "title": ", wo deine Schönheit und dein Wohlbefinden an erste Stelle stehen."
+    "title": "Wo deine Schönheit und dein Wohlbefinden an erste Stelle stehen."
   },
   "ratings": {
     "serviceTitle": "Service Rating",
@@ -61,7 +61,8 @@
   "prices": {
     "title": "Suchen Sie nach unseren aktuellen Preisen?",
     "description": "Laden Sie unsere vollständige Preisliste herunter, um alle Services und Pakete im Detail zu entdecken",
-    "button": "Preisliste – Herunterladen"
+    "button": "Preisliste – Herunterladen",
+    "complement": "ab"
   },
   "pricesTable": {
     "sections": {
@@ -79,9 +80,9 @@
       "nanoNeedling": "Microneedling Pro (CNC)"
     },
     "services": {
-      "basicCareRefreshment": "Porentiefe Reinigung, klärende Wirkung ab",
+      "basicCareRefreshment": "Porentiefe Reinigung, klärende Wirkung",
       "hydrationElasticity": "Intensive Hydration, Hautstraffung, Elastizität steigern",
-      "skinRejuvenation": "Tiefenaufbau, Anti-Aging, Hauterneuerung ab",
+      "skinRejuvenation": "Tiefenaufbau, Anti-Aging, Hauterneuerung",
       "newSet": "Neues Set",
       "refill2Weeks": "Auffüllen (2 Wochen)",
       "refill3Weeks": "Auffüllen (3 Wochen)",
@@ -100,7 +101,8 @@
       "comboPackage": "Kombi-Paket (Wimpern & Augenbrauenlifting)"
     },
     "notes": {
-      "wispyLook": "Nach 4 Wochen gilt der Preis für ein Neuset\nWispy Look, M-Curl und L-Curl ohne Aufpreis mit gleichem Volumen"
+      "wispyLook-top": "Nach 4 Wochen gilt der Preis für ein Neuset:",
+      "wispyLook": "Wispy Look, M-Curl und L-Curl ohne Aufpreis mit gleichem Volumen"
     },
     "buttons": {
       "showMore": "Mehr anzeigen",

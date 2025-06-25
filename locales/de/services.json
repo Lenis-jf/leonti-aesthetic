@@ -105,11 +105,11 @@
                     "description": "Eine natürliche Verlängerung, bei der einzelne Wimpern sanft für mehr Länge und Fülle sorgen."
                 },
                 "softVolume": {
-                    "label": "Soft Volume (3-4D)",
+                    "label": "Soft Volume (2-3D)",
                     "description": "Weiches Volumen für einen fülligeren, aber immer noch leichten und natürlichen Look."
                 },
                 "volume": {
-                    "label": "Volume (5-7D)",
+                    "label": "Volume (4-6D)",
                     "description": "Ein vollerer Look, der elegant bleibt und nicht überladen wirkt – perfekt ausbalanciert für mehr Ausdruck."
                 }
             },
