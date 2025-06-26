@@ -37,7 +37,7 @@ Options -Indexes
   # Política de Referrer
   Header always set Referrer-Policy "no-referrer-when-downgrade"
   # Habilita CSP básica (ajusta si necesitas cargar externamente)
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://maps.gstatic.com;"
 </IfModule>
 
 # ─────────────────────────────────────────────────────────────
