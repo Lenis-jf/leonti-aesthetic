@@ -1,18 +1,14 @@
 # ─────────────────────────────────────────────────────────────
-# 0. Fallback 404 a index.html (para BrowserRouter)
+# 0. BrowserRouter fallback
 # ─────────────────────────────────────────────────────────────
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-
-  # 0.1 Sirve ficheros/carpetas si existen
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
-
-  # 0.2 En cualquier otra ruta, entrega index.html
-  RewriteRule . /index.html [L]
-</IfModule>
+RewriteEngine On
+RewriteBase /
+# Si existe fichero o carpeta, sirve directo
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+# Si no existe, entrega index.html
+RewriteRule . /index.html [L]
 
 # ─────────────────────────────────────────────────────────────
 # 1. Desactivar listado de directorios
@@ -22,64 +18,34 @@ Options -Indexes
 # ─────────────────────────────────────────────────────────────
 # 2. Cabeceras de seguridad
 # ─────────────────────────────────────────────────────────────
-<IfModule mod_headers.c>
-  # Clickjacking
-  Header always set X-Frame-Options "SAMEORIGIN"
-  # XSS reflejado
-  Header always set X-XSS-Protection "1; mode=block"
-  # No sniffing MIME
-  Header always set X-Content-Type-Options "nosniff"
-  # Referrer Policy
-  Header always set Referrer-Policy "no-referrer-when-downgrade"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "no-referrer-when-downgrade"
 
-  # Content Security Policy
-  Header always set Content-Security-Policy "
-    default-src 'self';
-    script-src  'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com;
-    connect-src 'self' https://maps.googleapis.com https://maps.gstatic.com;
-    style-src   'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.gstatic.com;
-    img-src     'self' data: https://maps.gstatic.com https://maps.googleapis.com;
-    font-src    'self' https://fonts.gstatic.com;
-  "
-</IfModule>
+# CSP: permite fonts.googleapis, maps y estilos inline
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com; connect-src 'self' https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.gstatic.com; img-src 'self' data: https://maps.gstatic.com https://maps.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
 
 # ─────────────────────────────────────────────────────────────
-# 3. Caching de recursos estáticos
+# 3. Caching
 # ─────────────────────────────────────────────────────────────
 <IfModule mod_expires.c>
   ExpiresActive On
-
-  # Imágenes: 30 días
   ExpiresByType image/webp "access plus 30 days"
   ExpiresByType image/jpeg "access plus 30 days"
-  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/png  "access plus 30 days"
   ExpiresByType image/svg+xml "access plus 30 days"
-
-  # Scripts y estilos: 7 días
-  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType text/css   "access plus 7 days"
   ExpiresByType application/javascript "access plus 7 days"
-  ExpiresByType text/css "access plus 7 days"
-
-  # Fuentes: 30 días
+  ExpiresByType application/json      "access plus 7 days"
   ExpiresByType font/woff2 "access plus 30 days"
-  ExpiresByType font/woff "access plus 30 days"
-  ExpiresByType application/font-woff "access plus 30 days"
+  ExpiresByType font/woff  "access plus 30 days"
 </IfModule>
 
 # ─────────────────────────────────────────────────────────────
-# 4. Optimización de compresión
+# 4. Compresión
 # ─────────────────────────────────────────────────────────────
 <IfModule mod_deflate.c>
-  # Comprime textos
   AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css text/javascript application/javascript application/json
-
-  # Excluir medios ya comprimidos
   SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|pdf|zip|gz)$ no-gzip
 </IfModule>
-
-# ─────────────────────────────────────────────────────────────
-# 5. Evitar servir dotfiles (.env, .gitignore, .htaccess)
-# ─────────────────────────────────────────────────────────────
-<FilesMatch "^\.">
-  Require all denied
-</FilesMatch>
