@@ -96,13 +96,13 @@ const Home = () => {
 
                         <div className="service-rating-desktop-container">
                             <div className="background-img-mask-desktop">
-                                <div className="service-rating">
+                                {/* <div className="service-rating">
                                     <h2>{t("ratings.serviceTitle")}</h2>
                                     <p>
                                         <span></span>
                                         {t("ratings.customers")}
                                     </p>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -123,13 +123,13 @@ const Home = () => {
                         <div className="barra-decorativa"></div>
                         <div className="background-img-mask">
                             <div className="sombra-circular"></div>
-                            <div className="service-rating">
+                            {/* <div className="service-rating">
                                 <h2>{t("ratings.serviceTitle")}</h2>
                                 <p>
                                     <span></span>
                                     {t("ratings.customers")}
                                 </p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </section>
