@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title"></title>
+    <link rel="stylesheet" href="styles/maintenancePageStyles.css">
+
+    <script>
+        const translations = {
+            en: {
+                maintenance_title: "We'll be back soon!",
+                maintenance_message: "Sorry for the inconvenience but we're performing some maintenance at the moment. We'll be back online shortly!",
+                maintenance_contact: "If you need to, you can always contact us at:",
+                maintenance_estimate: "We expect to be back online in approximately 1 hour.",
+                page_title: "Maintenance | Leonti Aesthetic"
+            },
+            de: {
+                maintenance_title: "Wir sind bald zurück!",
+                maintenance_message: "Entschuldigen Sie die Unannehmlichkeiten, aber wir führen gerade Wartungsarbeiten durch. Wir werden in Kürze wieder online sein!",
+                maintenance_contact: "Wenn Sie uns kontaktieren müssen, können Sie dies jederzeit tun unter:",
+                maintenance_estimate: "Wir erwarten, in etwa 1 Stunde wieder online zu sein.",
+                page_title: "Wartung | Leonti Aesthetic"
+            }
+        };
+
+        let currentLang = "de";
+
+        function updateContent() {
+            document.title = translations[currentLang].page_title;
+
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                el.textContent = translations[currentLang][key];
+            });
+        }
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            updateContent();
+        }
+
+        document.addEventListener("DOMContentLoaded", updateContent);
+    </script>
+</head>
+
+<body>
+    <main class="maintenance-container">
+        <img src="../src/assets/principal-assets/main-logo-white.svg" alt="">
+
+        <div class="language-switcher">
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('de')">Deutsch</button>
+        </div>
+
+        <div class="maintenance-content">
+            <h1 data-i18n="maintenance_title"></h1>
+            <p data-i18n="maintenance_message"></p>
+            <p data-i18n="maintenance_contact"></p>
+            <a href="mailto:aesthetic@leonti.eu">aesthetic@leonti.eu</a>
+            <p data-i18n="maintenance_estimate"></p>
+        </div>
+    </main>
+</body>
+
+</html>
