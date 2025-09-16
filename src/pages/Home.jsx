@@ -207,7 +207,7 @@ const Home = () => {
                         <a
                             className='price-list'
                             download
-                            href={`${import.meta.env.BASE_URL}assets/imgs/preisliste.webp`}
+                            href={`${import.meta.env.BASE_URL}assets/imgs/preisliste-sept-2025.webp`}
                         >
                             {t("prices.button")}
                             <div className="download-icon-container"></div>

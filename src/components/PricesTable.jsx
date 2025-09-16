@@ -37,15 +37,6 @@ const PricesTable = () => {
                 {
                     name: t('pricesTable.categories.classicLook'),
                     services: [
-                        { name: t('pricesTable.services.newSet'), price: '€75' },
-                        { name: t('pricesTable.services.refill2Weeks'), price: '€40' },
-                        { name: t('pricesTable.services.refill3Weeks'), price: '€45' },
-                        { name: t('pricesTable.services.refill4Weeks'), price: '€55' },
-                    ],
-                },
-                {
-                    name: t('pricesTable.categories.softVolume'),
-                    services: [
                         { name: t('pricesTable.services.newSet'), price: '€85' },
                         { name: t('pricesTable.services.refill2Weeks'), price: '€45' },
                         { name: t('pricesTable.services.refill3Weeks'), price: '€50' },
@@ -53,12 +44,21 @@ const PricesTable = () => {
                     ],
                 },
                 {
-                    name: t('pricesTable.categories.megaVolume'),
+                    name: t('pricesTable.categories.softVolume'),
                     services: [
                         { name: t('pricesTable.services.newSet'), price: '€95' },
                         { name: t('pricesTable.services.refill2Weeks'), price: '€50' },
                         { name: t('pricesTable.services.refill3Weeks'), price: '€55' },
                         { name: t('pricesTable.services.refill4Weeks'), price: '€65' },
+                    ],
+                },
+                {
+                    name: t('pricesTable.categories.megaVolume'),
+                    services: [
+                        { name: t('pricesTable.services.newSet'), price: '€110' },
+                        { name: t('pricesTable.services.refill2Weeks'), price: '€55' },
+                        { name: t('pricesTable.services.refill3Weeks'), price: '€60' },
+                        { name: t('pricesTable.services.refill4Weeks'), price: '€70' },
                         { name: t('pricesTable.services.eyelashRemoval'), price: '€15' },
                     ],
                 },

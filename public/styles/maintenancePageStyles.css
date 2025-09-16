@@ -6,9 +6,22 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  background-color: #E08B8B;
+  height: 100%;
 }
 html body {
+  height: 100%;
   background-color: #E08B8B;
+}
+html div.safe-area-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top); /* usa el valor real del dispositivo */
+  background: #E08B8B;
+  z-index: 9999;
+  pointer-events: none; /* no bloquea clicks */
 }
 html main.maintenance-container {
   position: relative;
