@@ -18,16 +18,16 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 # ─────────────────────────────────────────────────────────────
 # 🔧 MODO MANTENIMIENTO: Redirigir todas las peticiones a maintenance.html
 # ─────────────────────────────────────────────────────────────
-RewriteCond %{REMOTE_ADDR} ^87\.144\.241\.157$ [OR]
-RewriteCond %{REMOTE_ADDR} ^2003:cb:170a:3634:94c:648e:3c68:7015$
-RewriteRule ^ - [L]
+#RewriteCond %{REMOTE_ADDR} ^87\.144\.241\.157$ [OR]
+#RewriteCond %{REMOTE_ADDR} ^2003:cb:170a:3634:94c:648e:3c68:7015$
+#RewriteRule ^ - [L]
 
 # Evitar bucle infinito para acceder a la propia maintenance.html, assets o favicon
-RewriteCond %{REQUEST_URI} !/maintenance\.html$ [NC]
-RewriteCond %{REQUEST_URI} !/styles/ [NC]
-RewriteCond %{REQUEST_URI} !/assets/ [NC]
-RewriteCond %{REQUEST_URI} !/favicon\.ico$ [NC]
-RewriteRule ^.*$ /maintenance.html [L]
+#RewriteCond %{REQUEST_URI} !/maintenance\.html$ [NC]
+#RewriteCond %{REQUEST_URI} !/styles/ [NC]
+#RewriteCond %{REQUEST_URI} !/assets/ [NC]
+#RewriteCond %{REQUEST_URI} !/favicon\.ico$ [NC]
+#RewriteRule ^.*$ /maintenance.html [L]
 
 # ─────────────────────────────────────────────────────────────
 # 1. BrowserRouter fallback (SPA)
