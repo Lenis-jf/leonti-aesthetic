@@ -7,8 +7,8 @@ const containerStyle = {
 };
 
 const leonti_aesthetic = {
-  lat: 50.15333716631024,
-  lng: 8.806611254970692
+  lat: 50.15348,
+  lng: 8.80642
 };
 
 const mapOptions = {
