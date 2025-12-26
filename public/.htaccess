@@ -12,6 +12,16 @@ RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} !^www\.aesthetic\-leonti\.de$ [NC]
 RewriteRule ^ https://www.aesthetic-leonti.de%{REQUEST_URI} [L,R=301]
 
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Si la petición no es un archivo real ni un directorio real, servir index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^.*$ /index.html [L,QSA]
+</IfModule>
+
 # 0c) HSTS: obliga a usar HTTPS
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
