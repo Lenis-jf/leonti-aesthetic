@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100%',
@@ -7,9 +7,11 @@ const containerStyle = {
 };
 
 const leonti_aesthetic = {
-  lat: 50.15348,
-  lng: 8.80642
+  lat: 50.153442186565954,
+  lng: 8.806392281536015
 };
+
+const placeId = "ChIJM4fyG3URvUcROHzhN0g6bF8";
 
 const mapOptions = {
   disableDefaultUI: true,
@@ -38,10 +40,10 @@ const MapComponent = () => {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={leonti_aesthetic}
-          zoom={15}
+          zoom={16}
           options={mapOptions}
         >
-          <Marker position={leonti_aesthetic} />
+          <MarkerF position={undefined} options={{ placeId }} />
         </GoogleMap>
       ) : (
         <div className="loading">loading map...</div>
