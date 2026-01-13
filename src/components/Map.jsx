@@ -7,11 +7,14 @@ const containerStyle = {
 };
 
 const leonti_aesthetic = {
-  lat: 50.153442186565954,
-  lng: 8.806392281536015
+  lat: 50.15333870842466,
+  lng: 8.806434387053411
 };
 
-const placeId = "ChIJM4fyG3URvUcROHzhN0g6bF8";
+// 50.15334472609511, 8.806442166002721
+// 50.15333870842466, 8.806434387053411
+
+// const placeId = "ChIJM4fyG3URvUcROHzhN0g6bF8";
 
 const mapOptions = {
   disableDefaultUI: true,
@@ -40,10 +43,10 @@ const MapComponent = () => {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={leonti_aesthetic}
-          zoom={16}
+          zoom={18}
           options={mapOptions}
         >
-          <MarkerF position={undefined} options={{ placeId }} />
+          <MarkerF position={leonti_aesthetic} title='Kosmetikstudio Leonti Aesthetic' />
         </GoogleMap>
       ) : (
         <div className="loading">loading map...</div>
